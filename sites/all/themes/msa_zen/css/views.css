@@ -1,0 +1,217 @@
+/* Default style for all views */
+.view .views-row {
+  font-size: 12px;
+}
+
+/* Default page views style */
+#content .view .views-row {
+  margin-bottom: 10px;
+  background-color: #eee;
+  border-width: 0;
+  padding: 10px;
+}
+
+#content .view .views-row .views-field {
+  margin: 10px 0;
+}
+
+#content .view .views-row .views-label {
+  color: #ad0000;
+}
+
+#content .view .views-row .views-field-title,
+#content .view .views-row .article-title {
+  font-size: 16px;
+  color: #ad0000;
+  margin: 5px 0 0;
+}
+
+#content .view .views-row .views-field-created,
+#content .view .views-row .views-field-created span {
+  margin-top: 0;
+}
+
+#content .view .views-row .views-field-created span {
+  font-size: 10px;
+  color: #777;
+  font-style: italic;
+}
+
+#content .view .views-row .field-content p:first-child {
+  margin-top: 0;
+}
+
+#content .view .views-row .views-field ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+#content .view .views-field .item-list li {
+  margin: 0;
+}
+
+
+/* Default block views style */
+.sidebar .view .views-row {
+  margin: 10px 0;
+}
+
+.sidebar .more-link {
+  font-size: 10px;
+}
+
+
+/* Branches view */
+.view-branches-v2 .field-content div {
+  display: inline;
+}
+
+.view-branches-v2 .field-name-field-branch-photo {
+  float: right;
+}
+
+#branches-menu {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+
+/* Executive view (no longer used) */
+.view-executive .views-field-name {
+  font-size: 16px;
+}
+
+.view-executive .views-field-field-user-position {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.view-executive .user-picture {
+  float: left;
+  margin-right: 10px;
+  width: 100px;
+  text-align: center;
+}
+
+.view-executive .user-picture img {
+  border: 1px solid #ccc;
+}
+
+.view-executive .views-row {
+  clear: both;
+  background-color: #eee;
+  padding: 10px;
+  min-height: 100px;
+  margin-bottom: 10px;
+}
+
+.views-exposed-widgets .form-item {
+  margin: 0;
+}
+
+.views-exposed-widgets .views-exposed-widget {
+  margin: 10px 0;
+}
+
+.views-exposed-widgets {
+  margin-bottom: 20px;
+}
+
+
+/* Mars missions view */
+
+#content .view-mars-missions .views-row {
+  min-height: 273px;
+}
+
+#content .views-field-field-mission-image {
+  float: right;
+}
+
+#content .view .views-field-field-mission-image div:last-child {
+  clear: none;
+}
+
+.field-name-field-mission-image {
+  margin-bottom: 0;
+}
+
+#block-views-mars-missions-block .views-table thead {
+  display: none;
+}
+
+#block-views-mars-missions-block .views-table table,
+#block-views-mars-missions-block .views-table thead,
+#block-views-mars-missions-block .views-table tbody,
+#block-views-mars-missions-block .views-table tr,
+#block-views-mars-missions-block .views-table th,
+#block-views-mars-missions-block .views-table td {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+}
+
+#block-views-mars-missions-block .views-table td {
+  padding: 5px 0;
+  border-bottom: solid 1px #ddd;
+}
+
+#block-views-mars-missions-block .views-table img {
+  display: block;
+  margin-right: 10px;
+}
+
+
+/* Links page */
+
+#content .links-category {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#content .links-category .view-links .views-row {
+  margin: 10px 0;
+  background-color: transparent;
+  padding: 0;
+  -moz-box-shadow:    none;
+  -webkit-box-shadow: none;
+  box-shadow:         none;
+}
+
+#content .links-category .view-links .views-row .views-field-title {
+  margin: 0;
+  font-size: 12px;
+}
+
+/* Executive: */
+
+#content .view-executive .views-row .views-field-picture {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+#content .view-executive .views-row .views-field-name {
+  margin: 0 0 5px 0;
+  margin-left: 104px;
+}
+
+#content .view-executive .views-row .views-field-field-user-position {
+  margin: 5px 0 10px 0;
+  margin-left: 104px;
+}
+
+#content .view-executive .views-row .views-field-field-user-bio {
+  margin-left: 104px;
+}
+
+#content .view-executive .views-row .views-field-uid {
+  clear: both;
+  margin: 0;
+}
+
+#content .view-executive .views-row .views-field-uid .field-content {
+  display: none;
+}

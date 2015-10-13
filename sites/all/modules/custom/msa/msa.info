@@ -1,0 +1,4 @@
+name = MSA Core
+description = Support functions for new MSA site.
+core = 7.x
+package = MSA

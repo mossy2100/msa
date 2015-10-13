@@ -1,0 +1,43 @@
+#forum table {
+  width: 100%;
+}
+
+#forum th a.active {
+  margin-right: 10px;
+}
+
+.page-forum #content-inner .action-links {
+  list-style: none;
+  padding-left: 0;
+}
+
+.page-forum #content-inner .action-links a {
+  padding: 5px 10px;
+  font-size: 10px;
+}
+
+.page-forum #content-inner .action-links a:hover {
+  background-color: #ffdea6;
+  color: #ad0000;
+  text-decoration: none;
+}
+
+.block-forum a.active {
+  color: #0000b3;
+}
+
+.block-forum a.active:hover {
+  color: #b6c5ff;
+}
+
+.node-forum > .content {
+  background-color: #eee;
+  padding: 10px;
+}
+
+.node-forum > ul.links.inline {
+  display: block;
+  margin-top: 10px;
+  text-align: right;
+  font-size: 10px;
+}

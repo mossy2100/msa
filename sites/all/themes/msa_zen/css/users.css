@@ -1,0 +1,77 @@
+.profile dt {
+  font-weight: normal;
+  margin: 0 5px 0 0;
+  float: left;
+}
+
+.profile h3 {
+  border: none;
+  margin-bottom: 3px;
+}
+
+.profile .field {
+  margin: 20px 0;
+}
+
+.profile .field-label {
+  font-size: 16px;
+  font-weight: normal;
+  color: #ad0000;
+  margin-bottom: 3px;
+}
+
+.profile .user-picture {
+  margin: 0 0 10px 10px;
+}
+
+/* Member checklist table */
+
+.membership-table {
+  margin-left: 0;
+  width: 520px;
+}
+
+.membership-table td,
+.membership-table th {
+  padding: 5px;
+  margin: 0;
+  border: solid 1px #aaa;
+  vertical-align: middle;
+  line-height: 24px;
+}
+
+.membership-table td.member-checklist-num {
+  width: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #ad0000;
+}
+
+.membership-table td.member-checklist-check {
+  height: 24px;
+  width: 24px;
+}
+
+.membership-table img {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+#membership-rates .price {
+  text-align: right;
+}
+
+#member-benefits > li {
+  margin: 8px 0;
+}
+
+#member-rates {
+  border-collapse: collapse;
+}
+
+a.button {
+  color: black;
+  background-color: #b6c5ff;
+}

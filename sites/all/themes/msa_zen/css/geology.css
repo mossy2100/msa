@@ -1,0 +1,44 @@
+
+.gallery-item {
+  float: left;
+  height: 150px;
+  width: 120px;
+  padding: 5px;
+  font-size: 10px;
+}
+
+.figure {
+  text-align: center;
+  margin: 20px 0;
+}
+
+#jnt-map {
+  width: 520px;
+  height: 390px;
+  margin: 20px 0;
+}
+
+h3.jnt-map-place {
+  margin-top: 0;
+  margin-bottom: 3px;
+}
+
+#jnt-table-lc td {
+  border-left: none;
+  border-right: none;
+}
+
+#jnt-table-lc td.hierarchy {
+  width: 30px;
+  text-align: right;
+}
+
+#tbl-geology-climate .field-label {
+  font-size: 12px;
+  margin: 0;
+}
+
+#tbl-geology-climate .field-item {
+  font-size: 12px;
+  margin: 0 0 10px;
+}

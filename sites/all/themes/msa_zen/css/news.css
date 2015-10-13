@@ -1,0 +1,77 @@
+/* CSS for news articles, including views and nodes */
+
+.view-current-articles img,
+.node-article img {
+  float: right;
+  clear: right;
+  margin: 0 0 10px 10px;
+  border: solid 1px #ccc;
+  max-width: 300px;
+}
+
+.article-image img {
+  width: 180px;
+  margin: 0 0 10px 10px;
+}
+
+.article-link {
+  clear: both;
+}
+
+.region-content .block {
+  margin-bottom: 0;
+}
+
+#content .view .views-row .views-field-field-article-date,
+.field-name-field-article-date .field-items,
+
+
+
+#content .view .views-row .views-field-field-in-the-news-date {
+  margin-top: 0;
+  font-size: 11px;
+  font-style: italic;
+  color: #777;
+}
+
+#content .node .content .field-name-field-article-date {
+  margin-top: 0;
+}
+
+
+/* Marsupial images table */
+
+.tbl-marsupial-images {
+  border: none;
+  margin: auto;
+}
+
+.tbl-marsupial-images td {
+  width: 240px;
+  vertical-align: top;
+  text-align: center;
+  padding: 10px;
+  font-size: 11px;
+  color: #777;
+  font-style: italic;
+  border: none;
+}
+
+.tbl-marsupial-images img {
+  float: none;
+  display: block;
+  margin: auto;
+}
+
+
+/* MSA in the news block view */
+
+.sidebar .view-msa-in-the-news .views-field-field-in-the-news-date {
+  font-size: 11px;
+  font-style: italic;
+  color: #777;
+}
+
+.sidebar .view-msa-in-the-news .views-field-field-in-the-news-source {
+  font-size: 11px;
+}

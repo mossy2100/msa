@@ -1,0 +1,102 @@
+/* All corners rounded */
+.sidebar .block,
+.sidebar .block .menu a,
+#content .view .views-row,
+.form-submit,
+div.messages,
+div.status,
+div.warning,
+div.error,
+#main-menu a,
+ul.nice-menu li a,
+#content-inner,
+#content .section,
+.msa-user-register-form,
+li.comment-add a,
+.comment,
+.comment ul.links a,
+.view-branches-v2 .views-row,
+.page-forum #content-inner .action-links a,
+#search-form > div,
+fieldset,
+.node-forum .content,
+.node-teaser,
+#branches-menu,
+.view-executive .views-row,
+#membership-options td,
+#content .view-mars-missions .views-row,
+.view-commerce-cart-block .links a,
+.pager a.active,
+#nice-menu-1 ul ul,
+a.button {
+  -moz-border-radius:     5px;
+  -webkit-border-radius:  5px;
+  -khtml-border-radius:   5px;
+  border-radius:          5px;
+}
+
+/* Only top corners rounded */
+ul.primary li a .tab {
+  -moz-border-radius:     5px 5px 0 0;
+  -webkit-border-radius:  5px 5px 0 0;
+  -khtml-border-radius:   5px 5px 0 0;
+  border-radius:          5px 5px 0 0;
+}
+
+/* Only bottom corners rounded */
+#nice-menu-1 > li > ul {
+  -moz-border-radius:     0 0 5px 5px;
+  -webkit-border-radius:  0 0 5px 5px;
+  -khtml-border-radius:   0 0 5px 5px;
+  border-radius:          0 0 5px 5px;
+}
+
+.sidebar .block,
+#content-inner,
+#branches-menu,
+#content .view .views-row,
+#ui-datepicker-div,
+#nice-menu-1 ul {
+  -moz-box-shadow:    1px 2px 2px #999;
+  -webkit-box-shadow: 1px 2px 2px #999;
+  box-shadow:         1px 2px 2px #999;
+}
+
+#navigation {
+  -moz-box-shadow:    0px 2px 2px #999;
+  -webkit-box-shadow: 0px 2px 2px #999;
+  box-shadow:         0px 2px 2px #999;
+}
+
+
+/* Common buttons, links and hover effects. */
+
+.sidebar .block .menu a,
+.comment ul.links a,
+ul.links li.comment-add a,
+.form-submit,
+.page-forum #content-inner .action-links a,
+.view-commerce-cart-block .links a,
+#commerce-checkout-form-checkout #edit-cancel,
+#commerce-checkout-form-review #edit-back,
+.pager a.active,
+a.button {
+  color: black;
+  background-color: #b6c5ff;
+}
+
+.sidebar .block .menu a:hover,
+.sidebar .block .menu a.active,
+.view-commerce-cart-block .links a:hover,
+#commerce-checkout-form-checkout #edit-cancel:hover,
+#commerce-checkout-form-review #edit-back:hover,
+.pager a.active:hover,
+a.button:hover {
+  color: #ad0000;
+  background-color: #ffdea6;
+  text-decoration: none;
+}
+
+a.button {
+  padding: 5px 10px;
+}

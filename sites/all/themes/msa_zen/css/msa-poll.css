@@ -1,0 +1,7 @@
+.poll .bar {
+  background-color: #eee;
+}
+
+.poll .bar .foreground {
+  background-color: #ff9941;
+}

@@ -1,0 +1,280 @@
+<?php
+
+/**
+ * Implements hook_commerce_currency_info_alter()
+ */
+function msa_shop_commerce_currency_info_alter(&$currency_info) {
+  // Make the AUD currency format more normal, e.g. A$10 instead of 10 AUD
+  // Original:
+  //  'AUD' => array(
+  //    'code' => 'AUD',
+  //    'symbol' => 'AU$',
+  //    'name' => t('Australian Dollar'),
+  //    'numeric_code' => '036',
+  //    'minor_unit' => t('Cent'),
+  //    'major_unit' => t('Dollar'),
+  //  ),
+  // For reference:
+  //  'USD' => array(
+  //    'code' => 'USD',
+  //    'symbol' => '$',
+  //    'name' => t('United States Dollar'),
+  //    'numeric_code' => '840',
+  //    'symbol_placement' => 'before',
+  //    'code_placement' => '',
+  //    'minor_unit' => t('Cent'),
+  //    'major_unit' => t('Dollar'),
+  //  ),
+  
+  $currency_info['AUD']['symbol'] = 'A$';
+  $currency_info['AUD']['symbol_placement'] = 'before';
+  $currency_info['AUD']['code_placement'] = '';
+}
+
+/**
+ * Format a commerce amount (cents) as a price.
+ * 
+ * @param int $cents
+ * @return string
+ */
+function msa_shop_money_format($cents) {
+  return 'A$' . number_format($cents / 100, 2);
+}
+
+/**
+ * String containing order details.
+ * 
+ * @todo HTML version
+ * 
+ * @param object $commerce_order
+ * @param bool $html
+ * @return string
+ */
+function msa_shop_order_details($commerce_order, $html = FALSE) {
+  require_once DRUPAL_ROOT . '/includes/locale.inc';
+  
+  $user = user_load($commerce_order->uid);
+
+  $msg  = "Order details: \n";
+  $msg .= "User: $user->name\n";
+  $msg .= "Order date: " . date('j F Y') . "\n";
+  $msg .= "Order number: $commerce_order->order_number\n";
+
+  // Order amount:
+  $amount = msa_shop_money_format($commerce_order->commerce_order_total[LANGUAGE_NONE][0]['amount']);
+  $msg .= "Order total: $amount\n\n";
+
+  $msg .= "Items:\n";
+  foreach ($commerce_order->commerce_line_items[LANGUAGE_NONE][0] as $key => $value) {
+//    $msg .= "$key => " . var_export($value, TRUE) . "\n";
+//    $msg .= var_export($line_item, TRUE) . "\n";
+    
+    $line_item = commerce_line_item_load($value);
+    $qty = (float) $line_item->quantity;
+    $product_id = $line_item->commerce_product[LANGUAGE_NONE][0]['product_id'];
+    $product = commerce_product_load($product_id);
+    $unit_price = msa_shop_money_format($line_item->commerce_unit_price[LANGUAGE_NONE][0]['amount']);
+    $total = msa_shop_money_format($line_item->commerce_total[LANGUAGE_NONE][0]['amount']);
+    $msg .= "$qty x \"$product->title\" @ $unit_price each = $total\n";
+  }
+  $msg .= "\n";
+
+  // Customer name and address:
+  $msg .= "Customer details:\n";
+  $profile = commerce_customer_profile_load($commerce_order->commerce_customer_billing[LANGUAGE_NONE][0]['profile_id']);
+  $address = $profile->commerce_customer_address[LANGUAGE_NONE][0];
+  $name = $address['name_line'] ? $address['name_line'] : trim("{$address['first_name']} {$address['last_name']}");
+  if ($name) {
+    $msg .= "$name\n";
+  }
+  if ($address['organisation_name']) {
+    $msg .= "{$address['organisation_name']}\n";
+  }
+  if ($address['premise']) {
+    $msg .= "{$address['premise']}\n";
+  }
+  if ($address['locality']) {
+    $msg .= "{$address['locality']}\n";
+  }
+  if ($address['administrative_area'] || $address['postal_code']) {
+    $msg .= trim("{$address['administrative_area']} {$address['postal_code']}") . "\n";
+  }
+  if ($address['country']) {
+    $countries = country_get_list();
+    $msg .= $countries[$address['country']] . "\n";
+  }
+
+  // Get the order items:
+  return $msg;
+}
+
+/**
+ * Generate the email to send to the secretary/treasurer when someone places an order.
+ * 
+ * @todo HTML version
+ * 
+ * @param object $commerce_order
+ * @param bool $html
+ * @return string
+ */
+function msa_shop_admin_order_notification_email($commerce_order, $html = FALSE) {
+  global $base_url;
+  $msg  = "A new order has been placed at the MSA website.\n\n";
+  $msg .= msa_shop_order_details($commerce_order);
+  $msg .= "\n";
+  $msg .= "View details of the order here: $base_url/admin/commerce/orders/$commerce_order->order_id\n\n";
+  $msg .= "View all orders here: $base_url/admin/commerce/orders/list\n";
+  return $msg;
+}
+
+/**
+ * Generate the email to send to the customer when they place an order.
+ * 
+ * @todo HTML version
+ * 
+ * @param object $commerce_order
+ * @param bool $html
+ * @return string
+ */
+function msa_shop_customer_order_notification_email($commerce_order, $html = FALSE) {
+  global $base_url;
+  $msg  = "Thanks for placing an order at the MSA website!\n\n";
+  $msg .= "If this is your first order with us, you will receive a separate e-mail with login instructions.\n";
+  $msg .= "You can view your order history with us at any time by logging into our website at:\n\n";
+  $msg .= "$base_url/user\n\n";
+  $msg .= "You can find the status of your current order at:\n\n";
+  $msg .= "$base_url/user/$commerce_order->uid/orders/$commerce_order->order_id\n\n";
+  $msg .= "Please contact us if you have any questions about your order.\n\n";
+  $msg .= msa_shop_order_details($commerce_order);
+  return $msg;
+}
+
+/**
+ * Implements hook_rules_condition_info().
+ */
+function msa_shop_rules_condition_info() {
+  $conditions = array();
+
+  $conditions['commerce_order_contains_product_type'] = array(
+    'label' => t('Order contains a particular product type'),
+    'parameter' => array(
+      'commerce_order' => array(
+        'label' => t('Order'),
+        'type' => 'commerce_order',
+        'description' => t('The order whose line items should be checked for the specified product type. If the specified order does not exist, the comparison will act as if it is against a quantity of 0.'),
+      ),
+      'product_type' => array(
+        'label' => t('Product type'),
+        'type' => 'list<text>',
+        'description' => t('The product type to look for in the order.'),
+        'options list' => 'commerce_product_type_options_list',
+      ),
+      'operator' => array(
+        'label' => t('Operator'),
+        'type' => 'text',
+        'description' => t('The operator used with the quantity value below to compare the quantity of the specified product type on the order.'),
+        'default value' => '>=',
+        'options list' => 'commerce_numeric_comparison_operator_options_list',
+        'restriction' => 'input',
+      ),
+      'value' => array(
+        'label' => t('Quantity'),
+        'type' => 'text',
+        'default value' => '1',
+        'description' => t('The value to compare against the quantity of the specified product type on the order.'),
+      ),
+    ),
+    'group' => t('Commerce Order'),
+    'callbacks' => array(
+      'execute' => 'msa_shop_rules_contains_product_type',
+    ),
+  );
+
+  return $conditions;
+}
+
+/**
+ * Condition callback: checks to see if one or more particular product types exist on an order
+ * in the specified quantity.
+ * 
+ * @param object $order
+ * @param array $product_types
+ * @param text $operator
+ * @param text $value
+ * @return bool
+ */
+function msa_shop_rules_contains_product_type($order, $product_types, $operator, $value) {
+  // Default quantity is 0.
+  $qty = 0;
+
+  // If we actually received a valid order...
+  if (!empty($order)) {
+    $order_wrapper = entity_metadata_wrapper('commerce_order', $order);
+
+    // Populate the array of the quantities of the products on the order.
+    foreach ($order_wrapper->commerce_line_items as $line_item_wrapper) {
+      if (in_array($line_item_wrapper->type->value(), commerce_product_line_item_types())) {
+
+        // Extract the product type from the line item.
+        $line_item_product_type = $line_item_wrapper->commerce_product->type->value();
+
+        // If the line item product type matches, update the total quantity.
+        if (in_array($line_item_product_type, $product_types)) {
+          $qty += $line_item_wrapper->quantity->value();
+        }
+
+      } // if valid line item type
+    } // foreach line item
+  } // if we have a valid order
+
+  // Make a quantity comparison based on the operator.
+  switch ($operator) {
+    case '<':
+      return $qty < $value;
+
+    case '<=':
+      return $qty <= $value;
+
+    case '=':
+      return $qty == $value;
+
+    case '>=':
+      return $qty >= $value;
+
+    case '>':
+      return $qty > $value;
+  }
+
+  return FALSE;
+}
+
+/**
+ * Create an Add to Cart form for embedding.
+ * 
+ * @param string $sku
+ * @param bool $show_qty
+ * @return string
+ */
+function msa_shop_add_to_cart_form($sku, $show_qty = FALSE) {
+  // Attempt to load the specified product.
+  $product = commerce_product_load_by_sku($sku);
+  
+  if (!$product) {
+    return FALSE;
+  }
+  
+  $product_ids = array($product->product_id);
+
+  // Build the line item we'll pass to the Add to Cart form.
+  $line_item = commerce_product_line_item_new($product);
+  $line_item->data['context']['product_ids'] = $product_ids;
+  $line_item->data['context']['add_to_cart_combine'] = TRUE;
+
+  // Generate a form ID for this add to cart form.
+  $form_id = commerce_cart_add_to_cart_form_id($product_ids);
+
+  // Build the Add to Cart form using the prepared values.
+  $form = drupal_get_form($form_id, $line_item, $show_qty, array());
+
+  return drupal_render($form);
+}

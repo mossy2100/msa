@@ -1,0 +1,37 @@
+/*
+ * Search (search-block-form.tpl.php)
+ */
+#block-search-form /* Wrapper for the search form */ {
+}
+
+#block-search-form .form-item-search-block-form {
+  float: left;
+  margin: 0 6px 0 0;
+}
+
+#block-search-form input.form-text {
+  width: 100px;
+  height: 18px;
+  padding: 1px;
+}
+
+#block-search-form input.form-submit {
+  width: 60px;
+  padding: 3px 6px;
+  font-size: 10px;
+  margin-right: 0;
+}
+
+#search-form > div {
+  background-color: #eee;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+#search-form fieldset {
+  background-color: #f7f7f7;
+}
+
+#edit-advanced legend {
+  font-size: 12px;
+}

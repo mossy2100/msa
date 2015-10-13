@@ -1,0 +1,319 @@
+<?php
+
+/*
+ * What's this for?
+ * We need to know all the paths from the old site so we can set up redirects as required.
+ * 
+ * This is for 2 reasons:
+ *  1. So we can set up the 301 redirects to the new site.
+ *  2. To clarify which content has been transferred and which has not.
+ * 
+ * Instead of a site scraper, we can just scan through the existing codebase and find the path to every item.
+ * 
+ * For each item, we need the following options:
+ * 
+ * 1. We don't care about the item
+ *    => 404
+ * 2. We do care about the item, and we have created the content on the live site
+ *    => 301 redirect to new path using redirect module.
+ * 3. We do care about the item, and we have not yet created the content on the live site
+ *    => Add to list of content still to create.
+ * 4. We do care about the item, and we have an automatic redirect setup (images and documents).
+ * 
+ * 
+ * Status codes:
+ * 404|404 Not found (default).
+ * 307-1|307 Temporary redirect to file in sites/old. Content not created on new site yet (to do).
+ * 307-2|307 Temporary redirect to file in new site, automatic for images and documents.
+ * 307-3|307 Temporary redirect to new path (enter below).
+ * 301-1|301 Permanent redirect to file in sites/old.
+ * 301-2|301 Permanent redirect to file in new site, automatic for images and documents.
+ * 301-3|301 Permanent redirect to new path (enter below).
+ * 
+ * It will also be useful to provide a general programmatic rule for things like images and library items, so we don't
+ * need a specific 301 redirect for every single item. DONE @see msa_redirect_media_new_path()
+ */
+
+/**
+ * Array of mappings between media folders in the old site (sites/old)
+ * and new locations in new site (sites/default/files).
+ * 
+ * Keep updated as content is transferred.
+ * 
+ * @return array
+ */
+function msa_redirect_map() {
+  static $map;
+  if (!$map) {
+    $map = array(
+      'images'              => 'images',
+      'library'             => 'library',
+      'marsupial/drawings'  => 'library/marsupial/drawings',
+      'marsupial/documents' => 'library/marsupial',
+      'marsupial/images'    => 'images/marsupial',
+      'jnt/images'          => 'images/jnt',
+      'jnt/jnt-db/images'   => 'images/jnt',
+      'amec2001'            => 'amec/amec2001',
+      'amec2002'            => 'amec/amec2002',
+      'amec2003'            => 'amec/amec2003',
+      'amec2004'            => 'amec/amec2004',
+      'amec2005'            => 'amec/amec2005',
+      'amec2006'            => 'amec/amec2006',
+      'amec2007'            => 'amec/amec2007',
+      'amec2008'            => 'amec/amec2008',
+      'amec2009'            => 'amec/amec2009',
+      'amec2010'            => 'amec/amec2010',
+    );
+  }
+  return $map;
+}
+
+/**
+ * Array of mappings between media folders in the old site (sites/old)
+ * and new locations in new site (sites/default/files).
+ * 
+ * Keep updated as content is transferred.
+ * 
+ * @return array
+ */
+function msa_redirect_content_extensions() {
+  static $extensions;
+  if (!$extensions) {
+    $extensions = array(
+      'Page'      => array('html', 'htm', 'shtml', 'php'),
+      'Image'     => array('png', 'gif', 'jpg', 'jpeg', 'ico', 'tif'),
+      'Document'  => array('txt', 'doc', 'pdf', 'rtf'),
+    );
+  }
+  return $extensions;
+}
+
+/**
+ * Implementation of hook_menu().
+ */
+function msa_redirect_menu() {
+  $items = array();
+  $items['admin/config/msa/create-default-redirects'] = array(
+    'title'             => "Create default redirects",
+    'description'       => "Scan all files in the old website and create default redirects.",
+    'page callback'     => 'msa_redirect_set_defaults',
+    'access arguments'  => array('access administration pages'),
+    'type'              => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+/**
+ * Scan all the files in the old site and update the redirects to their defaults.
+ * 
+ * @param string $dir
+ */
+function msa_redirect_set_defaults($dir = NULL) {
+  echo "<br><hr>Scanning directory $dir...<br>";
+  
+  // Default directory is root of old site:
+  $old_site_root = DRUPAL_ROOT . '/sites/old';
+  if ($dir === NULL) {
+    $dir = $old_site_root;
+  }
+
+  // Get all the items in the directory:
+  $files = scandir($dir);
+
+  // Remember the subdirs so we can scan them, too:
+  $subdirs = array();
+
+  // Go through the items:
+  foreach ($files as $file) {
+    
+    // Skip . and ..
+    if (in_array($file, array('.', '..'))) {
+      continue;
+    }
+
+    // Get the full path to the item:
+    $path = "$dir/$file";
+    
+    // Get the old path, which will be the node title.
+    // This will be relative to http://marssociety.org.au/ in the old site
+    // and http://marssociety.org.au/sites/old/" in the new site.
+    $old_path = substr($path, strlen($old_site_root) + 1);
+    
+    if (is_file($path)) {
+      // Do we have a node for it yet?
+      $sql = "SELECT nid FROM {node} WHERE type = 'old_site_file' AND title = :old_path";
+      $rs = db_query($sql, array(':old_path' => $old_path));
+      if ($rs) {
+        $rec = $rs->fetch();
+      }
+      if ($rec) {
+        echo "Node found for $old_path<br>";
+        $node = node_load($rec->nid);
+      }
+      else {
+        echo "Node not found for $old_path<br>";
+        $node = (object) array('type' => 'old_site_file');
+        node_object_prepare($node);
+      }
+
+      // Get the extension and file category:
+      $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+      $content_extensions = msa_redirect_content_extensions();
+      $category = 'Other';
+      foreach ($content_extensions as $category2 => $extensions) {
+        if (in_array($ext, $extensions)) {
+          $category = $category2;
+        }
+      }
+      
+      // Check if it's a media file that has been copied to sites/default/files:
+      $new_path = msa_redirect_media_new_path($old_path);
+      if ($new_path) {
+        // Permanent redirect (301) to new location:
+        $status = '301-2';
+      }
+
+      // If not a media file or can't find a match in sites/default/files,
+      // temporary redirect to copy of old site in sites/old:
+      if (!$new_path) {
+        $new_path = msa_redirect_new_path($old_path);
+        if ($new_path) {
+          // Check the extension. We only want to reproduce some content.
+          if ($category == 'Other') {
+            // Permanent redirect to sites/old. This is not content, only keep file so old site works.
+            $status = '301-1';
+          }
+          else {
+            // Temporary redirect to sites/old. This is content, and we probably want to reproduce it in the new site.
+            $status = '307-1';
+          }
+        }
+      }
+
+      // If we can't find an alternate path, default to 404.
+      // Should never happen since we're scanning sites/old for files!
+      if (!$new_path) {
+        $status = '404';
+        $new_path = NULL;
+      }
+      
+      // Update node properties:
+      $node->uid = 1;
+      $node->language = LANGUAGE_NONE;
+      $node->title = $old_path;
+      $node->field_old_site_file_status[LANGUAGE_NONE][0]['value']    = $status;
+      $node->field_old_site_file_new_path[LANGUAGE_NONE][0]['value']  = $new_path;
+      $node->field_old_site_file_category[LANGUAGE_NONE][0]['value']  = $category;
+      echo "Set status = $status, new path = $new_path, category = $category<br><br>";
+
+      // Save it:
+      node_save($node);
+      
+    }
+    elseif (is_dir($path)) {
+      // Remember the subdirectory:
+      $subdirs[] = $path;
+    }
+  }
+  
+  // Now scan the subdirs, if there were any:
+  foreach ($subdirs as $subdir) {
+    msa_redirect_set_defaults($subdir);
+  }
+
+}
+
+/**
+ * Tries to find the requested file in sites/old, where it should be.
+ * If the file is found then returns the new path, otherwise FALSE.
+ * 
+ * @param string $old_path
+ * @return mixed The new path as a string, or FALSE.
+ */
+function msa_redirect_new_path($old_path) {
+  $new_path = "sites/old/$old_path";
+  if (file_exists(DRUPAL_ROOT . "/$new_path")) {
+    return $new_path;
+  }
+  return FALSE;
+}
+
+/**
+ * Tries to automatically find a match in the new site for a media (image, document, etc.) file from the old site.
+ * If one cannot be found, return FALSE.
+ * 
+ * @param string $old_path
+ * @return mixed The new path as a string, or FALSE.
+ */
+function msa_redirect_media_new_path($old_path) {
+  $map = msa_redirect_map();
+  foreach ($map as $old_dir => $new_dir) {
+    if (beginsWith($old_path, "$old_dir/")) {
+      $new_path = "sites/default/files/$new_dir" . substr($old_path, strlen($old_dir));
+      if (file_exists(DRUPAL_ROOT . "/$new_path")) {
+        return $new_path;
+      }
+    }
+  }
+  return FALSE;
+}
+
+/**
+ * Set up the redirect for the node using the redirect module.
+ * 
+ * @param object $node 
+ */
+function msa_redirect_create_redirect($node) {
+  if ($node->type == 'old_site_file') {
+    // Load the redirect:
+    if (isset($node->field_old_site_file_rid[LANGUAGE_NONE][0]['value']) && $node->field_old_site_file_rid[LANGUAGE_NONE][0]['value']) {
+      $redirect = redirect_load($node->field_old_site_file_rid[LANGUAGE_NONE][0]['value']);
+    }
+
+    // Create new redirect object if necessary:
+    if (!isset($redirect) || !$redirect) {
+      $redirect = new stdClass();
+    }
+
+    // Update the redirect:
+    $defaults = array(
+      'source'      => $node->title,
+      'redirect'    => $node->field_old_site_file_new_path[LANGUAGE_NONE][0]['value'],
+      'status_code' => substr($node->field_old_site_file_status[LANGUAGE_NONE][0]['value'], 0, 3),
+    );
+    redirect_object_prepare($redirect, $defaults);
+
+    // Save the redirect:
+    redirect_save($redirect);
+
+    // Update the node:
+    $node->field_old_site_file_rid[LANGUAGE_NONE][0]['value'] = $redirect->rid;
+    $node->redirect_updated = TRUE;
+    node_save($node);
+  }
+}
+
+/**
+ * Implements hook_node_update().
+ */
+function msa_redirect_node_update($node) {
+  if (!isset($node->redirect_updated)) {
+    msa_redirect_create_redirect($node);
+  }
+}
+
+/**
+ * Implements hook_node_insert().
+ */
+function msa_redirect_node_insert($node) {
+  msa_redirect_node_update($node);
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function msa_redirect_views_pre_render(&$view) {
+  if ($view->name == 'msa_redirects') {
+    drupal_add_css(drupal_get_path('theme', 'msa_zen') . '/css/msa_redirects.css');
+  }
+}

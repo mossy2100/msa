@@ -1,0 +1,52 @@
+diff --git a/modules/cart/commerce_cart.module b/modules/cart/commerce_cart.module
+index 3a77d90..7fa04a7 100644
+--- a/modules/cart/commerce_cart.module
++++ b/modules/cart/commerce_cart.module
+@@ -1536,17 +1536,6 @@ function commerce_cart_add_to_cart_form($form, &$form_state, $line_item, $show_q
+               $changed_attribute = $key;
+             }
+
+-            // If a field name has been stored and we've moved past it to
+-            // compare the next attribute field...
+-            if (!empty($changed_attribute) && $changed_attribute != $key) {
+-              // Wipe subsequent values from the form state so the attribute
+-              // widgets can use the default values from the new default product.
+-              unset($form_state['input']['attributes'][$key]);
+-
+-              // Don't accept this as a matching product.
+-              continue;
+-            }
+-
+             if ($product_wrapper->{$key}->raw() != $value) {
+               $match = FALSE;
+             }
+@@ -1576,9 +1565,27 @@ function commerce_cart_add_to_cart_form($form, &$form_state, $line_item, $show_q
+
+       // Set the default product now if it isn't already set.
+       if (empty($matching_products)) {
+-        // If a product ID value was passed in, use that product if it exists.
+-        if (!empty($form_state['values']['product_id']) &&
++        if (!empty($changed_attribute)) {
++          $changed_value = $form_state['values']['attributes'][$changed_attribute];
++
++          // If the attribute form was submitted, use the changed value as the
++          // seed for a new default product
++          foreach ($products as $product) {
++            $product_wrapper = entity_metadata_wrapper('commerce_product', $product);
++
++            if ($product_wrapper->{$changed_attribute}->raw() == $changed_value) {
++              $default_products[] = $product;
++            }
++          }
++        }
++
++        if (!empty($default_products)) {
++          reset($default_products);
++          $default_product = $default_products[key($default_products)];
++        }
++        elseif (!empty($form_state['values']['product_id']) &&
+           !empty($products[$form_state['values']['product_id']])) {
++          // If a product ID value was passed in, use that product if it exists.
+           $default_product = $products[$form_state['values']['product_id']];
+         }
+         elseif (empty($form_state['values']) &&

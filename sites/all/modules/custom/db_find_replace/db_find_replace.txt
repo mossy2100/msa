@@ -1,0 +1,11 @@
+todo
+====
+
+1. Get replace functionality working.
+2. Add checkboxes for groups of tables to search.
+That will be enough for a contributed version.
+
+Version 2
+=========
+More advanced table selection, e.g. select by content type, fields.
+

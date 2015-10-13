@@ -1,0 +1,195 @@
+/**
+ * @file
+ * Navigation Styling
+ */
+
+/*
+ * Navigation
+ */
+#navigation {
+/*  float: left;  LTR */
+  width: 100%;
+  margin-left: 0; /* LTR */
+  margin-right: -100%; /* LTR */ /* Negative value of #navigation's width + left margin. */
+  padding: 0; /* DO NOT CHANGE. Add padding or margin to #navigation .section. */
+  background-color: #ff9941;
+  height: 34px;
+}
+
+#navigation .section {
+  max-width: 1300px;
+  margin: auto;
+}
+
+#navigation .content ul /* Main menu and secondary menu links */ {
+  margin: 0;
+  padding: 0;
+  text-align: left; /* LTR */
+}
+
+#navigation .content li /* A simple method to get navigation links to appear in one line. */ {
+  float: left; /* LTR */
+  padding: 0 10px 0 0; /* LTR */
+}
+
+/*
+ * The active item in a Drupal menu
+ */
+li a.active {
+  color: #ff7600;
+}
+
+.region-navigation {
+}
+
+.with-navigation #content,
+.with-navigation .region-sidebar-first,
+.with-navigation .region-sidebar-second {
+}
+
+#secondary-menu {
+  margin-top: 0;
+}
+
+
+/******************************************************************************/
+/* Nice Menu */
+
+#nice-menu-1 {
+  height: 34px;
+  margin: 0;
+}
+
+#nice-menu-1.nice-menu li {
+  background: none;
+  border-width: 0;
+  padding: 0;
+  margin: 0;
+}
+
+#nice-menu-1 li:hover {
+  background: none;
+}
+
+#nice-menu-1 li a {
+  padding: 4px 5px;
+  line-height: 16px;
+  margin: 5px;
+  float: left;
+  text-decoration: none;
+  color: Black;
+}
+
+#nice-menu-1 li a.active,
+#nice-menu-1 li a:hover {
+  background-color: #ad0000;
+  color: White;
+  text-decoration: none;
+}
+
+#nice-menu-1 li.first a {
+  margin-left: 10px;
+}
+
+#nice-menu-1 ul {
+  border-width: 0;
+  background-color: #ff9941;
+  top: 34px;
+}
+
+#nice-menu-1 ul li {
+  width: 140px;
+  margin: 0;
+}
+
+#nice-menu-1 ul li a {
+  padding-bottom: 4px;
+  margin: 0 5px 5px;
+  font-size: 10px;
+  width: 120px;
+}
+
+#nice-menu-1 li.menu-524 ul {
+  width: 160px;
+}
+
+#nice-menu-1 li.menu-524 ul li a{
+  width: 140px;
+}
+
+#nice-menu-1 ul li.first a {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#block-nice-menus-1 .block-title {
+  display: none;
+}
+
+#block-nice-menus-1 {
+  margin: 0;
+}
+
+/* second-level submenu */
+#nice-menu-1 ul ul {
+  top: 0;
+  left: 136px;
+  background-color: #ff7600;
+}
+
+#nice-menu-1 ul ul li a {
+}
+
+#nice-menu-1 ul ul li a.active,
+#nice-menu-1 ul ul li a:hover {
+}
+
+
+
+/******************************************************************************/
+/* Old settings for normal primary nav menu.
+
+#main-menu {
+  height: 34px;
+  margin: 0;
+}
+
+#main-menu a {
+  padding: 3px 5px;
+  margin: 5px;
+  height: 20px;
+  float: left;
+  text-decoration: none;
+  color: Black;
+}
+
+#main-menu a:hover,
+#main-menu a.active {
+  background-color: #ad0000;
+  color: White;
+}
+
+#main-menu li {
+  padding: 0;
+}
+
+#main-menu li.first a {
+  margin-left: 10px;
+}
+*/
+
+/**
+ * Admin menu
+ */
+#admin-menu {
+  font-size: 10px;
+}
+
+
+/* projects menu */
+.projects-menu {
+  margin-left: 0;
+  padding-left: 0;
+  font-size: 11px;
+  list-style-type: none;
+}

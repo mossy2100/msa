@@ -1,0 +1,1 @@
+test faq article|admin|1124261787|test faq article content text<br>[b]bold[/b] &nbsp;<br>[center]centered[/center][color=Yellow]yellow[/color]8-)

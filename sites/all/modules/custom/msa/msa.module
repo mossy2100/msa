@@ -1,0 +1,411 @@
+<?php
+
+/**
+ * Implements hook_init().
+ */
+function msa_init() {
+  // Include some of my library files:
+  require_once DRUPAL_ROOT . "/sites/all/libraries/star/strings.php";
+  require_once DRUPAL_ROOT . "/sites/all/libraries/star/drupal.php";
+  dbg_on();
+
+  // This only needs to be done once:
+//  variable_set('shortcut_max_slots', 20);
+//  variable_set('update_max_fetch_time', 120);
+
+  // Add some CSS to fix the seven admin theme:
+  $msa_path = drupal_get_path('module', 'msa');
+  drupal_add_css("$msa_path/msa.css");
+  
+  drupal_add_js("sites/all/libraries/star/debug.js");
+}
+
+/**
+ * Implementation of hook_menu().
+ */
+function msa_menu() {
+  $items = array();
+  
+  // Links library:
+  // @todo Should probably convert this to a view.
+  $items['links'] = array(
+    'title' => "Links Library",
+    'page callback' => 'msa_links',
+    'access callback' => TRUE,
+  );
+
+  // Administration pages for MSA:
+  $items['admin/config/msa'] = array(
+    'title'             => 'Mars Society Australia',
+    'description'       => 'Custom administration pages for MSA.',
+    'position'          => 'left',
+    'weight'            => -20,
+    'page callback'     => 'system_admin_menu_block_page',
+    'access arguments'  => array('access administration pages'),
+    'file'              => 'system.admin.inc',
+    'file path'         => drupal_get_path('module', 'system'),
+  );
+
+  return $items;
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function msa_form_alter(&$form, &$form_values, $form_id) {
+  switch ($form_id) {
+    case 'comment_node_article_form':
+      // We don't want a WYSIWYG editor for comments:
+      $form['comment_body']['#type'] = 'textarea';
+      $form['comment_body']['#wysiwyg'] = FALSE;
+      $form['comment_body']['#title'] = t('Comment');
+      break;
+    
+  }
+}
+
+/**
+ * Implements hook_token_info().
+ */
+function msa_token_info() {
+  $node['branch-code'] = array(
+    'name' => t("Branch code"),
+    'description' => t("The branch code, i.e. the state or country code."),
+  );
+  return array(
+    'tokens' => array('node' => $node),
+  );
+}
+
+/**
+ * Implements hook_tokens().
+ */
+function msa_tokens($type, $tokens, array $data = array(), array $options = array()) {
+  $replacements = array();
+
+  if ($type == 'node' && !empty($data['node']) && $data['node']->type == 'branch') {
+    $node = $data['node'];
+
+    foreach ($tokens as $name => $original) {
+      switch ($name) {
+        case 'branch-code':
+          if (isset($node->field_branch_code['und'][0]['safe_value'])) {
+            $replacements[$original] = $node->field_branch_code['und'][0]['safe_value'];
+          }
+          break;
+      }
+    }
+
+  }
+
+  return $replacements;
+}
+
+/**
+ * Get an array of links to MSA branches.
+ *
+ * @return array
+ */
+function msa_branch_links() {
+  $sql = "
+    SELECT n.nid, b.field_branch_code_value
+    FROM {node} n
+      LEFT JOIN {field_data_field_branch_code} b ON n.nid = b.entity_id AND b.entity_type = 'node'
+    WHERE n.type = 'branch' AND n.status = 1
+    ORDER BY n.title";
+  $rs = db_query($sql);
+  $branch_links = array();
+  foreach ($rs as $rec) {
+    $branch_links[] = l($rec->field_branch_code_value, "node/$rec->nid");
+  }
+  return $branch_links;
+}
+
+/**
+ * Display the links page.
+ * 
+ * @todo See if this can be generated using a View.
+ *
+ * @return string
+ */
+function msa_links() {
+  $html = '';
+  $sql = "
+    SELECT t.tid, t.name
+    FROM {taxonomy_term_data} t JOIN {taxonomy_vocabulary} v USING (vid)
+    WHERE v.name = 'Link Category'";
+  $rs = db_query($sql);
+  foreach ($rs as $term) {
+    $html .= "<div class='links-category'>";
+    $html .= "<h2>$term->name</h2>";
+    $html .= views_embed_view('links', 'page', $term->tid);
+    $html .= "</div>";
+  }
+  return $html;
+}
+
+/**
+ * Checks if a Mars mission was in the past.
+ * 
+ * @param int $nid
+ * @return bool
+ */
+function msa_mission_is_future($nid) {
+  $node = node_load($nid);
+  
+  $mission_year   = $node->field_mission_launch_year  ? $node->field_mission_launch_year['und'][0]['value']   : 0;
+  $mission_month  = $node->field_mission_launch_month ? $node->field_mission_launch_month['und'][0]['value']  : 0;
+  $mission_day    = $node->field_mission_launch_day   ? $node->field_mission_launch_day['und'][0]['value']    : 0;
+
+  $current_year = date('Y');
+  $current_month = date('m');
+  $current_day = date('d');
+
+  // check year:
+  if (!$mission_year || $mission_year > $current_year) {
+    return TRUE;
+  }
+  elseif ($mission_year < $current_year) {
+    return FALSE;
+  }
+  
+  // mission_year == current_year, check month:
+  if (!$mission_month || $mission_month > $current_month) {
+    return TRUE;
+  }
+  elseif ($mission_month < $current_month) {
+    return FALSE;
+  }
+  
+  // mission_month == current_month, check day:
+  if (!$mission_day || $mission_day > $current_day) {
+    return TRUE;
+  }
+  elseif ($mission_day < $current_day) {
+    return FALSE;
+  }
+  
+  // year, month and day equal:
+  return TRUE;
+}
+
+/**
+ * Generates a date string for a Mars mission.
+ * 
+ * @todo Override the field template for a launch year to display this date instead of all the date parts separately.
+ * 
+ * @param int $nid
+ * @return string
+ */
+function msa_mission_date($nid) {
+  $node = node_load($nid);
+  
+  $mission_year   = $node->field_mission_launch_year  ? $node->field_mission_launch_year['und'][0]['value']   : 0;
+  $mission_month  = $node->field_mission_launch_month ? $node->field_mission_launch_month['und'][0]['value']  : 0;
+  $mission_day    = $node->field_mission_launch_day   ? $node->field_mission_launch_day['und'][0]['value']    : 0;
+
+  // Get the month name:
+  $month_names = date_month_names_untranslated();
+  $month_name = $mission_month ? $month_names[$mission_month] : '';
+
+  if ($mission_year) {
+    if ($mission_month) {
+      if ($mission_day) {
+        return "$mission_day $month_name $mission_year";
+      }
+      else {
+        return "$month_name $mission_year";
+      }
+    }
+    else {
+      return $mission_year;
+    }
+  }
+  return '';
+}
+
+/**
+ * Generates HTML for the slideshow.
+ * This should probably be a theming function.
+ * 
+ * @return string
+ */
+function msa_slideshow_html() {
+  $slideshow_path = drupal_get_path('module', 'msa') . '/slideshow';
+  // Images should alternate black/white:
+  $image_filenames = array(
+    'Branches-slide.png'        => 'branches',
+    'MSA-Join-Now-slide.png'    => 'user/register',
+    'Mars-Oz-brown-slide.jpg'   => 'project/mars-oz',
+    'MarsSkin-slide.jpg'        => 'project/marsskin',
+    'Marsupial-slide.jpg'       => 'project/marsupial',
+    'AMEC-2012-slide.png'       => 'event/amec-2012/details',
+    'Spaceward-Bound-slide.jpg' => 'spaceward-bound-australia',
+    'Mars-Oz-black-slide.png'   => 'project/mars-oz',
+  );
+  $html = "
+    <script src='$slideshow_path/slideshow.js'></script>
+    <link rel='stylesheet' href='$slideshow_path/slideshow.css'>
+    <div id='slideshow'>";
+  
+  foreach ($image_filenames as $image_filename => $href) {
+    $id = 'slide-' . str_replace('.', '_', $image_filename);
+    $html .= "<a id='$id' href='/$href' style='background-image:url($slideshow_path/images/$image_filename)'></a>";
+  }
+
+  $html .= "</div>";
+  
+  // Controls:
+  $html .= "
+    <div id='slideshow-controls'>
+      <a id='slideshow-next' href='javascript:next_slide()'></a>
+      <a id='slideshow-pause' href='javascript:play_slideshow()'></a>
+      <a id='slideshow-prev' href='javascript:prev_slide()'></a>
+    </div>";
+  
+  return $html;
+}
+
+/**
+ * Implements hook_file_delete().
+ * 
+ * This is pretty hacky.
+ * It prevents files being deleted. (Actual files, not file entities.)
+ * We really need the media module working properly so we can keep files around in the proper way.
+ */
+function msa_file_delete($file) {
+  // If we clear the URI, the file will not be deleted:
+  $file->uri = NULL;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function msa_theme($existing, $type, $theme, $path) {
+  return array(
+    'msa_geology_map' => array(
+      'variables' => array(
+        'points'          => array(),
+      ),
+      'path' => drupal_get_path('theme', 'msa_zen') . '/templates',
+      'template' => 'geology-map',
+    ),
+  );
+}
+
+/**
+ * Generate the map for the Geology project page.
+ * 
+ * @return string 
+ */
+function msa_geology_map() {
+
+  // Get the data points:
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node', '=')
+        ->propertyCondition('type', 'mars_analogue_site', '=');
+  $result = $query->execute();
+  $nodes = is_array($result) ? entity_load('node', array_keys($result['node'])) : NULL;
+  $points = array();
+  
+  // For each node, get the point info:
+  foreach ($nodes as $node) {
+    $place = htmlspecialchars($node->title, ENT_QUOTES);
+    $terrain = htmlspecialchars($node->field_geo_terrain[$node->language][0]['value'], ENT_QUOTES);
+    $link = str_replace('"', "'", l($place, "node/$node->nid"));
+    $html = "
+      <div class='jnt-map-marker'>
+        <h3 class='jnt-map-place'>$link</h3>
+        <div class='jnt-map-terrain'>$terrain</div>
+      </div>
+      ";
+    
+    $field_collection_id = $node->field_geo_location[$node->language][0]['value'];
+    $location = field_collection_item_load($field_collection_id);
+    $lat = $location->field_geo_lat[$node->language][0]['value'];
+    $lng = $location->field_geo_long[$node->language][0]['value'];
+
+    $points[] = array(
+      'lat'   => $lat,
+      'lng'   => $lng,
+      'place' => $place,
+      'html'  => $html,
+    );
+  }
+  
+  return theme('msa_geology_map', array('points' => $points));
+}
+
+/**
+ * Render a project submenu as an ordered list.
+ * Use items the project's submenu within the main menu.
+ *
+ * @param string $menu_name
+ * @param int $plid
+ * @param int $level
+ * @return string
+ */
+function msa_project_menu($project) {
+
+  $menu_name = 'main-menu';
+  
+  // Get the system path of the top-level item:
+  $link_path = drupal_lookup_path('source', "project/$project");
+  
+  // Find the menu item with the given system path:
+  $sql = "SELECT * FROM {menu_links} WHERE menu_name = :menu_name AND link_path = :link_path";
+  $result = db_query($sql, array(':menu_name' => $menu_name, ':link_path' => $link_path));
+  if (!$result->rowCount()) {
+    return FALSE;
+  }
+  
+  // Get the menu item:
+  $menu_link = $result->fetch();
+  $plid = $menu_link->mlid;
+  if (!$plid) {
+    return FALSE;
+  }
+
+  // Start the array of menu items:
+  $items = array();
+  $items[$menu_link->link_path] = $menu_link->link_title;
+
+  // Get the submenu items:
+  $sql = "
+    SELECT *
+    FROM {menu_links}
+    WHERE menu_name = :menu_name AND plid = :plid AND hidden = 0
+    ORDER BY weight";
+  $menu_links = db_query($sql, array(':menu_name' => $menu_name, ':plid' => $plid));
+  if ($menu_links->rowCount()) {
+    foreach ($menu_links as $menu_link) {
+      // Note that if one of the submenu item paths is the same as the project path, it will overwrite the title,
+      // i.e. the title of the submenu item will be used rather than the title of the project.
+      $items[$menu_link->link_path] = $menu_link->link_title;
+    }
+  }
+
+  // Create the HTML list:
+  $html = "<ol class='projects-menu projects-menu-level-0'>\n";
+  foreach ($items as $path => $title) {
+    $html .= "<li>" . l($title, $path) . "</li>\n";
+  }
+  $html .= "</ol>\n";
+  
+  return $html;
+}
+
+/**
+ * Implements hook_block_info().
+ */
+//function msa_block_info() {
+//  $sql = "SELECT * FROM {node} WHERE type = 'project'";
+//  $stmt = db_query($sql);
+//  foreach ($stmt as $project) {
+//    $block[$project->title] = array(
+//      'info' => t("@title project menu", array('@title' => $project->title)),
+//      'properties' => array('administrative' => TRUE),
+//    );
+//  }
+//  return $block;
+//}

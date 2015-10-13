@@ -1,0 +1,53 @@
+.field-name-body table {
+  margin: auto;
+}
+
+table th,
+table td {
+  border: solid 1px White;
+  padding: 5px;
+  vertical-align: top;
+}
+
+table tr {
+  border-width: 0;
+  margin-bottom: 5px;
+}
+
+table tr th {
+  background-color: #fff1d9;
+}
+
+caption {
+  font-style: italic;
+}
+
+/* The 'striped' class can be added to a table to enable striping on a table
+that hasn't had the 'odd' and 'even' classes applied to the rows. */
+table tr.even,
+table.striped tr:nth-child(even) {
+  background-color: #eee;
+}
+
+table tr.odd,
+table.striped tr:nth-child(odd) {
+  background-color: #eef;
+}
+
+table.borderless,
+table.borderless td,
+table.borderless th {
+  border: none;
+}
+
+
+/* Table on the Marsupial Support page */
+
+table.marsupial-support {
+  width: 520px;
+  margin: auto;
+}
+
+table.marsupial-support td {
+  text-align: center;
+}

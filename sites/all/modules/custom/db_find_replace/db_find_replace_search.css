@@ -1,0 +1,12 @@
+#edit-find-options .form-type-checkbox {
+  margin-left: 1em;
+}
+
+#edit-find-options .form-item-find-options-1 {
+  margin-left: 0;
+}
+
+.db-find-replace-warning {
+  background-color: yellow;
+  font-weight: bold;
+}

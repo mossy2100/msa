@@ -1,0 +1,11 @@
+name = Preprocessor
+description = Provides an API for modules to offer preprocessing for stylesheets
+core = 7.x
+
+configure = admin/config/media/prepro
+; Information added by drupal.org packaging script on 2012-02-07
+version = "7.x-0.4"
+core = "7.x"
+project = "prepro"
+datestamp = "1328645447"
+

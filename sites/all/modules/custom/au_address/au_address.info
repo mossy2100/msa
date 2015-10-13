@@ -1,0 +1,7 @@
+name = Australian Address
+description = Addressfield format handler for Australian addresses. Provides states as select list.
+core = 7.x
+package = Fields
+
+dependencies[] = ctools
+dependencies[] = addressfield

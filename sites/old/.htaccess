@@ -1,0 +1,9 @@
+RewriteEngine on
+
+# Redirect for local dev site:
+RewriteCond   %{HTTP_HOST}    ^msa$                               [NC]
+RewriteRule   ^(.*)           http://old.msa/$1                   [L,R=301]
+
+# Redirect for live site:
+RewriteCond   %{HTTP_HOST}    ^(www\.)?marssociety.org.au$        [NC]
+RewriteRule   ^(.*)           http://old.marssociety.org.au/$1    [L,R=301]

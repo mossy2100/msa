@@ -1,0 +1,41 @@
+
+/* All titles in MSA red, and not bold, italic or underline. */
+h1, h2, h3, h4, h5, h6 {
+  color: #ad0000;
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 20px 0 10px;
+}
+
+h1 {
+  font-size:      24px;
+  margin-top:     0;
+}
+
+h2 {
+  font-size:      20px;
+}
+
+h3 {
+  font-size:      16px;
+}
+
+h4,
+h5,
+h6 {
+  font-size:      12px;
+}
+
+h1.title, /* The title of the page */
+h2.node-title, /* Title of a piece of content when it is given in a list of content */
+h2.title, /* Comment section heading */
+h2.comment-form, /* Comment form heading */
+h3.title /* Comment title */ {
+  margin-top: 0;
+}
+
+/* Block title */
+h2.block-title {
+  font-size: 18px;
+  margin: 0 0 5px;
+}

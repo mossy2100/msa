@@ -1,0 +1,16 @@
+
+
+#############################################################################
+# Added for hostgator.
+
+##############
+# Use PHP 5.3
+#Action application/x-hg-php53 /cgi-sys/php53
+#AddHandler application/x-hg-php53 .php
+
+#####################
+# Protect directory
+#AuthType Basic
+#AuthName "New MSA website"
+#AuthUserFile "/home/mossy/.htpasswds/public_html/newmsa.info/passwd"
+#require valid-user

@@ -1,0 +1,244 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0058)http://www.mech.uq.edu.au/aluminate/msa_tech/marsnet.shtml -->
+<HTML><HEAD><TITLE>MARSNET - Mars Analogue Research Satellite Network</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<META content="Microsoft FrontPage 4.0" name=GENERATOR></HEAD>
+<BODY>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD vAlign=top>
+    <TD vAlign=top width=5><FONT color=black>.</FONT></TD>
+    <TD colSpan=2 vAlign=top width=517>
+      <DIV align=center>
+      <CENTER>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD align=middle width="50%"><img border="0" src="/library/private/Marsnet_30pc.PNG" width="193" height="149"></TD></CENTER>
+          <TD align=middle width="50%">
+            <P align=right style="MARGIN-LEFT: 0px; MARGIN-RIGHT: 0px"><FONT 
+            color=#800000 face="BankGothic Md BT" size=5>Satellite 
+            Communications for The Mars Society</FONT></P>
+            <P align=right style="MARGIN-LEFT: 0px; MARGIN-RIGHT: 0px"><FONT color=#800000 
+            face="BankGothic Md BT" 
+      size=6>&nbsp;</FONT></P></TD></TR></TBODY></TABLE></DIV>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>The 
+      following is an extract from the complete Operational Concept Description:</FONT>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2><a href="/library/private/MSA-TEC-Marsnet_OCD.pdf">MSA-TEC-Marsnet_OCD.pdf</a>
+      (~1 Mb PDF)</FONT>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>A Budget 
+      Estimate can be downloaded:</FONT>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2><A 
+      href="/library/private/MSA-TEC-Marsnet_budget.xls">MSA-TEC-Marsnet_budget.doc</A> 
+      (~20 kB MS Excel 2000)</FONT> 
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=4>Mars 
+      Analogue Research Satellite Network<BR></FONT><FONT 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2><I>A proposal by 
+      Mars Society Australia</I></FONT> 
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>The next 
+      great step taken by humans will be upon the planet Mars.&nbsp; During 
+      Soviet and American preparations for the journey to the Moon, extensive 
+      use was made of earth “analogue environments”, places on our home planet 
+      where we could better understand the challenges that awaited us on another 
+      world.&nbsp; Space flight remains a difficult business and the attention 
+      of Mars mission researchers is increasingly turning to areas on earth that 
+      individually and collectively replicate features of the Martian 
+      environment or Mars missions.&nbsp; These can be reached for a tiny 
+      fraction of the cost and risk, and vital lessons can be learned.</FONT> 
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>The Mars 
+      Society has initiated a major project to establish a string of Mars 
+      Analogue Research Stations (herein referred to as the Mars-x Project) 
+      around the world.&nbsp; The first Mars-x was established in 2000, and 
+      these stations are expected to make significant contributions to planning 
+      and facilitating future human missions by providing unique research 
+      platforms and raising public awareness of the opportunity that lies before 
+      us.</FONT></P>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>The four 
+      stations expected to make up the worldwide network will be located in 
+      remote areas where communications and infrastructure are marginal at 
+      best.&nbsp; It is unlikely all stations will be occupied for field 
+      operations throughout the year.&nbsp; Without a system of year round 
+      communications, autonomous scientific field instruments (common tools in 
+      analogue field research) may have very limited usability, and the physical 
+      condition of each Mars-x will be unknown.</FONT></P>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>This 
+      document therefore proposes establishment and operation of MARSNET – the 
+      Mars Analogue Research Satellite Network.&nbsp; <b>This would be the first 
+      microsatellite communications system devoted to analogue research 
+      activities for human Mars missions.&nbsp; It would be the first 
+      space-based project of the recently formed international Mars 
+      Society.</b>&nbsp; It is a system designed to increase Mars Society 
+      capabilities, reduce communications costs and add a new and valuable 
+      dimension to human Mars mission analogue research.</FONT></P>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>The 
+      project should commence immediately and take advantage of a unique 
+      opportunity to acquire the Store and Forward Communications (SAFC) payload 
+      on the Joint Australian Engineering Satellite (JAESAT).&nbsp; JAESAT is 
+      planned for launch from Ukraine in late 2002.</FONT></P>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>MARSNET 
+      would allow emails to be sent between Mars Society research stations, 
+      mobile units (e.g. rovers), field expeditions, Mission Controllers and the 
+      internet.&nbsp; MARSNET orbital components (e.g. JAESAT) would cover the 
+      entire surface of the earth each day, relaying messages between ground 
+      stations and allowing communication amongst operations and expedition 
+      crews and automated monitoring and control of analogue systems.</FONT></P>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>It would 
+      consist of three segments; space, ground and software, which could be 
+      developed by three Mars Society teams on three continents.&nbsp; The space 
+      segment would consist of the JAESAT orbital component and others secured 
+      by Mars Society members.&nbsp; The ground segment would consist of mobile 
+      terminals for communicating with these orbital components, integrated with 
+      site Local Area Networks (LANs) and the internet.</FONT></P>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>The 
+      software segment would consist primarily of a highly functional Mars 
+      Society Mission Control (MSMC) website, terminal software as well as 
+      various autonomous system communications protocols.&nbsp; The scope of the 
+      software segment would extent beyond SAFC to the integration of Command, 
+      Control and Communications (C3) for all analogue activities into a single, 
+      user friendly interface accessible from anywhere in the world via the 
+      internet.</FONT></P><FONT 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>Working closely 
+      with the Mars-x project, MARSNET would add impetus and strengthen the 
+      international nature of Mars Society activities.&nbsp; The project would 
+      be overseen by an international committee and, according to this proposal, 
+      would raise 50% of its own funding requirements.</FONT> 
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>The Mars 
+      Society needs:</FONT></P>
+      <OL>
+        <LI><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>to 
+        offer members opportunities to be involved in exciting projects and 
+        demonstrate success on a number of fronts,</FONT> 
+        <LI><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>to 
+        generate even greater public and corporate awareness and interest in the 
+        organisation and its goals,</FONT> 
+        <LI><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>to 
+        strengthen links with national space agencies and universities around 
+        the world (potential customers) and to position the Society at the 
+        centre of international Mars research and mission preparation 
+        activities,</FONT> 
+        <LI><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>some 
+        means of monitoring and controlling Mars-x assets for security 
+        purposes,</FONT> 
+        <LI><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>some 
+        means of remote automated data acquisition, reducing demands on high 
+        bandwidth communications systems and supporting Mars-x and mobile field 
+        research activities,</FONT> 
+        <LI><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>to 
+        strengthen co-operation, purpose and contact amongst international 
+        members of the Society,</FONT> 
+        <LI><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>to 
+        minimise costs associated with analogue research and assets where 
+        appropriate, and</FONT> 
+        <LI><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>to 
+        seek ways to continually improve the fidelity of Mars analogue research 
+        activities.</FONT> </LI></OL>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>Not only 
+      would MARSNET become a useful support service, it would also become a 
+      valuable research tool in its own right.</FONT></P>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>Firstly, 
+      the finite speed of light results in a delay of between 3 and 22 minutes 
+      for communication transmissions between earth and Mars over the course of 
+      an earth year.&nbsp; Responses to questions between flight and ground 
+      crews during human Mars missions could take at least 45 minutes.&nbsp; 
+      Normally a routine inconvenience, yet an extremely long time in any 
+      emergency situation.&nbsp; Crews will need to be far more autonomous than 
+      was the case with the lunar landings.&nbsp; Thus one feature of the 
+      MARSNET system (uncontrollable but predictable message delays) that might 
+      be considered a disadvantage could in fact be turned into an added 
+      benefit.&nbsp; It would help us better understand crew productivity and 
+      autonomy issues for Mars mission command and control scenarios.</FONT></P>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular 
+      size=2>Secondly, it is highly likely human Mars missions will be preceded 
+      and supported by a powerful communications relay satellite system, 
+      probably in Mars geostationary orbit.&nbsp; However, there will be a role 
+      for Low Mars Orbiting (LMO) microsatellites for precisely the same reasons 
+      that LEO microsatellites are useful on earth – they provide cost effective 
+      low-power communications requiring only small, mobile, non-tracking ground 
+      terminals for low-level needs.&nbsp; They’re more appropriate for certain 
+      tasks, such as automated data acquisition and control of remote science 
+      stations or exploration robots.&nbsp;&nbsp; They’d also provide a cheap 
+      and robust backup system for surface-surface crew messaging.</FONT></P>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>During 
+      Mars-x operational campaigns, communications will be essential 
+      for:</FONT></P>
+      <OL>
+        <LI><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular 
+        size=2>transmitting data and observations to “backroom” 
+        researchers,</FONT> 
+        <LI><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular 
+        size=2>enhancing Mars mission simulations through the interactions 
+        between crew and “Mission Control”, and for</FONT> 
+        <LI><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular 
+        size=2>outreach purposes, creating interest amongst the general public 
+        (e.g. by allowing messaging between the public and crews and field diary 
+        entries on Mars Society websites)</FONT> </LI></OL><FONT 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>Mars Society 
+      field operations are unlikely to be confined to permanent Mars-x 
+      stations.&nbsp; Expeditions into remote areas serviced by existing 
+      research infrastructure (e.g. Canadian Polar Islands or Antarctic Bases) 
+      are a first step, but the programme must look also to areas of scientific 
+      value that have fewer support facilities.&nbsp; These mobile field 
+      expeditions will be highly dependent on communications services.</FONT> 
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>A 
+      year-round communications system assuring low-level services such as 
+      telemetry and packet messaging to and from anywhere in the world is 
+      necessary.&nbsp; The digital Store and Forward Communications (SAFC) class 
+      of low earth orbiting microsatellites ideally suits this duty.&nbsp; These 
+      have evolved since the launch of UoSat-2 in 1984 into a relatively 
+      standard and highly cost-effective remote data system.</FONT></P>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>MARSNET, 
+      or the Mars Analogue Research Satellite Network would consist of one to 
+      three dedicated SAFC microsatellites in different high inclination orbits 
+      (preferably sun-synchronous, see section 4.3), together with 3-9 digital 
+      packet radio ground terminals for distribution around the world, with 1-3 
+      of these acting as semi-permanent ground station gateways connected to a 
+      broadband internet link.</FONT></P>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>The SAFC 
+      payloads would be secured on existing or proposed satellites for minimal 
+      cost.&nbsp; The acquisition or development of two types of ground 
+      terminals would be required, one for fixed Mars-x class stations connected 
+      to a LAN, and one for man-portable small field 
+      expeditions.</FONT></P><FONT 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>MARSNET would 
+      provide the ability for Mars Society personnel and members to deliver 
+      useful email messages to each other regardless of where they are, 
+      year-round, in a predictable manner.&nbsp; These would include text, 
+      digital multimedia (or other binary) files, data and remote station 
+      control instructions.&nbsp; This would not replace other broadband and 
+      real-time services, but would reduce dependence on third party providers 
+      and enhance analogue research capabilities.</FONT> 
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>A 
+      technical description of the system, with diagrams and analysis can be 
+      found in the section 4 of the OCD.</FONT></P>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular 
+      size=2><B>BUDGET ESTIMATE</B> (all figures US$, time value of money 
+      ignored)</FONT></P>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>Total 
+      project cost over 5 years is estimated at $100,000.</FONT></P>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular 
+      size=2>The costs would be shared between four groups, with the work 
+      undertaken primarily by three of these groups.&nbsp; The main contribution 
+      of the Mars Society (US) from existing funds would be&nbsp; $17,000 in 
+      2001 and $17,000 in 2002 ( the total over five years being $36,000).&nbsp; 
+      This would help secure JAESAT and an extra satellite SAFC payload, provide 
+      terminal development seed funding for the Ground Segment team, would 
+      furnish the US Mars Society with 2-3 ground terminals and would facilitate 
+      one project management meeting in each of 2001 and 2002 outside the annual 
+      Mars Society convention.</FONT></P>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2>The 
+      three project teams would raise the rest of the required total, around 
+      $65,000 through new sponsorship and donations.&nbsp; It is suggested the 
+      "Group B" in the budget document could be Mars Society Europe, while Group 
+      C could be a US or Canadian group.</FONT></P>
+      <P><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=2><A 
+      href="mailto:hoogland@mech.uq.edu.au">Jason Hoogland</A> Mars Society 
+      Australia, Technical Co-ordinator</FONT></P></TD></TR></TBODY></TABLE>
+<P>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><FONT size=2>Last update 2001-02-21.&nbsp; </FONT></TR></TBODY></table>
+<!--#include file="/bottom.html" -->
+
+</BODY>

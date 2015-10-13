@@ -1,0 +1,4 @@
+name = Anonymous Session
+description = Fixes issue in D7 whereby sessions aren't saved for anonymous users and hence messages not displaying.
+core = 7.x
+package = Miscellaneous

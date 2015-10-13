@@ -1,0 +1,238 @@
+/**
+ * @file
+ * Form Styling
+ */
+
+ label {
+   color: Black;
+   font-weight: normal;
+ }
+ 
+.form-text, .form-textarea {
+  border: solid 1px #ccc;
+  font-size: 12px;
+  padding: 2px;
+}
+
+.form-item {
+  margin: 20px 0;
+}
+
+.form-checkboxes,
+.form-radios {
+  margin: 0 0 20px;
+}
+
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error /* Highlight the form elements that caused a form submission error */ {
+  border: 1px solid #ad0000;
+}
+
+.form-item label /* The label for a form element */ {
+  display: block;
+  font-weight: normal;
+  margin-bottom: 3px;
+}
+
+.form-item label.option /* The label for a radio button or checkbox */ {
+  display: inline;
+  font-weight: normal;
+}
+
+.form-required /* The part of the label that indicates a required field */ {
+  color: #ad0000;
+}
+
+.form-item .description /* The descriptive help text (separate from the label) */ {
+  font-size: 10px;
+  color: #777;
+}
+
+.form-checkboxes .form-item,
+.form-radios .form-item /* Pack groups of checkboxes and radio buttons closer together */ {
+  margin: 5px 0;
+}
+
+.form-submit /* The submit button */ {
+  color: black;
+  border-width: 0;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.form-submit:hover {
+  color: #ad0000;
+  background-color: #ffdea6;
+}
+
+#edit-actions .form-submit {
+  padding: 3px 6px;
+  margin-right: 5px;
+}
+
+.container-inline div,
+.container-inline label /* Inline labels and form divs */ {
+  display: inline;
+}
+
+.tips /* Tips for Drupal's input formats */ {
+}
+
+.form-actions {
+  margin: 0;
+}
+
+/*
+ * Drupal admin tables
+ *
+ * We overrode these styles in html-elements.css, but restore them for the admin
+ * section of the site.
+ */
+
+form th,
+form thead th {
+  text-align: left; /* LTR */
+  padding-right: 10px; /* LTR */
+}
+
+.filter-wrapper {
+  display: none;
+}
+
+.wysiwyg-toggle-wrapper {
+  display: none;
+}
+
+.cke_skin_kama {
+  max-width: 960px;
+}
+
+.cke_skin_kama .cke_contents {
+  height: 200px;
+}
+
+#edit-comment-body {
+  margin-bottom: 10px;
+}
+
+fieldset {
+  margin-bottom: 10px;
+  border: solid 1px #ccc;
+  padding: 10px;
+}
+
+div.link-field-column {
+  width: auto;
+  float: none;
+}
+
+div.link-field-column .form-text {
+  width: auto;
+}
+
+input[type=text].readonly {
+  background-color: #f7f7f7;
+  border-color: #ccc;
+  color: #777;
+}
+
+input.textfield-hint {
+  color: #ccc;
+}
+
+
+/***** User registration form *****/
+
+#user-register-form {
+  width: 498px;
+}
+
+#user-register-form fieldset.form-wrapper {
+  width: 100%;
+}
+
+#user-register-form #edit-actions {
+  margin-top: 10px;
+}
+
+div.membership {
+  margin: 10px 0;
+}
+
+#user-register-form .form-item-field-user-phone-und-0-value,
+#user-register-form .form-item-location-street,
+#user-register-form .form-item form-type-textfield form-item-field-user-phone-und-0-value,
+#user-register-form .form-item-hat-or-cap {
+  margin-top: 0;
+}
+
+#user-register-form .form-item-mail,
+#user-register-form .form-item-field-user-gender-und,
+#user-register-form .form-item-field-user-website-und-0-title,
+#user-register-form .form-item-field-user-website-und-0-url,
+#user-register-form .form-item-location-province,
+#user-register-form .form-item-project,
+#user-register-form .form-item-polo-shirt-gender {
+  margin-bottom: 0;
+}
+
+/***** Membership options form *****/
+
+#membership-options {
+  width: 100%;
+  margin: 0;
+}
+
+#membership-options td {
+  padding: 0px;
+}
+
+#membership-options tr.membership-option td,
+#membership-options .form-item-member-type {
+  padding-bottom: 10px;
+}
+
+#membership-options tr.membership-total {
+  background-color: #eef;
+  border: 1px solid #b6c5ff;
+}
+
+#membership-options tr.membership-total td {
+  padding: 10px;
+}
+
+#membership-options .amount-column {
+  text-align: right;
+  vertical-align: bottom;
+  width: 100px;
+  padding-right: 10px;
+}
+
+#membership-options .form-item,
+#membership-options .form-radios {
+  margin: 0;
+}
+
+#membership-options .form-type-radio {
+  display: inline;
+}
+
+#membership-options .form-type-radio label {
+  position: relative;
+  top: 3px;
+}
+
+#membership-options tbody {
+  border: none;
+}
+
+legend {
+  color: #ad0000;
+  font-size: 16px;
+}
+
+.fieldset-title {
+  font-size: 14px;
+}

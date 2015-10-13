@@ -1,0 +1,255 @@
+.field-type-commerce-product-reference .form-type-radios > label,
+.field-type-commerce-product-reference .form-type-select > label {
+  font-size: 16px;
+  color: #ad0000;
+}
+
+.field-type-commerce-product-reference .form-type-radio input,
+.field-type-commerce-product-reference .form-type-radio label {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.field-type-commerce-product-reference .form-type-radio {
+}
+
+.node .content .field-name-commerce-price .field-items {
+  margin-bottom: 0;
+}
+
+.field-type-commerce-product-reference .form-radios {
+  margin: 0;
+}
+
+.view-commerce-cart-block {
+  font-size: 10px;
+}
+
+.view-commerce-cart-block .line-item-summary {
+  margin-bottom: 0;
+}
+
+#views-form-commerce-cart-form-default,
+#views-form-commerce-cart-form-default table,
+.entity-commerce-order,
+.entity-commerce-order table,
+.view-commerce-user-orders,
+.view-commerce-cart-summary,
+.view-commerce-cart-summary table { 
+  width: 520px;
+}
+
+#views-form-commerce-cart-form-default table,
+#views-form-commerce-cart-form-default .line-item-summary,
+.view-commerce-cart-summary table,
+.entity-commerce-order table,
+.view-commerce-user-orders table th,
+.view-commerce-user-orders table td {
+  font-size: 12px;
+}
+
+#views-form-commerce-cart-form-default table th,
+#views-form-commerce-cart-form-default table td,
+.view-commerce-cart-summary table th,
+.view-commerce-cart-summary table td,
+.entity-commerce-order th,
+.entity-commerce-order td,
+.view-commerce-user-orders th,
+.view-commerce-user-orders td,
+#views-form-commerce-cart-form-default .line-item-summary span {
+  padding: 5px;
+}
+
+#edit-checkout.form-submit {
+  margin-right: 0;
+}
+
+.views-field-commerce-unit-price,
+.views-field-quantity,
+.views-field-commerce-total {
+  text-align: right;
+}
+
+#commerce-checkout-form-checkout #edit-continue,
+#commerce-checkout-form-review #edit-continue {
+  margin-right: 8px;
+}
+
+#commerce-checkout-form-checkout #edit-cancel,
+#commerce-checkout-form-review #edit-back {
+  margin-left: 8px;
+}
+
+#commerce-paypal-wps-redirect-form #edit-submit {
+  margin-top: 10px;
+}
+
+.field-name-commerce-order-total .commerce-price-formatted-components tr.component-type-commerce-price-formatted-amount {
+  background-color: #ffdea6;
+}
+
+.cart-empty-block {
+  font-size: 11px;
+}
+
+.commerce-line-item-views-form input.delete-line-item {
+  font-size: 10px;
+  padding: 3px 6px;
+}
+
+/* Order details */
+.entity-commerce-order .field-label {
+  margin: 10px 0;
+  color: #ad0000;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+
+/* sidebar cart table */
+.view-commerce-cart-block table {
+  margin-top: 0;
+}
+
+.view-commerce-cart-block table td {
+  padding: 2px;
+}
+
+.view-commerce-cart-block table thead {
+  display: none;
+}
+
+/* sidebar cart buttons */
+.view-commerce-cart-block ul.links {
+  margin-top: 10px;
+  clear: both;
+  display: block;
+  height: 20px;
+}
+
+.view-commerce-cart-block ul.links li {
+  padding: 0;
+}
+
+.view-commerce-cart-block ul.links li.line-item-summary-view-cart {
+  float: left;
+}
+
+.view-commerce-cart-block ul.links li.line-item-summary-checkout {
+  float: right;
+}
+
+.view-commerce-cart-block ul.links li a {
+  padding: 0 6px;
+  display: block;
+  height: 20px;
+  line-height: 20px;
+}
+
+.form-item-customer-profile-billing-commerce-customer-address-und-0-name-line {
+  margin: 5px 0 0;
+}
+
+.addressfield-container-inline.locality-block .form-item {
+  margin: 0 10px 5px 0;
+}
+
+
+/* Checkout fieldsets - remove border and padding */
+#commerce-checkout-form-checkout fieldset,
+#commerce-checkout-form-review fieldset {
+  border: none;
+  padding: 10px 0;
+}
+
+#commerce-checkout-form-checkout legend,
+#commerce-checkout-form-review legend {
+  padding: 0;
+}
+
+
+/* Checkout review table */
+
+table.checkout-review {
+  border: none;
+}
+
+table.checkout-review tr.pane-data,
+table.checkout-review tr.pane-title {
+  background-color: transparent;
+  border: none;
+}
+
+table.checkout-review tr.pane-title > td {
+  padding-left: 0;
+  font-weight: normal;
+  color: #ad0000;
+  font-size: 16px;
+  border: none;
+}
+
+table.checkout-review tr.pane-data > td {
+  border: none;
+}
+
+table.checkout-review .pane-data-full {
+  padding: 0 0 20px;
+}
+
+table.checkout-review .pane-data-full .form-item {
+  margin: 0 0 10px;
+}
+
+#commerce-checkout-form-review #edit-commerce-payment #edit-commerce-payment-payment-method {
+  margin: 5px 0 10px;
+}
+
+#commerce-checkout-form-review #edit-commerce-payment {
+  margin-bottom: 20px;
+}
+
+#commerce-checkout-form-review #edit-buttons {
+  border: none;
+  padding: 0;
+}
+
+.view-commerce-cart-summary table.views-table,
+.view-commerce-line-item-table table.views-table {
+  margin: 0;
+}
+
+.commerce-order-handler-area-order-total .commerce-price-formatted-components,
+.field-name-commerce-order-total .commerce-price-formatted-components {
+  width: auto;
+  margin-top: 0;
+}
+
+th.views-field-quantity,
+th.views-field-commerce-total,
+th.views-field-commerce-unit-price,
+table.commerce-price-formatted-components td {
+  width: 80px;
+  text-align: right;
+}
+
+#addressfield-wrapper div {
+  margin: 0;
+}
+
+#addressfield-wrapper div.form-item {
+  margin-bottom: 15px;
+}
+
+#addressfield-wrapper input {
+  margin-right: 10px;
+}
+
+.commerce-paypal-icons .label {
+  font-weight: normal;
+  padding-left: 0;
+}
+
+.commerce-add-to-cart .form-item-quantity label {
+  font-size: 16px;
+  color: #AD0000;
+}

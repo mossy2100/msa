@@ -1,0 +1,10 @@
+<?php
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function au_address_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'au_address') {
+    return 'plugins/' . $plugin;
+  }
+}

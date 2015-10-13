@@ -1,0 +1,311 @@
+<?php
+/**
+ * Debugging functions.
+ *
+ * Requires strings.php.
+ */
+
+/**
+ * The current debug mode.
+ */
+$_dbg_mode = FALSE;
+
+/**
+ * Get the debug mode.
+ *
+ * @param bool $mode
+ */
+function dbg_get_mode() {
+  global $_dbg_mode;
+  return $_dbg_mode;
+}
+
+/**
+ * Set the debug mode.
+ *
+ * @param bool $mode
+ */
+function dbg_set_mode($mode) {
+  global $_dbg_mode;
+  $_dbg_mode = (bool) $mode;
+}
+
+/**
+ * Switch the debug mode on.
+ */
+function dbg_on() {
+  dbg_set_mode(TRUE);
+}
+
+/**
+ * Switch the debug mode off.
+ */
+function dbg_off() {
+  dbg_set_mode(FALSE);
+}
+
+/**
+ * Begin echoing a debug message.
+ */
+function dbg_begin_echo() {
+  echo "<pre class='debug'>\n";
+}
+
+/**
+ * End echoing a debug message.
+ */
+function dbg_end_echo() {
+  echo "</pre>\n";
+}
+
+/**
+ * Debug all defined variables.
+ *
+ * @global bool $_dbg_mode
+ */
+function dbg_all() {
+  global $_dbg_mode;
+  if ($_dbg_mode) {
+    dbg_begin_echo();
+
+    $vars = get_defined_vars();
+    foreach ($vars as $var) {
+      dbg($var);
+    }
+
+    dbg_end_echo();
+  }
+}
+
+/**
+ * Exit with a debug message.
+ *
+ * @global bool $_dbg_mode
+ * @param string $str
+ */
+function dbg_exit($str = '') {
+  global $_dbg_mode;
+  if ($_dbg_mode) {
+    exit($str);
+  }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Main debugging functions.
+
+/**
+ * Print the contents of a variable as a string, wrapped in <pre> tags.
+ * THIS IS THE PRIMARY DEBUG FUNCTION.
+ *
+ * @param mixed $value
+ * @param string $func_name
+ */
+function dbg($value, $func_name = '') {
+  global $_dbg_mode;
+  if ($_dbg_mode) {
+    dbg_begin_echo();
+    if ($func_name != '') {
+      echo "<b>$func_name:</b> ";
+    }
+    // Requires strings.php:
+    echo var_to_string($value);
+    dbg_end_echo();
+  }
+}
+
+/**
+ * Print horizontal rule, only if in debug mode.
+ */
+function dbg_hr() {
+  global $_dbg_mode;
+  if ($_dbg_mode) {
+    echo "<hr>";
+  }
+}
+
+/**
+ * Converts an object to an array.
+ * Similar to casting, but gets rid of the weird \0*\0 prefix for protected properties.
+ * 
+ * @param object $object
+ * @return array
+ */
+function dbg_object_to_array($object) {
+  $array = (array) $object;
+  $result = array();
+  foreach ($array as $key => $value) {
+    if (substr($key, 0, 3) == "\0*\0") {
+      $result[substr($key, 3)] = $value;
+    }
+    else {
+      $result[$key] = $value;
+    }
+  }
+  return $result;
+}
+
+/**
+ * An alternative to dpm() when you also want to see private/protected properties.
+ */
+function dbg_obj($object) {
+  dpm((object) dbg_object_to_array($object));
+}
+
+/**
+ * Get a property value from an object. Supports protected and private properties.
+ * 
+ * @param object $object
+ * @param string $property
+ * @return mixed
+ */
+function dbg_get_property($object, $property) {
+  $array = dbg_object_to_array($object);
+  return $array[$property];
+}
+
+/**
+ * Get the SQL for a query.
+ * 
+ * @param Query $query
+ */
+function dbg_get_sql($query, $target = 'default') {
+
+  // Get the query as a string:
+  $query_string = (string) $query;
+  
+  // Prefix tables:
+  $connection = Database::getConnection($target);
+  $query_string = trim($connection->prefixTables($query_string));
+  
+  // Replace field placeholders:
+  $query_array = dbg_object_to_array($query);
+  $fields = $query_array['fields'];
+  $statement_type = strtolower(substr($query_string, 0, strpos($query_string, ' ')));
+  $placeholder = ":db_{$statement_type}_placeholder_";
+  $n = 0;
+  foreach ($fields as $key => $value) {
+    $replacement = is_numeric($value) ? $value : $connection->quote($value);
+    $query_string = str_replace($placeholder . $n, $replacement, $query_string);
+    $n++;
+  }
+
+  // Replace condition placeholders:
+  $conditions = dbg_object_to_array($query_array['condition']);
+  foreach ($conditions['conditions'] as $n => $info) {
+    if (!is_int($n)) {
+      continue;
+    }
+    $value = $info['value'];
+    $replacement = is_numeric($value) ? $value : $connection->quote($value);
+    $query_string = str_replace(':db_condition_placeholder_' . $n, $replacement, $query_string);
+  }
+
+  return $query_string;
+}
+
+/**
+ * Debug an SQL query.
+ * 
+ * @param Query $query
+ */
+function dbg_query($query, $target = 'default') {
+  dbg(dbg_get_sql($query, $target));
+}
+
+/**
+ * Devel-debug an SQL query.
+ * 
+ * @param Query $query
+ */
+function dpm_query($query, $target = 'default') {
+  dpm(dbg_get_sql($query, $target));
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Functions for converting variables into a string representation.
+
+/**
+ * Convert a variable to a string, usually for output to the browser.
+ * A bit nicer than PHP's default var_dump(), var_export() or serialize().
+ * 
+ * @param mixed $value
+ * @return string
+ */
+function var_to_string($value, $indent = 0, $objects = array()) {
+  if (is_null($value)) {
+    return 'NULL';
+  }
+  elseif (is_bool($value)) {
+    return $value ? 'TRUE' : 'FALSE';
+  }
+  elseif (is_string($value)) {
+    return "'" . htmlspecialchars(addslashes($value)) . "'";
+  }
+  elseif (is_array($value)) {
+    return array_to_string($value, $indent, $objects);
+  }
+  elseif (is_object($value)) {
+    $__instance_id = (int) $value;
+    if (in_array($__instance_id, $objects, TRUE)) {
+      return "((Circular reference to object $__instance_id))";
+    }
+    else {
+      $objects[] = $__instance_id;
+      return object_to_string($value, $indent, $objects);
+    }
+  }
+  else {
+    // int or float:
+    return (string) $value;
+  }
+}
+
+/**
+ * Format an array in the Drupal style.
+ *
+ * @param array $array
+ * @param int $indent
+ * @return string
+ */
+function array_to_string($array, $indent = 0, $objects = array()) {
+  if (empty($array)) {
+    return "array()";
+  }
+  $spaces = str_repeat(' ', $indent);
+  $lines = array();
+  $lines[] = "array(";
+  foreach ($array as $key => $value) {
+    $lines[] = "$spaces  " . var_to_string($key, 0, $objects) . " => " . var_to_string($value, $indent + 2, $objects) . ",";
+  }
+  $lines[] = "$spaces)";
+  return implode("\n", $lines);
+}
+
+/**
+ * Format an object in a JSON-ish style.
+ *
+ * @param object $object
+ * @param int $indent
+ * @return string
+ */
+function object_to_string($object, $indent = 0, $objects = array()) {
+  $spaces = str_repeat(' ', $indent);
+  $lines = array();
+  
+  $class = get_class($object);
+  $resource_id = (int) $object;
+  $lines[] = "object($class|$resource_id){";
+
+  // Get the object's property values, including protected/private:
+  $properties = dbg_object_to_array($object);
+
+  // Loop through properties:
+  foreach ($properties as $key => $value) {
+    $lines[] = "$spaces  $key : " . var_to_string($value, $indent + 2, $objects) . ",";
+  }
+
+  $lines[] = "$spaces}";
+  return implode("\n", $lines);
+}

@@ -1,0 +1,27 @@
+html,
+body,
+p,
+th,
+td,
+li {
+  font-size: 12px;
+  color: black;
+  font-family: Verdana, Tahoma, Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Verdana, Tahoma, Helvetica, Arial, sans-serif;
+}
+
+a:link,
+a:focus,
+a:active,
+a:visited {
+  color: #0000b3;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff7600;
+  text-decoration: underline;
+}

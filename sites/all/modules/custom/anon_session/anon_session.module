@@ -1,0 +1,112 @@
+<?php
+
+/**
+ * Implements hook_init().
+ */
+function anon_session_init() {
+  // Load the anonymous user's session:
+  anon_session_load_session();
+}
+
+/**
+ * Implements hook_exit().
+ */
+function anon_session_exit() {
+  // Save the anon user's session:
+  anon_session_save_session();
+}
+
+/**
+ * Get the user's IP address.
+ * @return string
+ */
+function anon_session_get_user_ip() { 
+  if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+    $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+  }
+  else {
+    $ip = $_SERVER['REMOTE_ADDR'];
+  }
+  return trim($ip);
+}
+
+/**
+ * If the user is anonymous, save the session in the sessions table.
+ * This is only meant to survive across one page load.
+ */
+function anon_session_save_session() {
+  global $user;
+  if (!$user || $user->uid == 0) {
+    
+    // Get the user's IP:
+    $ip = anon_session_get_user_ip();
+    
+    // Create a unique session id from the IP address:
+    $sid = hash('sha256', $ip);
+    
+    // Get the session data from the database:
+    $session = db_select('sessions', 's')
+      ->fields('s', array('session'))
+      ->condition('sid', $sid)
+      ->execute()
+      ->fetchObject();
+    
+    // Save the session data into the database:
+    if (is_object($session)) {
+      // Update the existing record:
+      db_update('sessions')
+        ->fields(array(
+            'uid'       => 0,
+            'hostname'  => $ip,
+            'timestamp' => time(),
+            'session'   => serialize($_SESSION),
+          ))
+        ->condition('sid', $sid)
+        ->execute();
+    }
+    else {
+      // Insert a new record:
+      db_insert('sessions')
+        ->fields(array(
+            'uid'       => 0,
+            'sid'       => $sid,
+            'hostname'  => $ip,
+            'timestamp' => time(),
+            'session'   => serialize($_SESSION),
+          ))
+        ->execute();
+    }
+  }
+}
+
+/**
+ * If the user is anonymous, and there is no session, load the session from the sessions table.
+ * This session is only meant to survive across one page load, so it is deleted after loading.
+ */
+function anon_session_load_session() {
+  global $user;
+  if ((!isset($user) || $user->uid == 0) && (!isset($_SESSION) || $_SESSION == array())) {
+    // Get the user's IP:
+    $ip = anon_session_get_user_ip();
+    
+    // Create a unique session id from the IP address:
+    $sid = hash('sha256', $ip);
+    
+    // Get the session data from the database:
+    $session = db_select('sessions', 's')
+      ->fields('s', array('session'))
+      ->condition('sid', $sid)
+      ->execute()
+      ->fetchObject();
+    
+    // Set the session:
+    if (is_object($session)) {
+      $_SESSION = unserialize($session->session);
+      
+      // Delete the session data:
+      db_delete('sessions')
+        ->condition('sid', $sid)
+        ->execute();
+    }
+  }
+}

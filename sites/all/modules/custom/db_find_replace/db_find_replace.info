@@ -1,0 +1,5 @@
+name = Database Find and Replace
+description = Find and replace functionality for database text fields.
+core = 7.x
+package = Development
+dependencies[] = backup_migrate

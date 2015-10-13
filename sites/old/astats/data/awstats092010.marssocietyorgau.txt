@@ -1,0 +1,4295 @@
+AWSTATS DATA FILE 6.6 (build 1.887)
+# If you remove this file, all statistics for date 201009 will be lost/reset.
+
+# Position (offset in bytes) in this file of beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 1864                
+POS_TIME 2564                
+POS_VISITOR 54870               
+POS_DAY 124399              
+POS_DOMAIN 3634                
+POS_LOGIN 3871                
+POS_ROBOT 4058                
+POS_WORMS 5802                
+POS_EMAILSENDER 5933                
+POS_EMAILRECEIVER 6076                
+POS_SESSION 125393              
+POS_SIDER 125609              
+POS_FILETYPES 6211                
+POS_OS 6562                
+POS_BROWSER 6836                
+POS_SCREENSIZE 8171                
+POS_UNKNOWNREFERER 8245                
+POS_UNKNOWNREFERERBROWSER 13315               
+POS_ORIGIN 16137               
+POS_SEREFERRALS 16294               
+POS_PAGEREFS 16528               
+POS_SEARCHWORDS 24628               
+POS_KEYWORDS 36317               
+POS_MISC 2226                
+POS_ERRORS 42897               
+POS_CLUSTER 3727                
+POS_SIDER_404 43074               
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20101001000303 1517745 302791620 16196936606
+FirstTime 20100901000847
+LastTime 20100930235910
+LastUpdate 20101001071820 1517745 1516127 1615 2 0
+TotalVisits 2185                
+TotalUnique 1509                
+MonthHostsKnown 0                   
+MonthHostsUnknown 1863                
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 285 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 1540 1733 124806584 627 690 87897417
+1 1453 1746 109219805 635 786 74494189
+2 1491 1693 80715640 623 689 77605419
+3 1353 1463 67957374 690 738 65397731
+4 1348 1546 65277025 534 635 80224293
+5 1305 1453 49957616 713 793 61642732
+6 1390 1657 46000618 466 532 72479899
+7 1306 1409 68268734 434 498 39687228
+8 1363 1695 75729771 521 599 92976031
+9 1456 1766 124747028 619 687 63506239
+10 1473 1824 83098552 875 923 39160284
+11 1512 1728 117155192 539 575 100239344
+12 1577 1898 92656951 681 751 34853912
+13 1647 1985 101260122 573 631 79133708
+14 1900 2295 109100355 568 611 84796921
+15 1630 2169 157217113 674 732 27959920
+16 1533 1841 168317853 666 739 59276402
+17 1601 1880 111938233 574 634 150285678
+18 1533 1764 161751471 617 670 82494300
+19 1550 1740 92636644 777 862 72088212
+20 1493 1771 113897267 679 785 103701006
+21 1522 1833 142094718 561 622 76739355
+22 1478 1709 104578608 624 682 69728017
+23 1562 1794 151276563 527 579 64879431
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 36016 42392 2519659837
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 1
+"" 60 60 1253475 20100929093659
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 44
+slurp 3313 550484166 20100930234542 0
+msnbot 1116 225860711 20100930230415 0
+googlebot 1062 83164321 20100930230334 0
+robot 801 3350867 20100930234455 0
+\wbot[\/\-] 698 8514439 20100930185324 0
+yandex 573 50368065 20100930225531 0
+baiduspider 361 3648505 20100930222009 0
+wombat 300 1360810 20100930181340 0
+msnbot\-media 248 16563469 20100930194105 0
+msiecrawler 201 4680171 20100930144726 0
+powermarks 68 585004 20100930182541 0
+commons\-httpclient 13 36811 20100927190140 0
+spider 6 0 20100920235910 0
+easydl 2 10672 20100918033235 0
+vagabondo 1 2391 20100916204111 0
+tencenttraveler 1 1137379 20100919070616 0
+custo 9 66318 20100928070616 0
+surveybot 6 18906 20100929053612 0
+psbot 25 458220 20100923055450 0
+cfnetwork 3 128227 20100929134447 0
+turnitinbot 177 12773502 20100925135606 0
+crawl 112 24993646 20100910122142 0
+voila 95 30696914 20100930143653 0
+nutch 39 318297 20100930193409 0
+bspider 80 324258 20100930210632 0
+cursor 1 14858 20100913125618 0
+exabot 8 71620 20100929162244 0
+mediapartners\-google 2 29837 20100925163918 0
+webcollage 3 7173 20100923094807 0
+ia_archiver 3 51175 20100927041335 0
+xenu\slink\ssleuth 14 0 20100930162357 0
+yahoo!\sslurp\schina 21 2389172 20100927075239 0
+gigabot 7 16737 20100928202143 0
+python 1 2391 20100916162532 0
+heritrix 172 28926856 20100917140444 0
+jeeves 131 24155276 20100929030513 0
+legs 9 21519 20100919181449 0
+java 55 3318305 20100930035112 0
+larbin 1 2391 20100930030540 0
+speedy 47 10199549 20100930085549 0
+mj12bot 1 2391 20100906222554 0
+[^a]fish 4 3220992 20100929182843 0
+netcraft 4 26507 20100907085234 0
+ocelli 76 24650492 20100923030404 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 15
+css 748 1128021 0 0
+png 6 92590 0 0
+pdf 492 525927546 0 0
+ppt 408 1592205312 0 0
+htm 592 10495706 0 0
+php 33135 159686035 0 0
+3gp 7 3649352 0 0
+html 1152 3308482 0 0
+js 178 4579488 0 0
+shtml 207 1300409 0 0
+jpg 4667 187277158 0 0
+jpeg 1 2717 0 0
+Unknown 19 0 0 0
+doc 4 1284608 0 0
+gif 776 28722413 0 0
+END_FILETYPES
+
+# OS ID - Hits
+BEGIN_OS 20
+linuxredhat 1
+macintosh 2
+winlong 2122
+winxp 9547
+win2000 1131
+linuxfedora 11
+win95 278
+wince 79
+linuxcentos 9
+win2003 662
+linuxdebian 7
+unix 60
+winnt 1675
+linuxubuntu 79
+win98 170
+linux 64
+win16 83
+macosx 946
+winme 217
+Unknown 25249
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 82
+msie6.0 5178
+webcapture 48
+firefox3.8 3
+firefox3.6 15
+firefox2.0.0.1 2
+firefox3.0.1 1
+firefox4.0 4
+msie4.01 71
+lynx 1
+firefox1.5.0.1 1
+msie8.0 2393
+firefox2.0.0.14 15
+netscape7.0 1
+netscape3.0 66
+firefox2.0.0.3 2
+msie7.0 2182
+netscape4.5 1
+microsoft\sdata\saccess\sinternet\spublishing\sprovider\sprotocol\sdiscovery 50
+firefox3.5.11 170
+netscape 1
+firefox3.5.13 51
+firefox2.0.0.20 2
+msie5.01 1
+firefox3.0.16 2
+firefox3.0.17 1
+firefox3.0 15
+netscape7.01 2
+netscape4.05 4
+firefox3.5.2 9
+firefox3.5.12 24
+firefox1.5.0.9 1
+netscape0.6 63
+firefox3.5.5 4
+konqueror 14
+mozilla 1574
+netscape5.0 1
+netscape4.0 2
+firefox3.6.3 44
+firefox3.0.10 10
+firefox3.1 6
+safari 1388
+firefox3.0.15 14
+microsoft\-webdav\-miniredir 43
+firefox1.5.0.3 9
+firefox3.6.6 26
+firefox2.0.0.12 7
+msie3.02 79
+firefox3.5.3 12
+netscape4.76 80
+netscape0.91 62
+firefox2.0.0.9 2
+msie2.0 140
+firefox3.6.9 389
+msie5.0 134
+firefox3.6.10 574
+msie9.0 1
+firefox1.6 1
+firefox1.5 1
+Unknown 23481
+firefox3.0.8 45
+firefox3.6.7 9
+firefox3.0.2 19
+firefox3.5.6 10
+netscape4.61 60
+firefox3.5.1 1
+firefox3.0.4 10
+libwww 16
+opera 1981
+samsung 1
+firefox3.6.2 1
+firefox3.0.11 37
+msie5.5 552
+firefox3.0.5 1
+netscape4.79 69
+firefox2.0.0.11 3
+firefox3.0.3 1
+firefox3.5.9 17
+msie 2
+firefox3.5 1
+firefox3.0.19 125
+firefox3.6.8 895
+firefox3.5.7 58
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 86
+Mozilla/4.05_[en] 20100927233351
+Linguee_Bot_(http://www.linguee.com/bot;_bot@linguee.com) 20100924162135
+Mozilla/5.0_(compatible;_Plukkie/1.3;_http://www.botje.com/plukkie.htm) 20100928124202
+Microsoft_Office_Existence_Discovery 20100929190203
+Microsoft-WebDAV-MiniRedir/6.0.6002 20100929190742
+Microsoft-WebDAV-MiniRedir/6.0.6000 20100925220808
+Mozilla/5.0_(compatible;_AboutUsBot_Johnny5/2.0;__http://www.AboutUs.org/) 20100913024916
+qnie2toaxmjnqtrr_eimyvqAq 20100921214152
+uhhqfJwcknfjsdsdxjuw 20100910072750
+Mozilla 20100928212150
+DavClnt 20100927015840
+Lynx/2.8.5rel.1_libwww-FM/2.14_SSL-MM/1.4.1_OpenSSL/0.9.8e-fips-rhel5 20100913123029
+Srtpfs_qvtmawpnnrootdswwvukeox 20100907034435
+Mozilla/5.0_(compatible) 20100924081116
+Microsoft_Data_Access_Internet_Publishing_Provider_Protocol_Discovery 20100921153545
+Mozilla/5.0_(compatible;_pmoz.info_ODP_link_checker;__http://pmoz.info/doc/botinfo.htm) 20100913044638
+Mozilla/4.0_(vBSEO;_http://www.vbseo.com) 20100918230323
+Goldfire_Server 20100913182446
+HttpComponents/1.1 20100930030718
+MaMa_CaSpEr 20100930013227
+Mozilla/5.0_(compatible;_Yahoo_Pipes_2.0;__http://developer.yahoo.com/yql/provider)_Gecko/20090729_Firefox/3.5.2 20100910062916
+PECL::HTTP/1.6.0_(PHP/5.2.6-pl7-gentoo) 20100924215853
+tcynidyopgwiachmqgcrpdlrpkb33kmmwLbglap 20100907082231
+Mozilla/5.0_(en-US) 20100923003537
+Mozilla/5.0_(compatible;_ScoutJet;__http://www.scoutjet.com/) 20100927142233
+Microsoft-WebDAV-MiniRedir/6.1.7600 20100928153045
+sotow8disthhrmrtiorihdu8trfrdiner 20100906053159
+Opera/9.80_(J2ME/MIDP;_Opera_Mini/5.1.21051/20.2479;_U;_en)_Presto/2.5.25 20100928001154
+nrbvoaghkyuhoqtqwonagRaifcacv2rodwnee2i 20100905074041
+panscient.com 20100926131250
+didtdtrolvksioXeroXig_pluvgts 20100930015700
+- 20100930234118
+NextGenSearchBot_1_(for_information_visit_http://www.zoominfo.com/About/misc/NextGenSearchBot.aspx) 20100924004657
+facebookexternalhit/1.0_(_http://www.facebook.com/externalhit_uatext.php) 20100914143622
+hoge_(co2h2onacl@gmail.com) 20100919215333
+SAMSUNG-GT-C3303/C3303DDJFB_NetFront/3.5_Profile/MIDP-2.0_Configuration/CLDC-1.1 20100918215529
+Mozilla/3.0_(compatible;_Indy_Library) 20100915130346
+WebWorkerBee 20100926075728
+Mozilla/5.0_(en-us)_AppleWebKit/525.13_(KHTML,_like_Gecko;_Google_Wireless_Transcoder)_Version/3.1_Safari/525.13 20100925034015
+Mozilla/5.0_(Danger_hiptop_5.0;_U;_rv:1.7.12)_Gecko/20050920 20100901140238
+BlackBerry8900/4.6.1.231_Profile/MIDP-2.0_Configuration/CLDC-1.1_VendorID/100 20100907160946
+ragkFabxarxygb9Fmrgkydoacmlrdjerbby 20100905182638
+Microsoft_Office_Protocol_Discovery 20100929190155
+nlcbbdrrd1emaui1gqk1F1obxFnombjn 20100901064257
+Mozilla/4.0_(compatible;) 20100930095109
+cvhertv_hqifmyqsLqywecftcfplqy 20100930101844
+PANTECH-C740/ISUS09012008_Browser/Obigo/Q05A_Profile/MIDP-2.0_Configuration/CLDC-1.1 20100902105936
+Mozilla/5.0_(compatible;_woriobot_support_[at]_worio_[dot]_com__http://worio.com) 20100923052905
+swiwkcltfkkgb1ckbkmgtqbbdqu 20100910002907
+libwww-perl/5.805 20100917203231
+inkkmikgnwfypkmnt__dldyqjmtyomki_vhb_pv 20100910015921
+Mozilla/3.0_(compatible) 20100928114029
+pamrasE3_sin_iampsihcxb 20100902002344
+dsqxhity_iKqwtdffdoxfxykux 20100901235025
+null/1.0,_null@alibaba-inc.com 20100930180022
+Mozilla/3.0_(compatible;_WebCapture_2.0;_Auto;_Windows) 20100930225336
+MLBot_(www.metadatalabs.com/mlbot) 20100929114326
+libwww-perl/5.806 20100919020917
+FlightDeckReports_Bot_1.5_beta_(http://www.flightdeckreports.com/bot) 20100911224452
+Media_Player_Classic 20100919141436
+Mozilla/4.0_(compatible;_ICS) 20100929090858
+gnjepsgjskyxaypnauuyvy7tootwwu 20100910064323
+gmerOp_qdchy_rmppuheklhlcvwrmqt 20100906021358
+ms_khjaumrhfwbcs4kmce 20100905174736
+mrrkobbdnh__hwdrso 20100903162300
+swish-e_http://swish-e.org/ 20100926164738
+xholStd0kmkemeuuepnvxyphtho 20100903205412
+Mozilla/5.0_(compatible;_kmky-not-a-bot/0.2;_http://www.kilomonkey.com/notabot.txt_) 20100925111752
+Microsoft-WebDAV-MiniRedir/6.0.6001 20100929151651
+Mozilla/0.91_Beta_(Windows) 20100930221946
+ukkwvyyjvrvdcxotuwkfuktwwyvqxdtpvcxkelG 20100911021659
+www.sexoshop.it/http://www.sexyservice.it_(Sexy_shop_online_e_automatico_-_BDSM,_vibratori,_falli,_vagine,_lubrificanti.;_http://www.sexoshop.it;_marketing@sexoshop.it) 20100911014628
+Mozilla/5.0_(compatible;_MSIE_or_Firefox_mutant;_not_on_Windows_server;__http://ws.daum.net/aboutWebSearch.html)_Daumoa/2.0 20100925103947
+MSIE_5.0 20100919044004
+Mozilla/0.6_Beta_(Windows) 20100930112628
+Snoopy_v1.2.4 20100930014915
+Mozilla/4.0_(compatible;_BorderManager_3.0) 20100917213458
+kcyeffedyiu_gvmc0esvxnsvhOyemagx0 20100913191648
+'citeseerxbot' 20100922172403
+Rome_Client_(http://tinyurl.com/64t5n)_Ver:_0.9 20100910001107
+wnwyuadqwn_etvyqvdkqiqi_wrUyUtvw_dt_yj1 20100910031213
+AppEngine-Google;_(_http://code.google.com/appengine;_appid:_getfavicon) 20100923055206
+kkrjBlcyn_owvywuwxbjcyhwb 20100911065355
+alfhsdbpmwrsabpgcjjcjedqjjeynxqgsluqbdf 20100926171945
+kjiy4Ou4knfwsvgubawwckiv 20100922092402
+Mozilla/4.0_(compatible;_MS_FrontPage_6.0) 20100901164728
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 52
+PANTECH-C740/ISUS09012008_Browser/Obigo/Q05A_Profile/MIDP-2.0_Configuration/CLDC-1.1 20100902105936
+cvhertv_hqifmyqsLqywecftcfplqy 20100930101844
+swiwkcltfkkgb1ckbkmgtqbbdqu 20100910002907
+Linguee_Bot_(http://www.linguee.com/bot;_bot@linguee.com) 20100924162135
+Microsoft_Office_Existence_Discovery 20100929190203
+inkkmikgnwfypkmnt__dldyqjmtyomki_vhb_pv 20100910015921
+qnie2toaxmjnqtrr_eimyvqAq 20100921214152
+uhhqfJwcknfjsdsdxjuw 20100910072750
+pamrasE3_sin_iampsihcxb 20100902002344
+dsqxhity_iKqwtdffdoxfxykux 20100901235025
+null/1.0,_null@alibaba-inc.com 20100930180022
+DavClnt 20100927015840
+MLBot_(www.metadatalabs.com/mlbot) 20100929114326
+Srtpfs_qvtmawpnnrootdswwvukeox 20100907034435
+Goldfire_Server 20100913182446
+FlightDeckReports_Bot_1.5_beta_(http://www.flightdeckreports.com/bot) 20100911224452
+Media_Player_Classic 20100919141436
+gnjepsgjskyxaypnauuyvy7tootwwu 20100910064323
+HttpComponents/1.1 20100930030718
+gmerOp_qdchy_rmppuheklhlcvwrmqt 20100906021358
+MaMa_CaSpEr 20100930013227
+ms_khjaumrhfwbcs4kmce 20100905174736
+PECL::HTTP/1.6.0_(PHP/5.2.6-pl7-gentoo) 20100924215853
+tcynidyopgwiachmqgcrpdlrpkb33kmmwLbglap 20100907082231
+mrrkobbdnh__hwdrso 20100903162300
+swish-e_http://swish-e.org/ 20100926164738
+sotow8disthhrmrtiorihdu8trfrdiner 20100906053159
+xholStd0kmkemeuuepnvxyphtho 20100903205412
+nrbvoaghkyuhoqtqwonagRaifcacv2rodwnee2i 20100905074041
+TuneUpApp/1.8.1.0_wreckingCrew_(Windows;_Windows_NT_6.1) 20100928031121
+panscient.com 20100926131250
+didtdtrolvksioXeroXig_pluvgts 20100930015700
+www.sexoshop.it/http://www.sexyservice.it_(Sexy_shop_online_e_automatico_-_BDSM,_vibratori,_falli,_vagine,_lubrificanti.;_http://www.sexoshop.it;_marketing@sexoshop.it) 20100911014628
+ukkwvyyjvrvdcxotuwkfuktwwyvqxdtpvcxkelG 20100911021659
+- 20100930234118
+NextGenSearchBot_1_(for_information_visit_http://www.zoominfo.com/About/misc/NextGenSearchBot.aspx) 20100924004657
+facebookexternalhit/1.0_(_http://www.facebook.com/externalhit_uatext.php) 20100914143622
+Snoopy_v1.2.4 20100930014915
+hoge_(co2h2onacl@gmail.com) 20100919215333
+kcyeffedyiu_gvmc0esvxnsvhOyemagx0 20100913191648
+WebWorkerBee 20100926075728
+'citeseerxbot' 20100922172403
+Rome_Client_(http://tinyurl.com/64t5n)_Ver:_0.9 20100910001107
+wnwyuadqwn_etvyqvdkqiqi_wrUyUtvw_dt_yj1 20100910031213
+ragkFabxarxygb9Fmrgkydoacmlrdjerbby 20100905182638
+BlackBerry8900/4.6.1.231_Profile/MIDP-2.0_Configuration/CLDC-1.1_VendorID/100 20100907160946
+Microsoft_Office_Protocol_Discovery 20100929190155
+nlcbbdrrd1emaui1gqk1F1obxFnombjn 20100901064257
+AppEngine-Google;_(_http://code.google.com/appengine;_appid:_getfavicon) 20100923055206
+kkrjBlcyn_owvywuwxbjcyhwb 20100911065355
+alfhsdbpmwrsabpgcjjcjedqjjeynxqgsluqbdf 20100926171945
+kjiy4Ou4knfwsvgubawwckiv 20100922092402
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 26090 26373
+From1 15 18
+From2 1008 1191
+From3 247 603
+From4 8656 14207
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 7
+google 961 1131
+search 11 11
+baidu 2 2
+google_image 1 2
+yandex 3 3
+excite 1 1
+yahoo 29 41
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 144
+http://www.marssociety.org/portal/groups/AnalogsTF/index_html 34 34
+http://www.projectrho.com/rocket/rocket3m.html 21 21
+http://www.bing.com/search 20 20
+http://www.marsupial.org.au 19 19
+http://www.myschoolweb.com.au/school/sjpsnortham/links/links.asp 17 17
+http://www.aerospaceguide.net/planetmars/index.html 10 10
+http://www.bing.com/images/search 4 4
+http://www.hobbycentre.com.au/MarsSoc.html 4 4
+http://en.wikipedia.org/wiki/Mars_Society_Australia 3 3
+http://www.asri.org.au/web/australianspace/Related 3 3
+http://www.xiongdudu.com/image/Fern_Diagram/5 0 1
+http://priligy.pbworks.com/Priligy-Review 1 1
+http://www.posteezy.com/content/alprazolam-next-day-cash-delivery 1 1
+http://explorer.cekli.com/ppt/scramjet 1 1
+http://cialis-soft.centerblog.net/2-buy-cialis-soft 1 1
+http://wiki.developspace.net/Human_Mars_Exploration_Architecture_Studies 1 1
+http://www.peter-sun-scams.com 1 1
+http://priligy.pbworks.com/Priligy-Dapoxetine-Canada 1 1
+http://www.asri.org.au/australianspace/Related 1 1
+http://www.stfbankstown.catholic.edu.au/myclasses/Class,102612668888011 2 2
+http://www.paparoach.com/users/xKEfKdd6 1 1
+http://wwwit.murdoch.edu.au/~S850124D/ 3 3
+http://fnfarmy.lupefiasco.com/profiles/blogs/xanax-fedex-without 1 1
+http://jimpickerell.com/xanax.html 1 1
+http://www.knock-off-replica-handbags.com 1 1
+http://picsicio.us/domain/sweetmandarinchef.wordpress.com/ 0 1
+http://www.youtube.com/results 1 1
+http://menshealth.indieword.com/view/male-impotence2 1 1
+http://www.marssociety.nl 1 1
+http://pdfbar.com/free-pdf-download/solar%20powered%20base%20station%20design-pdf-2-L.html 1 1
+http://simcosmos.planetaclix.pt/01_orbiter/orbiter_SCaddons.htm 2 2
+http://www.iinet.net.au/search/index.html 1 1
+http://spaceports.blogspot.com/2006/07/starchaser-building-new-mexico-rocket.html 0 2
+http://chapters.marssociety.org/canada/expedition-mars.org/ExpeditionDelta/ 1 1
+http://picsicio.us/domain/wciadopt.org/ 0 1
+http://picsicio.us/keyword/tragedia%20armero/ 0 1
+http://www.vssec.vic.edu.au/events/public-talks/mars-science-laboratory-mission/ 1 1
+http://www.sauer-thompson.com/junkforcode/archives/2004_01.html 1 1
+http://www.123people.com/s/jo+michalek 0 2
+http://chapters.marssociety.org/canada/expedition-mars.org/ExpeditionThree/ 1 1
+http://linkband.de 1 1
+http://www.pdfgod.com/liquid-rocket-engine-pdf-4.html 1 1
+http://en.wikipedia.org/wiki/Mars_Direct 1 1
+http://www.spaceacademy.net.au/events/2009.htm 2 2
+http://picsicio.us/keyword/praying%20hands%20image/ 0 1
+http://picsicio.us/image/e4d0c11a/ 0 1
+http://www.marssociety.de/Web2/hintergrund/Betrieb 1 1
+http://www.itsatravelguide.com/c13/p5971/gmaps/see_a_map_of_coober_pedy.html 0 1
+http://fr.wikipedia.org/wiki/Mars_Society 1 1
+http://kamagrarx.webs.com/apps/blog/show/4873285-kamagra-jelly 1 1
+http://www.ebooknetworking.net/view-cat-robertzubrinislandinthesky-id-12941135.html 1 1
+http://www.spaceacademy.net.au/events/2008.htm 1 1
+http://desert.marssociety.org/MDRS/mdrs04a.asp 1 1
+http://www.ginginobservatory.com/index.php 1 1
+http://www.pipl.com/search/ 0 1
+http://worldtrip.bloguez.com/worldtrip/page771/ 0 28
+http://worldtrip.bloguez.com/worldtrip/page839/Nombre 0 3
+http://www.sttpadstow.catholic.edu.au/myraw/File/cenet/adminsr/sherrol.gane/Mission_to_Mars_Student_Booklet.pdf 1 1
+http://www.petersunscam.net 1 1
+http://worldtrip.bloguez.com/worldtrip/page815/ 0 3
+http://www.businesscoachcourse.com 1 1
+http://cialissoft.pbworks.com/Cialis-Soft-tabs-md 1 1
+http://ucpbl.aau.dk/lastalkom/weblog 1 1
+http://www.bigpondsitehelp.com/assist.php 1 1
+http://www.marssociety-europa.eu 3 3
+http://cialis-soft.centerblog.net/13-cialis-soft-order 1 1
+http://worldtrip.bloguez.com/worldtrip/page644/ 0 3
+http://www.weblo.com/celebrity/available/Jennifer_Gargano/308587/ 0 4
+http://www.astronomywa.net.au/whats-happening/space-trail 1 1
+http://www.marssociety.org.uk/conference.htm 1 1
+http://picsicio.us/keyword/balgo%20hills/ 0 2
+http://www.marssociety.nl./links.php 1 1
+http://cen.iona.wa.edu.au/mymail/src/read_body.php 1 1
+http://menhealth.pbworks.com/Causes-of-Impotence 1 1
+http://www.rss-nachrichten.de/rss-verzeichnis/forschung-wissenschaft-entwicklung/astro-raumfahrt/rss-anzeigen-30687.html 1 1
+http://priligy.webs.com/apps/blog/show/4729128-dapoxetine-side-effects 1 1
+http://priligy.indieword.com/view/priligy-dapoxetine15 1 1
+http://navigationshilfe.t-online.de/dtag/dns/results 3 3
+http://picsicio.us/keyword/location%20of%20the%20alps/ 0 1
+http://picsicio.us/keyword/precious%20moments%20picture/ 0 1
+http://www.sensis.com.au/search.do 1 1
+http://picsicio.us/domain/victoriarevay.wordpress.com/ 0 1
+http://spaceports.blogspot.com/search 0 2
+http://worldtrip.bloguez.com/worldtrip/page622/devalvr 0 3
+http://www.aerospaceguide.net/worldspace/australia_in_space.html 2 2
+http://picsicio.us/image/ae7dc072/ 0 1
+http://www.internationalearthspacetechnology.com/Links.html 0 3
+http://forexmacro.blogetery.com 1 1
+http://picsicio.us/keyword/jonathan%20stewart%20stiff%20arm/ 0 1
+http://picsicio.us/keyword/lego%20land%20pictures/ 0 1
+http://www.veganfoodrecipes.com 1 1
+http://www.edna.edu.au/edna/go/search 1 1
+http://priligy.pbworks.com/Dapoxetine-India 1 1
+http://zithromaxrx.pbworks.com/Azithromycin-250-mg 1 1
+http://images.devilfinder.com/go.php 0 1
+http://www.stjmoorebank.catholic.edu.au/myraw/File/cenet/adminsr/sherrol.gane/Unit_1_Mission_to_Mars.pdf 2 2
+http://picsicio.us/image/91032edd/ 0 1
+http://webcache.googleusercontent.com/search 0 4
+http://topkamagra.pbworks.com/Kamagra-Oral-Jelly-Australia 1 1
+http://kamagrarx.over-blog.com/article-kamagra-forum-57378060.html 1 1
+http://www.semrush.com/info/marssociety.org.au 1 1
+http://www.luogocomune.net/site/modules/news/article.php 0 55
+http://picsicio.us/keyword/japanese%20eye%20makeup%20tutorial/ 0 1
+http://www.marsupial.org.au 3 3
+http://priligy.indieword.com/view/dapoxetin-priligy 1 1
+http://www.bautforum.com/showthread.php/84144-VASIMR-Mars-mission-the-cheap-route 1 1
+http://www.facebook.com/l.php 3 3
+http://rxapproved.over-blog.com/article-buy-tramadol-online-without-prescription-56608343.html 1 1
+http://spaceports.blogspot.com/2006_07_01_archive.html 0 200
+http://www.authorsden.com/xanax2online%20xanax 1 1
+http://rxapproved.over-blog.com/article-prednisone-prednisolone-56535510.html 1 1
+http://forum.scmcanada.org/users/2431 1 1
+http://picsicio.us/keyword/apple%20math/ 0 1
+http://www.eoc.csiro.au/slinks/spacelinks.htm 1 1
+http://translate.google.com.br/translate 1 1
+http://www.marssociety.org/portal/ChaptersListing 3 3
+http://menshealth.indieword.com/view/caverta-100 1 1
+http://www.nssa.com.au/resources/cyberspace.shtml 1 1
+http://www.paparoach.com/users/POmTr5hz 1 1
+http://www.blackplanet.com/treklod/ 1 1
+http://picsicio.us/domain/d-maps.com/ 0 1
+http://portal.fke.utm.my/elgg/pg/profile/vukoletast 1 1
+http://beck-ronny.myartforworld.eu/100721/ 0 2
+http://www.posteezy.com/content/ritalin-without-rx-next-day 1 1
+http://clydecomedy.ning.com/profiles/blogs/no-rx-watson-soma 1 1
+http://picsicio.us/keyword/laguna%20de%20los%20cerros/ 0 1
+http://topkamagra.pbworks.com/Kamagra-100 1 1
+http://foto-video.vipphoto.li/index2.php 1 1
+http://www.cossa.csiro.au/slinks/spacelinks.htm 1 1
+http://picsicio.us/keyword/suzuki%20rc100/ 0 1
+http://en.wikipedia.org/wiki/Mars_Society 1 1
+http://cc.bingj.com/cache.aspx 0 15
+http://picsicio.us/domain/evoluciondelosanimalesvertebrados.blogspot.com/ 0 1
+http://www.toodoc.com/search.php 3 3
+http://blog.internationalearthspacetechnology.com/page/3.aspx 0 1
+http://kamagrarx.pbworks.com/Kamagra-Gold 1 1
+http://picsicio.us/keyword/web%20template%20psd/ 0 1
+http://www.hobbyspace.com/SpaceScience/index.html 1 1
+http://drugstore4.com/de/product/vantin-tabs.html 1 1
+http://prematureejaculation.pbworks.com/Pre-mature-ejackulation 1 1
+http://cialis-soft.over-blog.com/article-soft-cialis-mastercard-55544935.html 1 1
+http://picsicio.us/domain/ted.com/ 0 1
+http://marsmovieguide.com 1 1
+http://menshealth.indieword.com/view/premature-ejaulation10 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 386
+living+on+mars 156
+mars+society+australia 61
+mars+society 32
+mars 16
+concept+description 14
+the+mars+society 10
+operational+concept 8
+living+in+mars 8
+living+on+mars+in+the+future 6
+space+activity+suit 5
+martian+society 1
+problems+with+living+on+mars%3f 1
+basic+operational+concepts 3
+living+on+mars+ppt 1
+australia+conference 1
+montmorillonite+ppt 1
+space+suits 1
+nasa+hygiene+tactics+for+mars 1
+what+problems+would+we+have+in+surviving+on+mars%3f 1
+earth+to+mars+ppts 2
+problems+when+living+on+mars 1
+annual+rainfall+kulgera+nt 1
+daniel+ischia 1
+how+a+helicon+double+layer+thruster+design+works 1
+health+problems+caused+by+living+on+mars 1
+adelaide+is+located+in+south+australia 2
+government+deep+space+satellite+keplinger 2
+life+support+equipment 1
+jenny+laing+psychologist 1
+operational+concept+document+template 2
+dr+mann+is+a+director+on+the+board+of+the+mars+society+australia 1
+mars+mobility+requirements 1
+mars-oz 1
+adelaide+to+lyndhurst 3
+how+wood+we+live+on+mars 1
+operational+definition+to+initiate+greetings 1
+tom+geologist+brisbane 1
+spring+mound+sediments 1
+mars+water+extration 1
+journal+of+the+british+interplanetary+society+pdf 1
+life+on+mars+ppt 1
+living+on+mars+is+possible 1
+nuclear+russian+interplanetary+tug 1
+tm-54%2f30 1
+what+is+concept+description 2
+liquid+propellant+rocket+engine+combustion+chamber+casing+material 1
+mars+living 1
+breakaways+coober+pedy 1
+rai+balwant+nasa+on+twitter 1
+hearing+aid+localization+and+spectral+smearing 1
+free+space+flight+simulator 1
+planetary+and+space+science+-+australia 1
+gravity-loading+skinsuit 1
+national+space+camp+woomera 5
+how+is+living+on+earth+better+than+living+on+mars%3f 1
+ppt+on+life+on+mars 2
+victor+walter+clarke+geologist 1
+mineral+water+project-pdf 1
+mineral+water+with+magnesium+sold+in+australia 1
+dulkannia 1
+possible+food+sources+on+mars 5
+australia+and+the+planet+mars+in+august+2010 1
+mars+website 1
+adelaide+to+woomera 1
+possible+to+live+in+mars 1
+operational+concept+document+for+a+software+project 1
+mammaliated 1
+operational+scenario+requirement+mars+rover 1
+south+australian+mars+tracking 1
+mineral+water+plant+project+report 1
+mcp+eva+space+suit 1
+esa+hdlt+hydrazine 1
+excursion+proposal+for+principal 1
+epsomites+ability+to+store+water+on+mars 1
+wommera+mars 2
+australian+mars+exploration+conference+2010 3
+spaceward+bound+2010 1
+propellant+tank+hot+gas+design+filetype+pdf 1
+nozzle+chamber+explosion+methane+detonation 1
+mars+oz 3
+katy+quinn+mit 1
+liquid+rocket+engine+test 1
+3+good+things+about+living+on+mars 1
+space+science+developing+awareness+amongst+middle+to+senior+school+students 1
+launcher+1+dr.+adam+baker 1
+typical+vehicle+deceleration 1
+nasa+woomera+space+camp 1
+concept+description+instrument+esa 1
+where+is+mars+australia 1
+austra%ef%bd%8cia+msa 1
+mars+research 1
+science+society+australia 1
+echo+camp+backtrack 3
+georgia+bowen+perth 1
+matilda+thomas+geoscience 1
+spaceward+bound+nasa+namibia+2010 1
+yon+wui+ng 1
+coober+pedy+hydrology 2
+apollo+11+experiments+still+active 1
+mars+society+of+australia 5
+annual+rainfall+coober+pedy 1
+dalhousie+mound+springs+map 1
+national+space+camp+2010 1
+how+to+live+on+mars 1
+australia+like+mars 2
+re+entry+woomera+26+june+2010 1
+problems+living+mars 1
+st+joseph+s+northam+wa+western+australia 1
+mcp+spacesuits 2
+planet+mars+october+2010+australia 1
+satellite+operational+concept 1
+mdrs+expedition+guide 1
+musical+good+scraps+filetype+ppt 1
+jonathan+clarke+adelaide 1
+system+concept+description 1
+mossbauer+spectroscopy+new+mexico+tech 1
+description+concept 1
+equipment+left+on+mars 1
+what+is+mars+society+australia 1
+how+can+we+live+on+mars 1
+what+about+living+in+mars 1
+www.abrown+seti+org 1
+st+josephs+northam+wa 1
+adelaide+south+australia. 1
+magnesium+sulphate+mining+australia 1
+mars+analogue+database 2
+dr+kimberley+clayfield 2
+aerospace+polycarbonate 1
+how+to+dismental+streeing+wheel+of+mitsubishi+l300%3f 1
+benefit+of+living+on+mars 1
+tourist+information+brochure+wishing+to+visit+mars 1
+mars+exploration+conference 1
+polyimide+tape 1
+jozef+michalek+perth 2
+terraforming+mars 1
+mars+society+bees+in+space 1
+operational+concept+description+template 1
+mars+australia 3
+ocds+forms-aviation 1
+indian+tools 4
+description+of+the+concept 1
+amec+mars 1
+what+equipment+would+you+need+to+take+to+survive+on+mars 1
+the+needs+for+living+on+mars 1
+dustin+green 1
+%f0%e0%e9%ee%ed+2 1
+eva+suits 1
+bus+to+woomera 1
+australi+from 1
+mars+travertine+mound 1
+living+in+marte 1
+life+on+mars.ppt 1
+mineral+water+plant+pdf 1
+pdf+on+mineral+water+processing+plant 1
+maureen+cooper 1
+terra+xrd 1
+hydroponic+powerpoint+slides 1
+magnesium+sulphate+deposits+in+south+australia 1
+jo+berriman 1
+spacecraft+materials 1
+how+to+live+with+food+on+mars 1
+skinsuit 1
+ppt+communication+skills+hargie 1
+roberts+c.+r.+and+mitchell+c.+w.+1987+.+spring+mounds+in+southern+tunisia.+in+desert+sediments+ancient+and+modern+ed.+l.+frostick+and+i.+reid.+geological+society+special+publication+35+pp.+321+34. 1
+fuel+gas+liquid+engine+design 1
+how+would+we+colonise+mars 1
+mars+trans+australia 1
+158621799 1
+operational+concepts 1
+operation+concept 1
+international+space+olympics 2
+vegetation+dalhousie+spring+australia 1
+description+of+concept 3
+space+woomera 1
+joe+cassady+one-way+mission+to+mars 1
+coober+pedy+opal+aster 1
+what+concept+description 1
+folding+ramp+egress+nasa 1
+hydrology+jozef+michalek+perth 1
+polycarbonate+for+aerospace+application 1
+interlocking+brick+design+australia+wall+university 1
+adelaidecbdmap 1
+stuart+mead+csiro 1
+could+you+live+on+mars+with+the+ozone+layer 1
+inverted+relief 1
+life+on+mars+possible+ppt 1
+mars+semi+direct 1
+spaceward+bound+2011 1
+interlocking+construction+blocks+australia 1
+moondust+value 1
+strangways+springs 1
+mineral+water+key+stadies 1
+2010+society+australia 1
+sort+the+following+maneuvers+in+order+of+increasing+delta+v 1
+amec 1
+mars+research+habitat+australia 1
+mars+society+perth 1
+marsupialia+quotes 1
+oz+mars 2
+c3+conference+adelaide 2
+jennifer+heldmann 1
+problems+in+living+for+mankind+s+in+mars 1
+shaunmoss%40yahoo.com.au 1
+isru+technology+challenge 1
+apollo+dust+detecor+bates 1
+aerospace+mars+studies+australia 1
+terra+forming+ppt 1
+georgia+bowen 1
+mdrs+92 1
+nitrogen+kerosene+pressurized+bottles 1
+operational+concept+description 5
+mars+red+planet+headlines 1
+gibber+plain+australia+chemistry 1
+sfincss 1
+australia+concept+of+operations+development 1
+nscw+woomera 1
+central+mound+hotspring 1
+archimedes+dlr+development+program 2
+hotel+contact+list+in+au+email+site+.au 1
+project+concept+documentation 1
+woomera+souvenir 1
+example+of+a+project+proposal+hydroponics 1
+problems+with+living+on+mars 2
+national+space+camp+woomera+2010 2
+russian+rocket+engines+pdf 1
+operational+concept+description+document 1
+life+on+mars 1
+what+do+we+need+to+live+on+mars 1
+national+space+school 1
+mars+vs+earth+ppt 1
+description+of+a+concept 1
+do+you+way+0.38+on+mars%3f 2
+living+circumstances+on+mars 1
+operational+concept+document+mil+std+498 1
+vegetation+geology+and+hydrology+of+macquarie+university+sydney 1
+prof+rob+morrison 1
+mobile-spy 1
+aerospace+polycarbonate+applications 1
+ppt+on+life+on+titan 1
+craig+teewoon+%e2%80%9c+human+interface+support+for+information+technology+for+mars+researchmissions 3
+avanti+satellite 4
+rubber+suit 1
+recycling+nutrients+on+mars 1
+mariner+7+launch+and+orbital+information 1
+australia+mars+geographic+statistic 1
+living+on+mars+building+materials 1
+pressure+mcp 1
+the+mars+society+australia 3
+mars+society+melbourne 1
+expedition+to+mars 1
+dr+james+leyden+adelaide 1
+adelaide+and+field+biologists+and+pictures 1
+ocd+payload 1
+equipment+for+mars 1
+what+is+a+description+of+a+concept 1
+what+is+concept+description%3f 1
+what+is+the+air+like+on+mars 5
+mars+oz+energy 1
+mars+semi-direct 1
+woomera+rocket+range+-first+satellite+launch 1
+mars+mission+space+camp+australia 1
+terraform+mars+-+food+and+water 1
+mineral+water+plant+project+report+pdf 1
+food+security+hydroponic+project+proposals 1
+punthill+apartment+hotel+essendon 1
+marce+society+australia 1
+astronaut+harrison+schmitt+contact+details 2
+echo+back+track 1
+mars+press+release+australia 1
+edith+de+vermond 1
+adelaide+space+school 1
+mars+societies+washington+dc 1
+mars+regolith+isru+water 1
+ppt+on+sol+to+global+warming 1
+water+extraction+on+mars 1
+ppt+presentation+living+on+mars 4
+mineral+water+base 1
+mineral+water+plant+cost.pdf 1
+space+science+brittany+hunter 1
+mars-oz+orbiter 2
+can+we+live+on+mars 1
+steel+making+in+the+future+ppt 1
+mars+future+living 1
+welcome+to+coober+pedy+powerpoint 1
+andrew+langendam 1
+coober+pedy+mars+analog+site+jpl 1
+j.+emilio+rondeau 1
+mars+-+best+choice+for+colonization 1
+living+mars 3
+roket+engine+ignition+filetype+pdf 1
+woomera+space+camp+2009+photos 3
+wendell+mendell 1
+proceedings+of+the+conference+on+electromagnetic+exploration+of+the+moon 1
+ppt+about+terraforming 1
+bionic+flight+winglet 1
+what+equipment+do+you+need+for+mars 1
+mars+direct+mav 1
+aerospace+use+of+polycarbonate 1
+chantal+tomkins+doctor 1
+planet+mars+from+australia 1
+full+rubber+suits 2
+isp+of+the+hdlt+plasma+thruster 1
+dictionary+rejinked 1
+mars+society.org.au 1
+boxer+fir+filters+face+recognition 1
+mars+and+living 1
+astrobiology+university+nsw 1
+australian+mars+exploration+conference 2
+website+chris+mckay+astro+scientist 1
+mars+analog+delay 1
+how+to+live+on+mars+download 1
+dalhousie+springs+map 2
+nasa+spaceward+bound+program+to+the+mojave+desert+2011 1
+msa+reviewer+library 1
+hypergolic+gel+igniter+for+lox%2fkerosene+pdf 1
+peter+nattras+lord+mayor+perth 1
+benefits+of+living+on+mars 1
+spectrally-smeared+broadband+localization 1
+lucinda+weisbach 1
+professor+russell+boyce 1
+australia+s+space+program+2010 1
+concept+description+document 1
+mars+how+will+you+survive 1
+concept+description+-+definition 1
+oz+planet+mars 2
+vernon+kramer+mars+society 1
+jason+hoogland 1
+mars+society+vernon+kramer 1
+hydroponics+on+mars 2
+apollo+11+physic+question 1
+finding+natural+spring+groundwater+canberra+natural+-bottled+-suppliers 1
+food+and+equipment+for+mars 1
+moon+plain+nt+au 1
+mcp+suit 2
+liveing+on+mars 1
+equipment+and+supplies+on+mars 1
+concept+of+operations+mars+mission 1
+ocd+operational+concept+design 1
+john+t.malos+csiro 1
+university+of+sydney+farrell+theatre 1
+basic+oprational+concept 1
+mars+powerpoints 1
+mission+operations+concept+document 1
+living+on+mars+powerpoint 1
+operational+concept+document 2
+school+projects+constructing+rover 1
+ppt+terraforming+mars 1
+main+oxidizer+valve+rocket+engine+feed+system 1
+microscopy+meca+phoenix 1
+challenges+of+living+on+mars 2
+thoracic+lumbar+fracture 1
+marine+beacon+gps+serial+port+-emergency 1
+power+point+of+liquid+rocket+engine 1
+mars+society+of+australia+spaceward+bound 1
+australian+tufa+landforms 1
+power+point+presentation+on+hydroponics 1
+cooking+robots+ppt 1
+australian+school+teacher+nasa 1
+mars+society+australia%5d 1
+st+joseph+s+school+08+9621+3550 1
+photography+of+jennifer+heldmann 1
+project+report+examples+for+setting+up+mineral+water+plant 1
+matthew+smola 1
+crux+gpr.pdf 1
+proceedings+of+the+7th+australian+mars+exploration+conference 1
+nasa+spaceward+bound+robotics+project 1
+hotels+near+murdoch+university 1
+concept+of+description 1
+advanced+space+suit 1
+graham+mann+murdoch+university 1
+asus+p535 1
+zinc+balls 1
+natural+kingdom+collection+mars+on+earth 1
+mars+rover+filetype+ppt 1
+astronaut+eva+hand+function 1
+mars+filetype+ppt 1
+nri+codan+architecture 1
+operational+concept+descriptor 1
+australian+space+science 1
+hal+board+director+nominations 1
+space+engine+hdlt+v+max 1
+mars+august+2010 2
+rocket+kits+space+camp 1
+mars+society+austrlia 1
+how+to+write+cover+letter+for+proposal 2
+woomera+space+camp+2010 1
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 677
+mars 445
+on 231
+living 202
+society 127
+australia 104
+concept 60
+the 38
+space 38
+description 36
+of 33
+wui 1
+mav 1
+rubber 3
+dust 1
+-emergency 1
+greetings 1
+email 1
+trans 1
+marte 1
+ocds 1
+aid 1
+life 8
+frostick 1
+mankind 1
+what 16
+forming 1
+lumbar 1
+constructing 1
+lord 1
+materials 2
+energy 1
+roket 1
+system 2
+wall 1
+annual 2
+electromagnetic 1
+hal 1
+headlines 1
+still 1
+cover 2
+will 1
+press 1
+marine 1
+geoscience 1
+when 1
+codan 1
+tm-54%2f30 1
+tug 1
+board 2
+can 2
+brisbane 1
+where 1
+flight 2
+doctor 1
+hydroponic 2
+left 1
+helicon 1
+way 2
+nasa 8
+a 7
+deceleration 1
+dulkannia 1
+activity 5
+national 9
+pedy 7
+nattras 1
+mojave 1
+challenge 1
+inverted 1
+proposal 4
+mammaliated 1
+in 31
+future 8
+hotspring 1
+teacher 1
+eva 3
+tech 1
+pdf 8
+re 1
+setting 1
+analogue 2
+smearing 1
+by 1
+theatre 1
+operations 3
+moon 2
+pp. 1
+schmitt 2
+project 8
+archimedes 2
+proposals 1
+proceedings 2
+researchmissions 3
+morrison 1
+jo 1
+warming 1
+c. 2
+requirements 1
+kulgera 1
+dustin 1
+software 1
+cassady 1
+adelaide 13
+pressurized 1
+farrell 1
+nutrients 1
+meca 1
+blocks 1
+tactics 1
+andrew 1
+northam 2
+mars%3f 5
+microscopy 1
+james 1
+map 3
+western 1
+dictionary 1
+benefit 1
+explosion 1
+base 1
+recycling 1
+south 5
+egress 1
+broadband 1
+springs 4
+p535 1
+survive 2
+kits 1
+i. 1
+southern 1
+equipment 7
+tourist 1
+visit 1
+developing 1
+mariner 1
+namibia 1
+advanced 1
+good 2
+making 1
+georgia 2
+08 1
+documentation 1
+melbourne 1
+students 1
+societies 1
+journal 1
+mounds 1
+sydney 2
+peter 1
+things 1
+sold 1
+test 1
+website 2
+oprational 1
+ignition 1
+slides 1
+max 1
+olympics 2
+spectroscopy 1
+matilda 1
+propellant 2
+1 1
+joseph 2
+about 3
+backtrack 3
+john 1
+government 2
+keplinger 2
+australi 1
+how 12
+r. 1
+rover 3
+planetary 1
+kramer 2
+initiate 1
+de 1
+158621799 1
+avanti 4
+austrlia 1
+colonization 1
+best 1
+suit 10
+wheel 1
+engines 1
+direct 2
+1987 1
+up 1
+contact 3
+hypergolic 1
+sulphate 2
+tape 1
+senior 1
+adelaidecbdmap 1
+musical 1
+challenges 2
+interplanetary 2
+michalek 3
+question 1
+colonise 1
+point 2
+hand 1
+increasing 1
+martian 1
+jozef 3
+weisbach 1
+pressure 1
+brick 1
+balwant 1
+amec 2
+liquid 4
+better 1
+magnesium 3
+deep 2
+fracture 1
+spectrally-smeared 1
+chantal 1
+detecor 1
+reviewer 1
+montmorillonite 1
+security 1
+possible 8
+and 14
+download 1
+travertine 1
+spectral 1
+spacecraft 1
+sfincss 1
+is 16
+mineral 10
+rai 1
+heldmann 2
+jpl 1
+geographic 1
+operation 1
+macquarie 1
+%e2%80%9c 3
+sort 1
+food 9
+ng 1
+concepts 4
+berriman 1
+mound 4
+ozone 1
+dismental 1
+awareness 1
+semi 1
+balls 1
+asus 1
+like 7
+rondeau 1
+camp 18
+template 3
+value 1
+crux 1
+finding 1
+active 1
+reid. 1
+34. 1
+7th 1
+emilio 1
+building 1
+ppts 2
+robots 1
+kerosene 1
+c3 2
+filetype 5
+bus 1
+aerospace 5
+dr. 1
+astrobiology 1
+director 2
+teewoon 3
+science 5
+mexico 1
+free 1
+plant 6
+epsomites 1
+orbiter 2
+kingdom 1
+hygiene 1
+landforms 1
+498 1
+august 3
+mcp 6
+localization 2
+caused 1
+igniter 1
+7 1
+australian 10
+projects 1
+26 1
+take 1
+launcher 1
+craig 3
+green 1
+astro 1
+0.38 2
+zinc 1
+middle 1
+one-way 1
+layer 2
+gps 1
+mossbauer 1
+dalhousie 4
+csiro 2
+with 6
+function 1
+delay 1
+collection 1
+we 6
+architecture 1
+face 1
+to 26
+rocket 7
+graham 1
+school 6
+cooper 1
+wa 2
+hotels 1
+harrison 2
+nri 1
+circumstances 1
+3550 1
+need 3
+polyimide 1
+edith 1
+earth 5
+marce 1
+punthill 1
+could 1
+nuclear 1
+interface 3
+gravity-loading 1
+field 1
+dc 1
+-bottled 1
+phoenix 1
+v 2
+port 1
+extration 1
+winglet 1
+mil 1
+engine 7
+baker 1
+tracking 1
+quinn 1
+benefits 1
+needs 1
+principal 1
+research 2
+strangways 1
+rob 1
+mobility 1
+analog 2
+. 1
+gel 1
+ability 1
+thoracic 1
+feed 1
+example 1
+ancient 1
+clayfield 2
+application 1
+than 1
+regolith 1
+streeing 1
+june 1
+experiments 1
+vs 1
+pictures 1
+you 6
+brittany 1
+jenny 1
+program 4
+mendell 1
+maureen 1
+power 2
+central 1
+presentation 5
+leyden 1
+www.abrown 1
+j. 1
+chamber 2
+letter 2
+gpr.pdf 1
+hydrology 4
+supplies 1
+perth 6
+deposits 1
+delta 1
+technology 4
+mars-oz 3
+spacesuits 2
+35 1
+11 2
+bionic 1
+australia%5d 1
+.au 1
+recognition 1
+jonathan 1
+indian 4
+- 4
+adam 1
+satellite 8
+british 1
+located 2
+health 1
+mining 1
+chris 1
+nscw 1
+photography 1
+fuel 1
+human 3
+relief 1
+souvenir 1
+would 3
+tank 1
+order 1
+red 1
+tufa 1
+following 1
+russian 2
+2010 16
+nsw 1
+vernon 2
+surviving 1
+prof 1
+casing 1
+development 3
+publication 1
+hydroponics 4
+russell 1
+support 4
+combustion 1
+cost.pdf 1
+twitter 1
+scenario 1
+hdlt 3
+global 1
+t.malos 1
+spaceward 6
+back 1
+water 15
+murdoch 2
+description%3f 1
+international 2
+mit 1
+entry 1
+ramp 1
+filters 1
+geological 1
+tunisia. 1
+orbital 1
+problems 8
+list 1
+breakaways 1
+applications 1
+boyce 1
+scraps 1
+bates 1
+bound 6
+xrd 1
+oxidizer 1
+seti 1
+wood 1
+october 1
+wishing 1
+moondust 1
+nt 2
+design 5
+scientist 1
+payload 1
+echo 4
+dr 4
+ppt 22
+instrument 1
+hotel 2
+statistic 1
+mitsubishi 1
+mars.ppt 1
+hot 1
+aster 1
+maneuvers 1
+document 9
+isru 2
+new 1
+skinsuit 2
+professor 1
+roberts 1
+org 1
+titan 1
+kimberley 2
+marsupialia 1
+hunter 1
+modern 1
+coober 7
+hydrazine 1
+bees 1
+woomera 19
+austra%ef%bd%8cia 1
+library 1
+mann 2
+plain 2
+use 1
+2011 2
+9621 1
+university 6
+stuart 1
+%f0%e0%e9%ee%ed 1
+hearing 1
+wommera 2
+victor 1
+dlr 2
+clarke 2
+communication 1
+steel 1
+bottles 1
+key 1
+groundwater 1
+suits 4
+ischia 1
+examples 1
+hargie 1
+powerpoint 3
+st 3
+details 2
+shaunmoss%40yahoo.com.au 1
+opal 1
+bowen 2
+gas 2
+sediments 2
+nominations 1
+geologist 2
+powerpoints 1
+yon 1
+mead 1
+have 1
+w. 1
+interlocking 2
+conference 11
+2009 3
+rainfall 2
+thruster 2
+launch 2
+construction 1
+tomkins 1
+321 1
+geology 1
+mobile-spy 1
+extraction 1
+oz 8
+simulator 1
+natural 3
+2 1
+stadies 1
+requirement 1
+terraforming 3
+wendell 1
+special 1
+typical 1
+valve 1
+write 2
+descriptor 1
+forms-aviation 1
+guide 1
+full 2
+s 4
+matthew 1
+washington 1
+ed. 1
+joe 1
+laing 1
+society.org.au 1
+walter 1
+biologists 1
+mayor 1
+works 1
+-suppliers 1
+definition 2
+tom 1
+au 2
+terraform 1
+choice 1
+processing 1
+quotes 1
+folding 1
+store 1
+track 1
+physic 1
+ocd 2
+nitrogen 1
+mckay 1
+isp 1
+semi-direct 1
+hoogland 1
+chemistry 1
+vermond 1
+terra 2
+skills 1
+smola 1
+double 1
+project-pdf 1
+amongst 1
+serial 1
+brochure 1
+tools 4
+katy 1
+mitchell 1
+liveing 1
+plasma 1
+92 1
+sources 5
+vehicle 1
+welcome 1
+beacon 1
+-first 1
+sol 1
+detonation 1
+josephs 1
+mission 4
+do 4
+range 1
+australia. 1
+gibber 1
+from 2
+jason 1
+planet 6
+lox%2fkerosene 1
+daniel 1
+essendon 1
+canberra 1
+std 1
+release 1
+cooking 1
+database 2
+nozzle 1
+robotics 1
+site 2
+psychologist 1
+live 9
+astronaut 3
+material 1
+langendam 1
+polycarbonate 4
+apartment 1
+spring 4
+lyndhurst 3
+methane 1
+excursion 1
+for 20
+near 1
+main 1
+mdrs 2
+report 3
+l300%3f 1
+vegetation 2
+fir 1
+rejinked 1
+photos 3
+basic 4
+apollo 3
+operational 30
+thomas 1
+expedition 2
+habitat 1
+studies 1
+exploration 8
+esa 2
+desert 2
+l. 1
+boxer 1
+3 1
+information 5
+lucinda 1
+msa 2
+jennifer 2
+air 5
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 8
+403 27 5977
+206 2156 643273610
+400 2 624
+302 2 0
+416 1 402
+405 37 11910
+404 4296 1284465
+301 52 17370
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 272
+/library/nsw.php 18 -
+/jnt/jnt-3.jpg 3 -
+/amec2002/24-Yon_Wei_Ng_full_paper.htm 2 -
+/vmain.shtml 19 -
+/jnt/jarnti130801.shtml 2 http://www.webwombat.com.au/
+//sqlweb/scripts/setup.php 1 -
+/amec2007/proceedings//includes/db_adodb.php 3 -
+/images/tech_images/Sturtst0_thumb.GIF 26 http://www.marssociety.org.au/headline_archive.php
+/library/CPSS_Leaflet.pdf[doc] 2 -
+/www.graphicssolutions.iinet.net.au/~wams/doc/Astrofest_2003_G_Mann.mp3 4 -
+/Registration2006.pdf 3 -
+/amec2002/proceedings/11-Assessment_of_the_Use_of_Tether_Technology_in_the_Future_Exploration_of_Mars.pdf 6 -
+//phpmanager/scripts/setup.php 1 -
+/technical/index.shtml 13 -
+//web/phpMyAdmin/scripts/setup.php 1 -
+/library/AMEC2008_conference_ 3 -
+//phpmyadmin1/scripts/setup.php 1 -
+/library/out.html 2 -
+//webdb/scripts/setup.php 1 -
+/amec2002/contact.php 2 -
+/BGCOLOR=%22 1 http://www.marssociety.org.au/Call_for_Abstracts.php
+/jnt-db/Australia-SA_NE-Sturt.html 3 -
+/amec2003/proceedings/00-preface_files/editdata.mso 1 -
+/memform.htm 25 -
+/NSW.php 22 -
+/Zond%202http://nssdc.gsfc.nasa.gov/database/MasterCatalog 3 http://www.marssociety.org.au/mars_missions.php
+/amec2002/proceedings/19-Jin_Tan_Carlile_Leung_Van_shaik_full_paper.html 1 -
+/amec2003/proceedings/04-James_Waldie_files/editdata.mso 1 -
+//PhpBigDick/scripts/setup.php 1 -
+/library/media_release_020308.pdf 6 -
+/headline_a 1 -
+/amec2008/BGCOLOR=%22 1 http://www.marssociety.org.au/amec2008/Call_for_Papers.php
+/amec2004/proceedings/00-Acknowledgements_files/editdata.mso 1 -
+/amec2008/https://monroe.vianet.net.au/~mhchost/UofSAReg2008.html 1 -
+/jnt/LoadGallery('Jnt1',%20'images/adelaide_jnt23.jpg',%20'Jnt1Caption',%20'%3Ca%20href=%5C'images/adelaide_jnt23.jpg%5C'%3EDeparture%20Breakfast%3C/a%3E') 1 -
+/amec2008/BGCOLOR=\" 1 http://www.marssociety.org.au/amec2008/Call_for_Papers.php
+//webadmin/scripts/setup.php 1 -
+/amec/Paine_amec2001_rover.doc 20 -
+/jnt/qanda.html 32 -
+/amec2003/proceedings/11-Jon_Clarke_2_files/editdata.mso 1 -
+/Registration.pdf 8 -
+/amec2008/\\ 2 -
+/amec/index.shtml 2 -
+/jnt-db/climate.html&h=382&w=399&sz=56&hl=en&start=369 16 -
+/marsskinlisaleonardo.shtml 3 -
+/index.html 16 -
+/www.australiaday.com.au 7 -
+/jnt/australia.php 7 -
+/flow.php 2 -
+/CityEast.pdf 2 -
+/technical/MARSOZ_Proposal-ver1A.pdf 1 -
+/marsskinexpeditiontwo.php 5 -
+/jnt/jnt-8.jpg 2 -
+/proceedings/11-Assessment_of_the_Use_of_Tether_Technology_in_the_Future_Exploration_of_Mars.pdf 1 -
+/favicon.gif 7 -
+/jnt/CooberPedy.jpg 1 -
+/library/living_on_Mars.ppt 2 -
+/jnt/technical/index.shtml 1 http://www.webwombat.com.au/
+/site_selection.shtml 22 -
+/jnt-db/climate.html&h=382&w=399&sz=56&hl=en&start=336 16 -
+/qld/qld.html 32 -
+/\\ 2 -
+/index 1 -
+/AMEC2004_Program.htm 13 -
+/VIC.shtml 1 -
+/library/index.002.jpeg 1 -
+/jnt-db/Australia-NT_S-Todd_Hale.html 1 -
+/robots.txt 2161 -
+/amec2005//\\ 2 -
+/schmittbio.shtml 18 -
+//php-myadmin/scripts/setup.php 1 -
+/technical/Analogue_Stations.pdf 9 -
+/amec 2 -
+/amec2002.shtml 9 -
+/jnt-db/images/australia_median_rainfall.jpg 16 -
+//php-my-admin/scripts/setup.php 1 -
+/jnt/hakluyt.shtml 1 http://www.webwombat.com.au/
+/jnt-db/climate.html&h=382&w=399&sz=56&hl=en&start=337 16 -
+/amec2002/proceedings/uvzjrjecr.html 1 -
+/amec2002/17-James_Waldie_MCP_full_paper.htm 3 -
+/AMEC2004_A4_Poster.pdf 5 -
+/upcoming_conferences.shtml 17 -
+/marsskin/wa.php 24 -
+/images/Honeywell_MCPS_large.jpg 5 http://www.marssociety.org.au/marsskin.php
+/marsupial/index.html 4 -
+/amec2002/press_release_280502.pdf 12 -
+/main.shtml 5 -
+/clarkediary.shtml 16 http://www.webwombat.com.au/
+/jnt/Zubrin_Tour_2000.shtml 1 http://www.webwombat.com.au/
+/images/tech_images/Batoota1_thumb.GIF 25 http://www.marssociety.org.au/headline_archive.php
+/www.graphicssolutions.iinet.net.au/~wams/doc/Astrofestp3.PPT 16 -
+/jnt-db/climate.html&h=382&w=399&sz=56&hl=en&start=341 16 -
+/amec2002/proceedings/06-MarsOz_background_full_paper.htm%20%20/contact.php 1 -
+//phpmy-admin/scripts/setup.php 1 -
+/jnt/LoadGallery('Jnt1_people',%20'images/adelaide_jnt14.jpg','Jnt1_peopleCaption',%20'%3Ca%20href=%5C'images/adelaide_jnt14.jpg%5C'%3EMichael%20West,%20Jonathan%20Clarke,%20Jason%20Hoogland,%20Guy%20Murphy,%20James%20Waldie%3C/a%3E') 1 -
+/pr/PressRelease121201.PDF 18 -
+/amec2003/proceedings/09-Arkady_Dyskin_files/editdata.mso 1 -
+/amec2010/side.php 20 http://marssociety.org.au/side.php
+/120207.shtml 1 -
+/library/robots.txt 1 -
+/jnt/240501.shtml 1 http://www.webwombat.com.au/
+/library/sa.php 20 -
+/amec2002/proceedings/12-Nigel_Henbest_&_Heather_Couper.htm 15 -
+/amec2003/proceedings/00-Guy_Murphy_files/editdata.mso 2 -
+/amec2003/proceedings/02-Steven_Dawson_files/editdata.mso 4 -
+/rules.htm 20 -
+/jnt/site_selection.shtml 18 -
+/_vti_bin/shtml.exe/_vti_rpc 16 -
+/amec2003/proceedings/index2_files/editdata.mso 2 -
+/amec2007/proceedings/AMEC2007_Mann.PDF//includes/db_adodb.php 3 -
+/expedition1/Rockydebriefing.jpg 1 -
+/marsskin/nt.php 25 -
+/jnt/LoadGallery('Jnt1',%20'images/adelaide_jnt9.jpg','Jnt1Caption',%20'%3Ca%20href=%5C'images/adelaide_jnt9.jpg%5C'%3EVic%20Gostin,%20James%20Leyden,%20James%20Waldie%20&%20Jonathan%20Clarke,%20pre-forum%20meeting%3C/a%3E') 1 -
+/library/wa.php 19 -
+/amec2003/proceedings/01-Vadim_Gushin_files/editdata.mso 1 -
+/amec2003/proceedings/08-Jon_Clarke_1_files/editdata.mso 1 -
+/library/\\ 2 -
+/amec2003/proceedings/13-panel_discussion_2_files/editdata.mso 3 -
+/amec2002/proceedings/24-yon_wei_ng_full_paper.htm 1 -
+/jnt/jnt-4.jpg 3 -
+/marsskin/\\ 2 -
+/mediarelease311005.shtml 2 -
+/marsskin/qld.php 21 -
+/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/tinybrowser.php 5 http://www.marssociety.org.au/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/tinybrowser.php
+/amec2010/return%20addthis_sendto() 1 -
+/Cosmos%20419 10 -
+/https://sites.google.com/site/eriitajones/ 1 -
+/technical/tech_images/MarsOz_cover.jpg 1 -
+/jnt-db/climate.html 4 -
+/library/vic.php 21 -
+/amec2008/https://monroe.vianet.net.au/~mhchost/Registration2008.html 3 -
+/marsskin/sa.php 22 -
+/amec2003/proceedings/pr%2520paper__3d70ca98.jpg 1 -
+/bibliography.shtml 18 -
+/amec2003/proceedings/04-James_Waldie_files/filelist.xml 1 -
+/jnt/LoadGallery('Jnt1_people',%20'images/adelaide_jnt17.jpg','Jnt1_peopleCaption',%20'%3Ca%20href=%5C'images/adelaide_jnt17.jpg%5C'%3EExpedition%20vehicle%20showing%20Starchaser%20logo%3C/a%3E') 1 -
+/marsskin/act.php 23 -
+/MarsOZ.php 36 -
+/jnt-db/Australia-SA_N-Toondina.html 1 -
+/%5C 2 -
+/amec2004.shtml 17 -
+/jnt-db/Australia-NT_S-Henbury.html 9 -
+/hop.shtml 2 -
+/library/living_on_Mars 1 -
+/jnt/amec/index.shtml 1 http://www.webwombat.com.au/
+/amec2002/12-Nigel_Henbest_&_Heather_Couper_full_paper.htm 1 -
+/amec2004/progs/default.asp 6 -
+/mediarelease170805.shtml 29 -
+/amec2003/proceedings/00-publication_notes_files/editdata.mso 1 -
+/240501.shtml 20 -
+/marsupial/publications.htm 1 -
+/pressrelease120202.doc 25 -
+/Cosmos+419 2 -
+/jnt/LoadGallery('Jnt1_people',%20'images/adelaide_jnt10.jpg','Jnt1_peopleCaption',%20'%3Ca%20href=%5C'images/adelaide_jnt10.jpg%5C'%3ECarol%20Stoker,%20Jason%20Hoogland,%20Larry%20Lemke%3C/a%3E') 1 -
+/NSW.shtml 19 -
+/jnt-db/ 10 -
+/http/ 1 http://www.webwombat.com.au/
+//phpMyAdmin-2/scripts/setup.php 1 -
+/amec2002/proceedings/00-Acknowledgements.htm 18 -
+/amec2003/proceedings/06-Mark_Smith_files/editdata.mso 4 -
+/amec2007/proceedings/TOC_files/editdata.mso 2 -
+/amec2002/proceedings/contact.php 2 -
+/marsskin/tas.php 22 -
+/media_release_130801.php 22 -
+/library/MarsOZ 1 -
+/jnt-db/climate.html&h=382&w=399&sz=56&hl=en&start=334 16 -
+/marsskin/nsw.php 25 -
+/amec/AMEC2005.htm 35 -
+/amec2010/index.php 23 http://marssociety.org.au/index.php
+/media.shtml 1 -
+/amec2010/main.php 20 http://marssociety.org.au/main.php
+/jnt-db/index.html 22 -
+//mysql-admin/scripts/setup.php 1 -
+/amec2002/proceedings/06-MarsOz_background_full_paper.htm/contact.php 1 -
+/amec2001/index.shtml%20 1 -
+/amec2003/proceedings/03-Rob_Hart_files/editdata.mso 4 -
+//pma/scripts/setup.php 1 -
+/images/tech_images/Dune_thumb.GIF 27 http://www.marssociety.org.au/headline_archive.php
+//phpmyadmin/scripts/setup.php 1 -
+/amec2002/index.html 20 -
+/marsupial/\\ 2 -
+/library/index.004.jpeg 1 -
+//mysqladmin/scripts/setup.php 1 -
+/amec2008/AMEC2008.php_files/BGCOLOR.htm 14 http://www.marssociety.org.au/amec2008/AMEC2008.php
+/amec2003/proceedings/10-panel_discussion_1_files/editdata.mso 5 -
+/minutes1.htm 17 -
+/jnt/MSA-TEC-JNT-PLN-JNT_1_detailed_itinerary-U-ver0A.html 20 -
+//myadmin/scripts/setup.php 1 -
+/marsskin.shtml 23 -
+/return%20addthis_sendto() 1 -
+/library/nt.php 19 -
+/amec2003/proceedings/05-Graham_Mann_files/editdata.mso 2 -
+/mars_oz_base_jbis2.pdf 9 -
+/library/qld.php 16 -
+/amec2002/proceedings/24-yon_wui_ng.htm 2 -
+/Expedition_2_report.pdf 3 -
+//dbadmin/scripts/setup.php 1 -
+/library/index.005.png 1 -
+/jnt-db/brief.html 1 -
+/jnt/LoadGallery('Jnt1',%20'images/adelaide_jnt12.jpg',%20'Jnt1Caption',%20'%3Ca%20href=%5C'images/adelaide_jnt12.jpg%5C'%3EVic%20Gostin%20&%20Guy%20Murphy%20at%20Mars%20forum%3C/a%3E') 1 -
+/marsupial.shtml 11 -
+/jnt-db/climate.html&h=382&w=399&sz=56&hl=en&start=345 16 -
+/main.php: 1 -
+/marsskinlisaleonardo.php 2 -
+/technical/MSA-TEC-MNG-PRT-MSA_overview_20011026_a-P-ver1.ppt 21 -
+//mysqlmanager/scripts/setup.php 1 -
+/sitemap.xml 2 -
+/MSA_downloads.shtml 2 -
+//marssociety.org.au/amec2010/index.php 3 http://marssociety.org.au//marssociety.org.au/amec2010/index.php
+/amec2001/index.shtml+ 2 -
+/jnt/jnt-db/climate.html%23moomba 1 -
+/orc.shtml 2 -
+/jnt/onvrsfjbf.html 1 -
+/_vti_inf.html 16 -
+/contacts.shtml 1 -
+/amec2002/amec2002abstracts.htm 19 -
+/amec2002/10-Rod_Boswell.htm 3 http://pipl.com/directory/people/Rod/Boswell
+//phpadmin/scripts/setup.php 1 -
+/jnt/hop.shtml 1 http://www.webwombat.com.au/
+/jnt-db/climate.html&h=382&w=399&sz=56&hl=en&start=364 16 -
+/Mars%20or%20Utah 11 -
+/amec2002/proceedings/lagfrcdkndy.html 1 -
+/amec2003/proceedings/07-Aaron_Tan_files/editdata.mso 1 -
+/images/Jennifer_Heldmann.jpgG 15 -
+/jnt/diaries.shtml 32 -
+/amec2002/proceedings/09-Jennifer_Laing_MarsOz_Outreach.htm 15 -
+/geology.shtml 1 -
+/mediarelease050906.shtml 2 -
+/library/tas.php 18 -
+/jarnti130801.shtml 2 -
+/side.html 3 -
+/library/index.003.png 1 -
+/contact.php 12 -
+/marsupial/project%20team.htm 1 -
+/Membership.shtml 2 -
+/jnt/CooberPedySmall.jpg 36 http://www.marssociety.org.au/headline_archive.php
+/jnt/breakawaystop.jpg 1 -
+//web/scripts/setup.php 1 -
+//sqlmanager/scripts/setup.php 1 -
+/jnt-db/db.html 1 -
+/med_rel_19dec03.shtml 20 -
+/AGM2003.shtml 17 -
+/amec2002/proceedings/10-Rod_Boswell.htm 15 -
+//websql/scripts/setup.php 1 -
+//phpmyadmin2/scripts/setup.php 1 -
+/amec2004/research/default.asp 6 -
+/Mars+or+Utah 2 -
+/amec2002/proceedings/08-Jonathan_Clarke_MarsOz.htm 15 -
+/jnt-db/Australia-NT_S-Gosses_Bluff.html 10 -
+/indonesia.htm 1 -
+/technical/MSA-TEC-MNG-PRT-MSA_overview_20011026_b-P-ver1.ppt 21 -
+/pressrelease050802.doc 22 -
+/MarsOZ.shtml 21 -
+//db/scripts/setup.php 1 -
+/marsskinexpeditionone.shtml 3 -
+/amec2003/proceedings/12-Jennifer_Laing_files/editdata.mso 1 -
+/SA.shtml 1 -
+/TEC-MSP/marsupial.shtml 1 -
+/aboutus.shtml 2 -
+/library/act.php 19 -
+/jonathan_clarke_05_07_06.pdf 21 -
+//admin/phpmyadmin/scripts/setup.php 1 -
+/marsskin/vic.php 20 -
+/amec2002/proceedings/20-Maurice_Castro_&_Paul_van_den_Bergen.htm 15 -
+//typo3/phpmyadmin/scripts/setup.php 1 -
+/human_factors.shtml 2 -
+/marsskinamec2002.shtml 1 -
+//includes/db_adodb.php 9 -
+//phpMyAdmin/scripts/setup.php 1 -
+//mysql/scripts/setup.php 1 -
+/outline_program.doc 8 -
+/images/tech_images/4wdtour2_thumb.GIF 26 http://www.marssociety.org.au/headline_archive.php
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 1863
+172.30.1.1 23092 23092 51833703 20100930234118
+93.174.93.5 3541 3541 30463223 20100930233828
+93.174.93.197 3532 3532 30385796 20100930234118
+38.99.96.200 494 494 6182384 20100927142233
+38.99.97.75 247 247 3090324 20100902002251
+38.99.96.24 247 247 3090324 20100901152522
+38.99.96.52 247 247 3090324 20100907023838
+64.27.25.126 88 98 2116294 20100911140724
+203.219.132.167 81 263 2116102 20100925114713
+203.36.44.15 74 155 3402518 20100930193517
+80.148.19.14 1 11 719201 20100907085905
+110.75.174.31 1 1 14979 20100904184435
+70.84.26.170 1 1 0 20100926061937
+207.46.12.162 2 2 84819 20100917094326
+58.175.138.46 3 7 76105 20100909183837
+168.10.27.10 1 5 142630 20100909040042
+87.21.233.138 0 1 115032 
+69.63.181.249 0 1 152548 
+163.1.31.204 1 1 3849584 20100907204959
+58.172.49.248 1 1 4950528 20100906194244
+203.206.234.158 3 7 76105 20100908163742
+164.116.126.144 0 1 24606 
+84.202.151.10 3 7 75910 20100921111031
+207.46.12.63 1 1 2717 20100906212809
+93.97.190.19 1 1 4950528 20100923070345
+75.151.76.234 3 3 7140357 20100915130939
+115.113.155.156 1 1 4950528 20100913182022
+94.23.3.138 9 9 76300 20100918072256
+150.70.66.186 2 2 1215246 20100928154522
+124.171.66.32 1 45 3152251 20100917214824
+124.188.1.149 4 4 4950528 20100912090239
+59.90.32.89 1 1 412189 20100916190531
+194.83.164.22 2 3 150240 20100917194159
+88.210.153.8 1 1 2326201 20100905181955
+140.114.58.145 1 1 4424908 20100907184352
+117.205.96.147 0 1 24606 
+60.254.20.70 0 1 24606 
+147.209.216.244 1 1 1137379 20100908164151
+91.81.80.119 0 1 115032 
+202.14.131.60 3 7 75910 20100924110620
+24.150.147.160 1 1 4950528 20100929170943
+72.207.69.7 2 10 178323 20100927053938
+58.172.60.153 3 7 76105 20100912104059
+207.46.199.184 1 1 19513 20100921125015
+207.46.204.160 1 1 33505 20100918214321
+217.12.1.125 1 1 2391 20100910062916
+85.162.49.149 1 9 553622 20100901040445
+202.45.119.17 1 6 59810 20100906125308
+144.131.41.138 6 19 642302 20100902222953
+69.236.77.42 1 7 527483 20100907104327
+41.220.68.5 0 2 189141 
+124.197.48.236 8 8 14856366 20100921153545
+58.164.118.211 7 24 351513 20100930203044
+124.184.183.53 4 10 90263 20100919155344
+207.46.204.208 1 1 51897 20100913130232
+76.226.184.140 1 6 68498 20100928061712
+62.56.114.57 1 1 738373 20100925205503
+93.158.121.66 4 4 0 20100921221009
+76.169.244.241 4 12 171822 20100915050945
+87.52.95.109 0 2 49212 
+99.88.23.200 1 1 8603 20100912145834
+80.6.154.90 0 1 24606 
+72.81.47.43 1 1 4950528 20100902035808
+129.120.198.192 1 11 540237 20100914221858
+125.230.64.112 1 1 2391 20100929070501
+24.63.232.118 0 1 24606 
+93.210.99.124 1 1 48670 20100907082231
+207.46.204.220 1 1 207367 20100903043302
+114.76.26.243 12 26 707193 20100915173607
+88.87.109.222 0 1 115032 
+146.231.129.54 1 1 4950528 20100923015252
+78.137.55.72 1 1 2391 20100930222046
+74.201.117.226 1 1 3911 20100911200306
+207.46.199.201 2 2 280671 20100921131730
+114.134.199.65 2 2 37680 20100922145718
+220.255.0.42 0 1 24774 
+79.75.20.7 1 11 719201 20100901104200
+114.76.222.233 4 8 160583 20100928143654
+95.67.80.146 1 1 13535 20100926185111
+160.80.212.80 1 1 2391 20100928080303
+86.30.17.163 1 1 4950528 20100907050226
+202.45.119.20 2 2 0 20100908125843
+110.15.182.25 1 1 4424908 20100920013205
+202.189.79.114 5 40 668652 20100930110024
+65.52.104.43 2 3 110304 20100909054043
+189.114.141.154 1 1 2391 20100908184131
+118.171.43.251 1 1 4950528 20100923020640
+130.76.155.168 2 6 86642 20100928040954
+92.225.114.2 0 1 79242 
+78.5.250.218 1 1 2391 20100911014628
+173.104.140.46 1 1 4950528 20100924110857
+80.249.48.132 7 7 0 20100923194013
+207.46.204.172 1 1 9049 20100903095246
+210.89.44.224 1 6 525990 20100917194810
+77.170.219.52 1 1 4424908 20100911225339
+217.155.109.70 1 1 4950528 20100918083751
+190.153.3.250 0 1 51520 
+89.240.105.215 1 1 4950528 20100914035114
+82.233.232.215 2 4 324550 20100929235626
+207.46.199.11 1 2 6701 20100907230820
+209.131.39.60 1 1 2391 20100903162456
+149.5.33.99 0 1 24606 
+58.170.29.154 8 14 104697 20100907101515
+12.168.203.132 11 11 113055 20100922145753
+71.96.125.236 1 8 374220 20100913082536
+203.188.218.49 48 68 49922899 20100923082104
+122.49.184.217 14 34 863827 20100930231444
+84.31.50.108 0 1 51520 
+74.117.136.180 0 1 24606 
+196.4.146.132 1 1 1137379 20100902230033
+89.208.196.229 0 1 65148 
+194.44.168.216 2 3 63421 20100907093453
+90.222.111.209 7 7 4952919 20100927020314
+207.216.74.200 0 1 24606 
+66.177.162.89 0 1 24606 
+83.215.56.121 0 1 8941 
+120.16.1.197 1 16 1183645 20100901113719
+124.190.115.179 3 7 75984 20100915114900
+174.31.234.68 10 25 336820 20100926181714
+121.96.215.188 1 1 1137379 20100903013746
+216.104.15.138 2 2 470104 20100926222423
+84.27.247.119 0 1 24606 
+88.159.169.99 3 7 75984 20100919073217
+205.251.121.5 0 33 451342 
+122.169.156.166 1 1 1137379 20100916185650
+79.89.194.153 4 10 243633 20100926170007
+174.129.78.29 1 1 14858 20100918065410
+174.129.117.216 3 3 7173 20100921084346
+59.156.192.96 24 24 57384 20100925084559
+81.144.199.141 1 9 441349 20100919015408
+201.20.18.165 10 10 78691 20100920201239
+86.143.166.79 1 9 441349 20100921014931
+151.132.105.50 2 2 13655462 20100922001015
+212.95.54.211 10 10 94518 20100913164814
+60.12.74.153 1 1 33620 20100902155334
+122.107.67.139 6 14 98701 20100905225606
+120.114.0.190 2 7 82729 20100929211107
+91.201.66.3 27 27 232281 20100930015022
+93.210.115.138 1 1 48670 20100911065355
+90.16.116.169 1 5 234965 20100910005822
+188.92.75.82 19 21 617190 20100922153215
+124.183.165.226 10 24 301944 20100930144338
+85.58.35.200 1 1 4950528 20100925074830
+187.22.169.9 0 2 49212 
+151.68.49.147 0 1 115032 
+110.175.157.5 1 1 4950528 20100906183247
+217.30.125.42 0 1 24606 
+99.235.138.111 0 1 51520 
+94.181.195.242 1 1 8603 20100914090630
+202.54.184.151 1 1 412189 20100924215434
+58.38.227.94 0 1 67129 
+190.146.187.146 0 5 367014 
+84.241.26.28 1 1 6827731 20100911075905
+86.154.18.134 1 1 4950528 20100926173224
+115.130.34.194 1 7 527483 20100918141015
+125.230.78.232 1 1 2391 20100904095036
+76.235.180.193 1 1 1137379 20100908085904
+203.202.225.168 2 2 16520 20100922145737
+92.240.249.96 2 2 31800 20100921063813
+108.3.209.215 4 12 287126 20100923151236
+92.27.69.157 5 5 4955310 20100913060211
+128.244.9.8 1 4 82582 20100918020727
+63.70.138.254 1 6 68498 20100901074301
+152.98.3.6 3 7 76105 20100908171241
+12.68.243.4 1 1 892783 20100917235022
+120.151.18.23 1 8 325438 20100913115356
+93.39.223.237 0 1 115032 
+203.10.121.86 3 3 9901056 20100915114657
+207.46.193.37 2 3 183685 20100912132216
+85.31.219.20 28 28 138614784 20100930030718
+86.96.226.87 1 10 680924 20100921062514
+58.174.114.106 1 1 2391 20100907131907
+174.131.74.17 1 6 68498 20100920101942
+66.219.58.38 2 2 4782 20100922192311
+202.168.58.126 6 96 3189813 20100914100804
+38.99.98.15 14 14 142857 20100917083616
+121.245.99.32 1 1 412189 20100925063246
+120.51.177.9 0 1 24606 
+203.41.220.240 1 1 213084 20100928172220
+58.168.7.40 3 7 76105 20100906225820
+174.17.147.30 1 1 1272509 20100923131829
+81.208.15.194 0 1 115032 
+68.192.191.80 1 1 8603 20100926223151
+218.231.214.140 1 2 24722 20100918211333
+151.95.97.41 0 1 115032 
+65.52.51.179 3 3 546461 20100923063113
+115.70.81.252 5 14 163016 20100906104858
+219.90.173.27 5 19 446463 20100907170405
+213.121.199.146 4 4 19802112 20100915005216
+202.45.119.21 15 15 14863539 20100916144500
+97.115.187.92 1 7 125968 20100913031112
+77.64.146.2 0 1 47454 
+59.156.129.123 12 12 28692 20100918023758
+122.148.118.115 2 2 2819354 20100915172451
+74.222.7.234 1 1 3911 20100904230716
+143.248.135.30 1 1 1137379 20100929114822
+90.195.201.229 1 1 4950528 20100923194857
+118.210.29.229 1 42 2082415 20100913222005
+110.75.176.39 1 1 5939 20100905152339
+121.215.134.182 7 16 398771 20100922234735
+203.189.4.102 4 4 4950528 20100906130707
+86.90.48.107 1 1 14858 20100925054751
+121.221.238.229 6 11 99776 20100910002944
+153.107.97.157 2 7 5019026 20100923135518
+87.54.33.65 1 1 1137379 20100921212114
+207.200.116.65 1 1 1137379 20100901070700
+72.211.149.58 1 11 719201 20100903035351
+80.66.182.195 0 1 24606 
+139.168.127.229 11 32 1818644 20100904163943
+24.30.44.127 0 1 77565 
+204.191.180.68 1 1 4950528 20100920121054
+129.78.32.22 19 47 1208558 20100904132206
+75.41.181.244 1 1 1130573 20100905121415
+82.59.173.223 0 1 115032 
+207.234.209.211 12 12 28692 20100930065259
+93.38.227.163 0 1 115032 
+80.249.48.137 3 3 0 20100923193827
+95.26.147.53 1 1 2391 20100908123206
+93.33.136.147 0 1 77565 
+74.209.46.237 0 1 79964 
+92.195.165.43 0 1 24606 
+61.247.209.83 15 15 159895 20100918025215
+129.24.44.201 0 1 24606 
+59.167.225.129 1 1 359898 20100914104909
+129.7.77.194 0 1 24606 
+24.16.56.234 3 33 719201 20100922011645
+89.123.253.179 6 21 443979 20100906042346
+203.2.218.132 3 7 75984 20100916154634
+66.215.98.8 2 3 39546 20100923152559
+89.211.252.130 1 1 4950528 20100924165341
+122.110.175.12 2 5 138367 20100925181531
+124.187.50.91 3 7 76105 20100904193109
+117.200.83.244 1 1 4950528 20100929013437
+74.104.185.50 1 42 2082415 20100912152502
+207.46.199.16 1 7 145928 20100922025749
+77.98.214.185 1 1 4950528 20100906204755
+126.119.142.204 18 18 43038 20100923140219
+212.183.140.30 1 1 6827731 20100929013956
+58.174.201.149 1 1 84673 20100928103325
+208.80.194.33 4 4 44319 20100922005119
+184.72.210.79 1 1 2391 20100913024916
+138.130.156.113 5 16 315900 20100920170521
+92.40.203.35 1 4 190238 20100925041713
+12.220.82.229 1 6 74448 20100908000429
+130.160.86.135 1 1 8603 20100928221144
+98.149.61.227 1 2 66081 20100917101044
+220.253.201.33 4 8 87812 20100920124356
+119.51.93.162 2 2 17206 20100918030950
+114.76.104.3 1 1 1409677 20100915205334
+60.229.2.213 4 8 5026633 20100906180546
+121.54.48.38 1 34 1677885 20100912180823
+121.215.178.186 1 7 374357 20100921203651
+203.219.52.189 1 1 4950528 20100915181936
+180.200.142.194 1 1 4950528 20100912135548
+63.225.97.82 1 1 351793 20100929141757
+71.138.133.186 1 1 6827731 20100928042854
+24.0.95.196 0 1 24606 
+76.73.108.76 2 2 180148 20100915072503
+124.180.194.99 3 7 75910 20100928224255
+82.57.173.201 0 1 115032 
+207.46.199.23 1 1 12038 20100930020533
+59.92.120.183 1 8 325438 20100911155441
+183.5.7.243 1 1 1130573 20100908181706
+203.214.103.243 4 8 78496 20100910223717
+121.45.179.245 3 7 75910 20100924162713
+98.227.89.88 2 18 441349 20100929131450
+60.242.174.80 1 1 4950528 20100919093218
+118.209.21.204 0 1 24606 
+124.180.37.90 4 4 4950528 20100901184441
+94.181.205.102 2 2 17206 20100918131548
+209.34.114.232 1 1 4950528 20100922205003
+113.29.215.135 3 7 22596 20100909133859
+192.100.112.211 1 1 1137379 20100910184316
+60.230.196.99 1 15 1230113 20100907092847
+124.180.153.126 2 13 595981 20100918155957
+207.46.199.193 2 2 742087 20100921141219
+110.75.168.16 2 2 4782 20100906205403
+207.46.12.29 1 2 6701 20100923021943
+216.221.240.130 0 1 24606 
+62.60.14.1 3 7 75910 20100930095107
+98.228.160.27 2 8 134249 20100909143404
+203.129.36.158 1 1 4950528 20100909113457
+210.212.155.73 1 1 4950528 20100917211507
+173.12.4.17 1 1 4950528 20100914095701
+118.208.221.254 0 1 24606 
+110.172.161.71 0 1 24606 
+82.235.57.41 7 29 848924 20100924195807
+216.104.15.134 1 1 711469 20100906123909
+69.2.247.2 1 1 1145104 20100917030025
+220.101.115.103 3 7 76105 20100901194131
+170.201.172.69 0 1 43614 
+180.67.178.13 1 1 4424908 20100917120256
+174.69.204.44 1 1 8603 20100923150623
+211.30.18.62 4 8 78496 20100902153846
+173.34.169.132 1 11 719201 20100908170414
+119.93.113.146 1 1 4950528 20100926212132
+67.163.70.183 1 2 66081 20100916115223
+69.236.78.249 1 11 774804 20100905152021
+78.20.177.27 1 2 31194 20100920071640
+140.253.34.186 1 5 234965 20100901152305
+212.117.107.189 1 1 4950528 20100916002820
+188.126.81.134 8 8 228385 20100927181845
+149.119.218.75 1 1 1137379 20100916163304
+95.149.227.46 1 1 4950528 20100906175248
+211.26.30.74 2 2 426168 20100919235213
+203.45.8.169 1 3 128981 20100926122444
+169.234.8.25 5 9 95920 20100925014812
+124.182.47.68 1 3 128981 20100925213556
+120.21.135.194 1 3 64380 20100905195033
+71.254.189.31 0 1 24606 
+93.32.224.86 0 1 115032 
+207.172.162.46 3 7 76105 20100905075049
+115.124.0.5 1 1 2391 20100914000813
+38.100.102.98 0 1 24606 
+144.85.131.248 0 1 115032 
+92.21.142.236 1 1 1137379 20100902014553
+58.108.194.193 1 1 4950528 20100919155900
+207.46.199.178 1 1 70744 20100921102414
+207.46.12.211 1 1 865623 20100903004348
+114.79.55.8 0 1 24606 
+92.231.185.30 3 7 75910 20100924203115
+216.229.71.30 1 1 4950528 20100928041632
+58.167.205.152 1 8 347970 20100906215703
+91.210.246.250 1 7 125968 20100907184217
+220.253.138.181 1 7 125968 20100905151822
+94.20.32.186 0 1 24606 
+130.95.187.156 1 1 412189 20100924103325
+41.218.247.49 1 1 13850 20100930103959
+122.58.98.123 2 2 9901056 20100901181323
+208.80.194.27 3 3 18317 20100917190255
+68.145.43.212 1 1 6827731 20100908154420
+24.72.139.98 0 1 24606 
+82.51.166.198 0 1 115032 
+173.78.123.66 1 7 125968 20100924150854
+12.165.172.4 0 1 24606 
+151.61.36.205 0 1 115032 
+121.216.250.157 1 7 374357 20100916111213
+212.219.247.210 0 1 24606 
+72.37.244.44 1 5 53981 20100929021135
+71.253.250.91 2 15 509847 20100927172039
+207.46.204.167 1 2 7863 20100916133427
+120.21.156.220 2 13 30856 20100908164611
+203.173.31.39 3 7 76105 20100906004157
+84.19.186.198 1 1 33620 20100904200350
+69.140.13.147 1 6 68498 20100928114216
+117.205.16.3 1 1 4950528 20100928165505
+145.101.134.166 1 1 1137379 20100915213442
+151.50.20.36 0 1 115032 
+210.212.222.90 3 3 14851584 20100906163458
+203.217.143.134 6 6 39186 20100913035738
+113.149.236.174 1 1 2380119 20100920093347
+58.33.188.249 1 1 4950528 20100910233030
+99.89.48.19 1 1 711469 20100913155859
+202.58.86.15 1 1 4950528 20100929162045
+166.216.130.71 0 1 19156 
+143.215.106.154 1 1 412189 20100915121730
+201.67.87.170 0 2 24606 
+202.45.119.11 6 10 5026633 20100909120022
+206.186.134.38 1 5 211216 20100903095521
+91.201.66.163 1 1 2391 20100901073002
+115.70.82.149 3 7 75910 20100919125859
+111.220.221.140 11 67 1073169 20100929132550
+113.29.215.129 9 15 5106851 20100916095642
+194.80.135.203 1 1 4950528 20100920171349
+122.107.117.227 14 14 14865930 20100913211927
+92.196.75.229 4 13 144603 20100903200931
+188.92.75.148 1 1 8603 20100915084433
+203.214.126.60 4 8 78301 20100924214640
+114.76.245.7 3 7 75910 20100926023500
+92.196.3.252 3 7 75910 20100920020135
+62.77.56.21 1 1 711469 20100910192535
+202.129.234.233 1 1 4950528 20100911154157
+62.31.213.54 0 1 24606 
+195.194.21.180 2 3 144637 20100927203207
+120.21.48.186 12 34 1067166 20100911175123
+138.162.0.44 0 1 24606 
+72.14.192.66 2 2 2274758 20100913090049
+199.67.203.140 2 15 623035 20100917150306
+69.134.73.38 1 11 1178343 20100912003425
+150.203.151.6 6 13 143471 20100924122237
+207.46.12.15 1 2 10281 20100925183906
+180.181.80.32 1 1 335604 20100906211110
+61.183.0.77 1 1 2391 20100930083357
+80.116.156.114 0 1 115032 
+62.148.135.32 1 7 68498 20100914215443
+124.148.159.192 1 2 24609 20100926192015
+110.75.172.71 1 1 15428 20100904215650
+204.45.55.23 2 2 26868 20100920224435
+89.211.94.173 1 1 4950528 20100925041022
+121.45.208.56 1 1 1137379 20100923205322
+67.18.5.133 1 1 4950528 20100923003537
+74.219.123.86 1 1 412189 20100910004551
+208.80.194.31 2 2 29837 20100919011155
+85.17.171.225 3 3 7173 20100928124202
+198.16.3.247 0 1 0 
+121.91.177.148 1 1 4950528 20100912224425
+214.13.149.10 5 11 783028 20100926044644
+65.52.104.41 1 2 8492 20100908030538
+204.74.218.240 2 2 180148 20100926154108
+203.48.66.138 1 1 1137379 20100916155030
+173.242.114.131 1 1 25236 20100916051654
+202.161.2.197 3 7 75984 20100918142954
+66.219.58.44 1 1 2391 20100926020753
+81.224.230.176 0 1 24606 
+75.39.142.180 1 6 68498 20100906122326
+80.67.13.108 1 1 18265 20100930202941
+193.2.237.17 1 1 1137379 20100930080727
+203.223.188.37 1 1 412189 20100927160347
+110.75.174.41 1 1 9482 20100904004351
+125.230.68.94 1 1 2391 20100916025636
+121.127.210.32 1 1 4950528 20100906171938
+121.222.252.200 3 3 514635 20100915110533
+124.179.145.90 1 6 68498 20100926230008
+124.148.55.11 4 8 78496 20100909202219
+110.20.21.126 4 8 84437 20100905221753
+68.41.177.133 1 3 73394 20100927235430
+65.52.49.139 1 1 220751 20100922235158
+99.252.165.65 1 8 325438 20100921233112
+170.185.216.19 0 1 24606 
+122.167.117.47 2 2 0 20100926011329
+69.236.93.148 1 42 2082415 20100929173028
+86.97.78.236 1 2 173490 20100919031120
+110.75.175.20 1 1 4596 20100903174433
+93.172.75.168 17 17 20814759 20100903023326
+95.26.112.225 1 1 2391 20100924200311
+60.224.164.25 4 16 630447 20100930122943
+64.118.10.203 2 18 882698 20100907083702
+124.189.27.91 4 9 112714 20100928203124
+59.92.83.129 0 1 24606 
+94.166.124.23 0 1 115032 
+121.217.204.12 1 1 4950528 20100916201036
+80.249.48.139 6 6 0 20100923194015
+117.55.241.57 1 9 441349 20100913062842
+65.52.49.75 1 1 25236 20100923041516
+144.131.114.52 1 42 2082415 20100916211135
+58.178.97.184 1 1 4950528 20100923231036
+113.199.217.24 1 1 4950528 20100901211407
+76.7.44.254 1 53 951373 20100925144359
+113.29.215.133 3 7 75984 20100916142931
+202.72.185.62 5 14 296447 20100914150314
+203.36.44.17 23 47 780554 20100928161149
+216.99.184.50 2 7 200435 20100930044924
+70.37.162.170 1 1 25562 20100916220848
+190.3.114.43 0 1 24606 
+83.170.105.81 1 1 4424908 20100908173137
+218.248.84.90 1 7 374357 20100919002408
+70.24.92.203 1 6 74448 20100901060252
+150.101.249.245 1 1 13462 20100928114029
+196.217.221.167 5 5 4955310 20100929151654
+201.173.114.252 0 1 24606 
+91.201.66.29 8 8 227802 20100908063448
+207.46.193.51 1 2 8225 20100907170339
+174.138.162.2 8 8 228385 20100924171709
+84.14.112.200 1 8 463922 20100930235743
+150.70.75.162 7 7 16098674 20100917145019
+58.168.44.47 15 43 500913 20100926154029
+203.171.196.19 3 7 75910 20100919224016
+115.248.175.227 3 33 624315 20100922193307
+207.46.199.25 1 1 4614108 20100928175655
+92.196.245.179 3 7 75984 20100918215516
+194.250.6.178 1 1 1137379 20100917003646
+203.51.104.245 1 1 4950528 20100921183455
+76.178.115.195 1 8 325438 20100919125135
+124.197.32.99 1 1 4950528 20100907095102
+62.25.109.195 2 16 343006 20100929183216
+213.192.68.50 0 1 24606 
+220.136.122.121 1 1 1130573 20100930113529
+184.82.88.99 1 1 2391 20100902091559
+202.58.64.18 1 1 8603 20100901121614
+134.178.63.3 3 9 45900 20100916130633
+188.28.3.122 0 1 8941 
+173.193.219.168 20 20 417825 20100929093659
+61.8.19.70 3 7 76105 20100908090556
+88.203.78.148 3 3 7173 20100921003444
+66.225.154.129 1 1 351793 20100913234839
+95.144.111.145 2 13 554023 20100908084135
+115.248.135.228 1 1 4950528 20100916223029
+117.193.228.108 1 1 1137379 20100919141718
+70.107.241.104 0 1 24606 
+203.206.24.132 4 8 78301 20100928205811
+207.46.12.21 1 6 122111 20100904001315
+78.40.232.4 1 3 110059 20100930221721
+121.217.55.254 1 1 84673 20100929231704
+83.101.61.130 1 7 527483 20100911091430
+87.25.191.65 0 1 115032 
+64.246.165.150 0 1 1924 
+95.26.16.203 1 1 14858 20100926141804
+90.198.164.193 1 1 4950528 20100928055556
+114.176.246.224 0 1 77252 
+210.9.200.35 13 46 791166 20100913115052
+150.203.161.6 1 5 211216 20100928085841
+41.229.100.3 1 1 892783 20100930191511
+123.201.70.153 1 1 1137379 20100908025817
+123.243.58.150 3 7 76105 20100906193312
+149.169.163.42 0 1 24606 
+79.50.119.83 0 1 115032 
+61.19.222.4 0 1 26035 
+207.46.193.49 1 1 34853 20100907084801
+121.216.223.123 3 7 75910 20100930165605
+58.166.76.203 1 9 441349 20100923205821
+78.101.148.148 14 14 14863539 20100929190913
+85.246.56.208 1 6 68498 20100912200646
+58.38.100.167 1 1 1272509 20100919183921
+65.96.176.74 0 1 24606 
+59.154.42.227 6 22 466857 20100904205003
+75.68.144.202 0 1 71316 
+173.48.202.196 1 14 665665 20100920053635
+58.111.86.248 1 1 4950528 20100908045515
+98.194.235.43 3 7 75984 20100916092004
+71.41.27.130 2 43 2098939 20100917015900
+80.254.147.132 1 1 1038048 20100906154956
+87.1.10.201 0 1 115032 
+85.31.219.23 1 1 92984 20100906214404
+80.230.58.88 1 1 92984 20100929011351
+207.46.199.22 1 1 25562 20100905152844
+220.239.170.209 1 1 4950528 20100919184822
+75.67.115.138 0 1 71316 
+70.121.138.3 0 1 24606 
+220.255.0.57 0 1 18719 
+87.17.224.3 0 1 115032 
+61.190.41.46 5 5 43716 20100930063701
+203.116.187.1 3 3 3412137 20100929184259
+64.233.172.18 1 1 1137379 20100909170724
+219.64.67.94 1 11 540237 20100924155615
+89.247.10.52 1 1 4950528 20100901162856
+207.46.12.27 1 7 144190 20100909064508
+61.142.213.158 1 1 8603 20100922102755
+139.130.43.94 1 44 3068766 20100920082344
+96.50.17.76 2 9 92745 20100903165034
+208.59.119.112 0 1 24606 
+124.185.161.198 1 1 4950528 20100907154205
+93.214.175.30 1 1 48670 20100905174736
+218.103.179.56 1 1 2391 20100903233529
+80.72.93.190 3 3 44574 20100925185719
+121.91.96.11 1 9 96008 20100917190741
+115.64.34.71 1 1 4950528 20100909202646
+79.29.13.7 0 1 115032 
+193.203.232.5 0 1 115032 
+194.44.170.214 3 6 70398 20100928170019
+187.14.225.206 12 30 1303146 20100913084337
+203.36.44.16 42 85 27198927 20100925124737
+178.33.104.43 1 1 2391 20100928034834
+65.48.240.140 4 4 4950528 20100909123957
+110.75.168.23 1 1 2391 20100915133026
+74.105.193.100 0 1 24606 
+78.139.249.180 1 3 33275 20100919011842
+79.11.210.236 0 1 115032 
+199.216.107.1 1 1 4950528 20100917050610
+186.80.142.171 0 3 223170 
+141.243.9.161 2 2 1033322 20100930065850
+110.164.213.158 1 1 4950528 20100909135659
+64.244.219.10 1 1 1137379 20100910080944
+95.26.246.110 0 1 24774 
+151.96.3.241 0 1 115032 
+203.46.11.172 1 1 4950528 20100907181447
+207.46.204.205 1 2 10692 20100912145330
+110.33.185.238 3 7 76105 20100903230449
+91.199.43.41 1 1 1137379 20100922201719
+82.84.209.202 0 1 115032 
+175.32.202.20 2 6 248500 20100928081318
+84.10.59.128 0 1 24606 
+65.52.49.76 1 1 255435 20100923053625
+207.46.195.202 2 2 824205 20100924122352
+207.46.12.205 2 2 224722 20100926103055
+203.36.44.11 51 95 15980385 20100924185056
+66.238.50.62 0 1 24606 
+174.129.56.31 7 7 0 20100912163241
+15.194.30.116 0 1 24606 
+138.236.248.196 0 1 51520 
+195.117.187.67 0 1 24606 
+60.33.172.40 0 1 24606 
+207.46.12.111 1 1 1130573 20100925145425
+24.14.175.106 0 1 77565 
+208.109.181.10 8 8 75150 20100912095431
+90.204.224.21 1 1 84673 20100921035912
+207.46.199.29 1 1 2531182 20100925102712
+65.92.235.192 1 1 412189 20100921100503
+211.147.20.187 1 1 48670 20100929033845
+74.125.75.20 3 3 3110565 20100926225448
+207.46.199.13 1 1 4441 20100912073311
+194.62.232.125 1 6 68498 20100918062622
+208.67.155.1 0 1 158115 
+118.166.217.72 1 1 1130573 20100911043158
+120.28.78.120 2 2 9901056 20100914002620
+198.145.116.13 1 1 2391 20100903064522
+115.64.14.14 1 15 1183645 20100918225102
+82.84.68.162 0 1 115032 
+60.234.252.43 0 1 24606 
+80.156.46.53 1 1 1137379 20100922185011
+213.96.59.5 1 6 74448 20100916190011
+138.96.199.53 1 11 540237 20100929153907
+207.46.12.217 1 1 3487001 20100915160505
+95.150.232.196 1 6 68498 20100922061245
+128.253.239.157 1 1 47000 20100910233123
+82.198.250.4 1 1 4950528 20100917003551
+204.95.82.70 0 1 24606 
+91.19.246.74 2 3 235676 20100913235036
+41.220.68.4 0 1 29341 
+58.7.246.243 1 1 153637 20100914205911
+124.148.37.184 4 8 78301 20100926233719
+78.149.178.225 0 1 24606 
+150.101.82.195 1 1 2391 20100921150542
+69.215.38.37 0 1 24606 
+98.112.68.196 2 8 1030948 20100924232917
+192.104.44.129 1 1 335604 20100902131248
+80.162.209.140 0 1 24606 
+94.19.191.183 15 16 384473 20100908120433
+117.53.8.27 2 8 134249 20100930160927
+70.51.253.120 1 11 719201 20100918080457
+156.14.253.26 1 1 1137379 20100906234247
+180.191.99.122 1 1 1137379 20100912222932
+212.183.140.39 4 11 134466 20100918045730
+166.82.181.2 1 1 4950528 20100910045221
+118.210.101.223 5 15 237443 20100928130902
+130.192.86.233 1 5 234965 20100918001013
+93.214.189.184 1 1 48670 20100910002907
+97.120.151.47 1 9 441349 20100920120231
+67.236.7.166 1 6 68498 20100925134326
+115.128.39.183 4 12 287321 20100909124657
+124.105.11.159 1 1 1137379 20100914164958
+194.44.170.49 1 1 55498 20100919212141
+72.42.84.158 3 7 75910 20100922043118
+150.70.64.205 4 4 19802112 20100929153949
+125.255.1.118 9 9 4962483 20100903155926
+66.220.153.248 0 1 152548 
+178.151.17.238 2 2 50472 20100917095125
+193.164.202.166 10 10 23910 20100924081116
+182.156.85.151 0 1 24606 
+67.173.64.33 0 1 24606 
+67.61.7.22 0 1 79964 
+155.42.34.132 0 2 49212 
+220.233.115.169 1 1 2391 20100927210458
+124.185.241.187 3 7 76105 20100910192257
+24.59.58.73 1 1 1137379 20100914145956
+121.215.53.233 3 8 136091 20100929194803
+183.12.102.136 1 1 2391 20100920062659
+203.217.12.82 1 37 1611296 20100917140940
+84.110.58.75 1 1 2391 20100904143804
+174.52.80.83 0 1 24606 
+92.192.123.222 1 1 2391 20100906030915
+95.247.89.233 0 1 115032 
+94.183.96.54 3 3 4950528 20100915013645
+208.80.194.36 2 2 15926 20100911165511
+72.81.24.216 1 1 4950528 20100929001344
+121.45.32.67 1 1 84673 20100920222927
+203.10.121.83 1 1 0 20100903115541
+63.239.134.6 0 1 24606 
+80.249.48.133 3 3 0 20100923193903
+207.46.12.202 1 1 3205 20100929023213
+67.234.88.221 0 1 24606 
+122.161.250.4 1 1 2391 20100909164247
+110.75.168.10 2 2 4782 20100921091001
+207.46.195.209 1 1 13535 20100902171741
+203.171.196.58 4 8 64609 20100905202259
+68.112.224.74 1 1 4950528 20100929024657
+80.127.8.163 1 1 4950528 20100907233736
+203.173.2.234 0 1 24606 
+98.88.175.190 0 1 24606 
+110.75.168.7 1 1 2391 20100913181949
+121.223.80.216 1 6 68498 20100930064812
+124.187.71.105 1 1 57915 20100906211323
+113.29.215.132 5 9 5075357 20100922120752
+189.77.143.99 5 5 78386 20100923072659
+69.132.13.15 1 4 229674 20100906082559
+202.173.149.229 1 3 19932 20100906164708
+222.231.42.195 1 1 2391 20100925103947
+67.163.187.186 1 1 4950528 20100917100204
+124.150.49.126 4 10 93066 20100917222542
+122.169.44.198 1 1 412189 20100908140347
+121.91.8.78 3 7 76105 20100906200226
+92.3.203.245 10 10 4967265 20100925220808
+93.214.185.128 1 1 48670 20100907034435
+203.217.143.135 6 6 39186 20100913035803
+110.175.137.65 6 12 363747 20100927205902
+27.32.198.207 1 7 374357 20100926071740
+60.217.232.56 1 1 5226 20100904104424
+83.240.1.130 3 7 75910 20100926173908
+94.242.3.253 0 1 71316 
+95.26.35.9 1 7 125968 20100908062111
+72.236.182.2 1 11 719201 20100915062807
+71.102.254.175 1 1 711469 20100913030103
+58.33.166.46 1 1 8603 20100926205933
+84.250.96.92 1 1 2380119 20100917221054
+90.176.184.249 1 1 13850 20100929003947
+209.131.38.71 1 1 2391 20100920202357
+80.42.141.253 1 15 1183645 20100906213826
+60.242.73.169 1 1 892783 20100926001041
+188.36.9.141 9 30 1335346 20100917000759
+117.195.224.156 1 1 4950528 20100925215111
+161.185.157.22 1 11 719201 20100913063952
+80.108.107.62 1 43 2159582 20100916081122
+115.113.212.194 2 2 9901056 20100903151910
+66.219.58.43 1 1 13850 20100925075106
+119.235.51.18 1 1 1137379 20100903160148
+81.135.65.231 1 1 6827731 20100925082513
+211.205.72.220 0 1 24606 
+217.23.233.124 3 3 14851584 20100923234417
+92.225.76.71 1 5 68367 20100919040801
+94.181.219.238 3 3 25809 20100906064613
+62.171.194.21 2 3 105287 20100924234158
+93.214.187.228 1 1 48670 20100926171945
+115.118.195.3 1 1 412189 20100922153728
+79.0.110.69 0 1 115032 
+90.40.219.122 1 1 2380119 20100908023838
+95.70.161.30 0 1 24606 
+187.16.58.9 1 1 8603 20100909024840
+209.219.227.218 0 2 49212 
+203.206.85.221 3 7 75984 20100915001321
+64.108.199.26 1 5 211216 20100930144755
+121.222.3.237 0 1 24606 
+80.74.0.1 0 1 24606 
+89.140.26.26 0 1 24606 
+78.69.188.222 0 1 24606 
+173.212.247.172 1 1 2391 20100909130645
+58.41.10.224 1 1 4950528 20100910083613
+200.174.96.212 1 1 2391 20100908184017
+119.63.136.234 0 1 24606 
+125.163.7.143 1 7 191189 20100916114334
+86.148.116.239 2 2 4950528 20100921035518
+121.210.82.149 4 4 4973003 20100912145745
+95.26.71.45 1 1 14858 20100924200312
+114.93.135.128 1 1 33620 20100919141436
+69.28.58.17 3 3 22401 20100927134533
+202.124.89.191 11 19 140854 20100919124214
+123.51.86.4 2 22 1297005 20100916205216
+89.132.208.180 0 1 24606 
+153.107.97.155 3 7 76105 20100902122752
+92.45.88.98 1 1 1137379 20100922230706
+208.93.237.18 4 4 9564 20100924202123
+41.146.159.59 1 1 4950528 20100916200559
+68.35.181.24 1 1 6827731 20100923081609
+117.201.20.156 1 1 4950528 20100921234451
+137.164.143.36 1 1 1145104 20100902054007
+180.181.52.225 1 1 84673 20100914202657
+196.207.207.220 0 1 24606 
+79.175.117.146 0 1 24606 
+122.174.109.22 3 10 360574 20100912202735
+12.239.13.140 1 11 719201 20100929063514
+125.230.72.130 1 1 2391 20100929063324
+70.230.199.178 1 6 74448 20100920111451
+164.112.249.11 2 3 32342 20100913104405
+58.84.144.0 9 14 130406 20100918144925
+75.108.226.159 1 6 68498 20100916022715
+117.254.253.152 1 1 1137379 20100903031045
+89.149.195.26 5 5 49371 20100912161656
+88.224.144.52 2 6 270452 20100912082715
+80.92.107.71 2 2 179175 20100901054725
+75.136.36.254 4 12 410420 20100927062456
+210.212.255.131 0 1 66162 
+119.152.70.117 9 14 121297 20100908183739
+66.26.86.41 1 7 374357 20100913100020
+76.71.201.129 2 7 82348 20100914043942
+129.13.72.198 1 1 4424908 20100921170122
+202.47.225.243 1 1 4424908 20100924173045
+38.111.147.86 6 6 12859038 20100924112346
+91.121.135.125 2 2 56679 20100921091418
+58.175.28.228 4 8 81938 20100927083204
+124.169.190.16 1 1 1130573 20100917183115
+71.252.64.51 9 9 76300 20100918174559
+170.224.52.40 0 1 24606 
+203.36.44.18 33 64 1655035 20100924195410
+95.169.186.11 5 5 205206 20100909120550
+189.41.55.222 0 1 457412 
+113.29.215.140 1 1 2391 20100909123554
+207.46.199.177 1 1 331041 20100921104627
+125.20.11.50 1 1 412189 20100908045142
+202.127.18.145 1 1 2391 20100901120319
+65.117.158.220 2 2 9901056 20100901233718
+207.46.204.171 1 2 60529 20100922125906
+64.71.175.126 0 1 7396 
+41.3.157.231 1 1 1137379 20100909020157
+211.30.28.7 1 6 74448 20100906234929
+203.27.145.44 2 2 9901056 20100916091918
+66.90.149.214 1 1 459834 20100902095124
+207.46.204.164 2 2 770807 20100905014005
+156.34.29.205 1 1 351793 20100929123316
+114.33.184.99 1 2 66323 20100904133254
+93.210.113.206 1 1 48670 20100906053159
+110.33.217.189 12 16 143113 20100925163905
+173.14.130.237 1 11 719201 20100929093318
+165.228.79.175 9 29 364339 20100910135854
+194.1.144.19 1 1 2391 20100924215853
+120.19.220.217 1 1 4950528 20100921195222
+94.181.195.40 1 1 8603 20100914222544
+208.80.194.34 6 6 82533 20100928153150
+211.26.149.206 1 1 4950528 20100910182827
+222.76.218.41 4 4 18384 20100922184455
+202.172.246.8 0 1 24606 
+194.110.162.95 1 1 23259 20100913222304
+207.46.12.208 1 1 17412 20100921152203
+186.113.81.59 0 3 223170 
+174.129.174.249 1 1 2391 20100923052905
+184.88.176.3 0 2 49212 
+217.171.129.71 0 1 24606 
+121.97.171.103 1 1 1137379 20100918072952
+122.166.88.146 1 11 540237 20100917162241
+77.28.78.203 1 1 4950528 20100917211127
+195.98.183.132 1 4 82582 20100901051235
+82.57.147.213 0 1 115032 
+83.170.82.5 0 7 561689 
+168.56.37.8 1 1 412189 20100923051004
+99.238.42.172 6 6 4955310 20100903070933
+212.121.219.1 1 1 4950528 20100920213539
+211.233.79.182 1 1 12038 20100921063040
+72.252.2.22 0 1 24606 
+59.156.9.210 9 9 21519 20100923101355
+121.215.208.113 1 7 191189 20100927202006
+203.36.44.14 31 47 2146267 20100921142904
+86.183.8.112 1 1 1272509 20100915074431
+207.46.195.205 1 1 60240 20100924021504
+96.24.205.217 1 1 2380119 20100901011754
+69.207.157.100 0 2 49212 
+86.52.8.227 1 20 1094112 20100928034514
+116.250.119.70 30 71 641134 20100907170536
+89.149.244.240 1 1 2391 20100903031240
+38.99.97.47 22 22 296918 20100926080113
+207.46.12.122 1 1 2122757 20100912144400
+60.14.247.228 1 1 2391 20100915130346
+220.255.7.228 1 1 5226 20100901185527
+212.98.161.202 2 2 2855596 20100913182446
+93.217.248.131 0 1 24606 
+90.185.231.87 0 1 24606 
+159.71.254.248 1 2 148537 20100916091148
+80.249.48.136 4 4 0 20100923193824
+123.209.5.56 1 1 84673 20100906143256
+97.88.253.146 1 1 4950528 20100930073232
+58.166.104.179 6 14 98701 20100901120016
+203.10.121.84 3 7 76105 20100908075551
+217.197.254.43 0 1 24606 
+82.102.2.66 0 1 24606 
+41.117.192.142 1 1 4950528 20100925200544
+216.226.127.130 2 2 4950528 20100911043433
+124.121.109.178 0 1 18627 
+173.224.218.118 4 4 40666 20100920174212
+91.212.243.4 1 7 527483 20100924194548
+184.99.135.23 2 43 2224169 20100908153151
+99.31.232.217 1 1 4424908 20100917102905
+89.0.49.204 0 3 223170 
+66.30.46.202 1 1 1130573 20100909160511
+124.148.42.169 5 9 84329 20100920230555
+67.193.224.73 2 3 356357 20100926231243
+220.255.0.53 0 1 1075 
+121.214.38.87 1 42 2082415 20100930151301
+95.168.183.233 1 1 13850 20100921080012
+124.171.224.133 4 8 78496 20100906221802
+195.168.232.65 3 7 1606174 20100918054157
+196.37.229.15 1 1 4950528 20100930173544
+195.2.240.100 1 1 2391 20100920141422
+203.94.155.211 5 9 84403 20100916120123
+220.255.7.222 1 1 14979 20100901185527
+117.206.66.159 0 1 24606 
+95.26.246.21 1 1 14979 20100908123208
+60.242.242.117 1 1 4950528 20100908001011
+202.128.253.140 4 8 78301 20100924154908
+62.171.198.9 1 1 4950528 20100923235255
+77.169.132.170 3 7 75984 20100914020539
+189.192.26.20 0 1 24606 
+67.170.145.91 1 4 41130 20100916224024
+207.46.204.157 2 8 189246 20100929144716
+41.130.30.188 3 7 75910 20100925043854
+24.155.38.143 1 1 8603 20100902135842
+110.75.176.60 1 1 8664 20100905150951
+120.89.86.140 3 7 76105 20100903193406
+195.223.208.35 10 10 78691 20100919034454
+211.31.55.24 1 1 4950528 20100924213137
+174.56.21.101 1 1 412189 20100923122458
+58.7.164.69 23 48 1061385 20100927113207
+95.143.208.118 5 5 205206 20100910111103
+41.137.27.39 4 4 4950528 20100928153050
+93.210.119.213 1 1 48670 20100910072750
+180.188.234.187 0 1 24606 
+64.120.126.68 1 1 25236 20100920072915
+190.141.218.47 1 1 2178908 20100921104428
+190.148.203.182 0 1 24606 
+87.173.193.136 1 1 1409677 20100903235924
+190.127.110.226 0 2 149268 
+61.68.27.76 4 8 78375 20100913201000
+93.210.120.139 2 2 97340 20100902002344
+80.25.193.236 1 42 2081442 20100908012119
+59.99.146.250 1 1 4950528 20100907161119
+207.46.195.218 2 3 10891 20100925231404
+212.95.58.198 8 8 227802 20100909135729
+122.60.10.166 2 32 1712222 20100901143411
+99.5.104.251 1 1 4950528 20100916080909
+89.253.175.163 0 1 24606 
+89.178.208.172 0 1 1075 
+173.81.114.227 1 1 6827731 20100902232102
+165.234.180.58 3 46 3129176 20100930014617
+173.79.221.10 2 8 319099 20100901101604
+79.50.46.118 1 6 68498 20100912070035
+41.220.68.10 0 1 16968 
+115.242.4.64 1 1 4950528 20100908000406
+85.104.106.113 1 1 1137379 20100903000116
+95.27.118.72 0 1 1075 
+64.147.210.162 1 12 308029 20100909093310
+203.134.189.123 1 1 1137379 20100928222905
+65.52.53.243 1 1 331041 20100923030537
+38.99.96.135 14 14 142978 20100907144025
+203.1.203.4 11 20 24905917 20100907135906
+193.206.247.120 0 1 115032 
+118.21.152.194 10 10 78691 20100910081148
+74.190.202.128 0 1 24606 
+122.106.125.88 1 6 68498 20100901205606
+82.198.250.66 1 1 4950528 20100928224642
+207.46.12.165 1 1 50858 20100919042911
+158.169.9.14 2 2 2819354 20100923221744
+212.178.143.212 1 1 1137379 20100902181715
+93.214.189.49 1 1 48670 20100910031213
+115.64.14.191 2 2 13062 20100914085412
+95.27.198.54 1 2 6227 20100926141804
+114.72.180.79 0 2 10016 
+194.151.164.173 11 21 5259978 20100917213457
+109.108.10.25 0 3 73818 
+124.235.145.67 0 2 428628 
+64.246.165.50 0 1 1924 
+130.37.84.251 1 1 6827731 20100920194920
+93.214.176.55 1 1 48670 20100910015921
+68.173.105.202 0 1 71316 
+207.46.12.115 1 1 48670 20100912085959
+59.92.54.13 1 3 174363 20100914050034
+189.85.30.106 1 1 2391 20100909092220
+124.148.244.29 1 9 169158 20100903164515
+110.75.168.19 1 1 2391 20100904063909
+120.56.140.185 1 1 4950528 20100930233648
+195.93.21.2 0 1 24606 
+71.192.161.71 1 11 719201 20100922145001
+196.35.158.184 1 1 4950528 20100920211156
+80.169.172.90 1 2 125182 20100917021136
+113.29.215.130 9 14 139895 20100914144000
+121.79.15.142 8 12 14927568 20100914135104
+83.149.3.113 0 1 24606 
+209.2.231.225 1 11 719201 20100916063338
+93.214.190.241 1 1 48670 20100921214152
+77.253.102.54 1 6 74448 20100924095049
+222.106.128.62 0 1 44015 
+218.20.3.45 1 1 1130573 20100915042609
+18.189.57.164 1 11 719201 20100923040825
+78.105.83.218 0 1 24606 
+66.219.58.45 1 1 2391 20100908091551
+114.75.0.55 11 41 654768 20100904100440
+149.171.3.103 0 1 8941 
+208.119.81.194 13 13 4962483 20100912043053
+125.7.106.36 3 8 219908 20100901123319
+124.197.15.85 1 1 4950528 20100908200702
+121.215.240.93 4 8 1365461 20100914141846
+218.82.213.91 1 1 8603 20100921090432
+121.44.204.192 1 3 128981 20100918203423
+93.65.6.214 0 1 115032 
+131.170.90.2 0 1 0 
+203.6.243.94 1 11 540237 20100920125421
+202.124.89.105 5 13 110460 20100922024002
+117.196.166.95 1 1 3085824 20100905201116
+120.145.143.181 3 7 75984 20100912215221
+69.175.104.218 10 10 93072 20100928031431
+203.10.121.87 6 10 5026633 20100907104210
+124.184.115.228 3 7 76105 20100903103806
+175.38.209.155 6 10 98311 20100923174015
+67.220.199.184 11 11 141229 20100902020834
+193.1.104.2 1 1 1137379 20100924200716
+64.245.1.158 1 1 1137379 20100916131606
+95.27.230.2 0 1 1075 
+208.80.194.32 19 19 138792 20100929185445
+110.33.84.125 1 1 2391 20100914201850
+178.234.98.238 1 1 2391 20100903062825
+121.45.227.104 1 1 84673 20100920074111
+207.46.193.38 1 1 34853 20100904064528
+93.214.184.53 1 1 48670 20100905074041
+115.131.199.116 3 7 75910 20100927170054
+125.236.44.43 2 2 9901056 20100921081259
+79.20.135.4 0 1 115032 
+60.217.232.82 1 1 14979 20100904104428
+65.52.50.54 1 2 172620 20100930163619
+194.138.12.146 1 1 1137379 20100902232350
+117.39.194.117 1 1 4424908 20100908011256
+202.70.147.135 2 2 9901056 20100916001129
+87.54.11.66 1 1 1137379 20100915020558
+93.210.115.216 1 1 48670 20100906021358
+124.83.3.126 0 1 51520 
+89.44.56.122 0 1 24606 
+121.222.116.201 1 7 374357 20100916162520
+193.244.33.47 1 6 68498 20100908214045
+110.75.175.18 1 1 5724 20100905010046
+173.51.75.42 1 6 74448 20100902115550
+124.197.59.161 1 15 1183645 20100930080459
+217.26.52.12 1 1 2391 20100921135031
+110.75.168.20 1 1 2391 20100928165911
+212.121.196.1 0 1 65148 
+130.102.158.13 1 3 156360 20100924100050
+93.210.121.150 1 1 48670 20100913191648
+87.101.25.48 0 1 24606 
+58.187.7.44 1 1 1137379 20100914010014
+58.174.1.161 40 113 7854868 20100929001409
+208.80.194.53 8 8 87315 20100930092117
+121.215.6.229 1 4 128981 20100909173155
+58.8.72.27 4 4 2274758 20100901152609
+207.46.12.71 1 1 130630 20100902200708
+173.26.197.78 1 1 1427798 20100919035514
+121.220.123.171 8 12 5026633 20100902202457
+136.182.2.25 1 1 2380119 20100916033515
+210.187.41.21 1 1 6531 20100908174600
+208.48.58.195 3 7 75910 20100929151057
+134.223.116.200 1 15 1183645 20100916021557
+91.210.106.254 20 20 821602 20100920155836
+121.221.84.82 3 7 75910 20100921212801
+210.212.207.4 1 1 4950528 20100922160537
+208.131.25.170 1 1 4950528 20100927144547
+207.46.12.120 1 1 25236 20100911205704
+124.168.8.246 3 3 22401 20100925105740
+66.109.93.146 1 1 1137379 20100923015728
+129.78.32.21 1 1 92984 20100923144649
+207.46.199.26 1 1 23138 20100926141616
+207.46.204.223 2 3 35978 20100930142838
+203.36.173.61 1 5 234965 20100902153522
+218.213.131.26 16 17 178683 20100919215333
+125.60.172.181 0 1 65148 
+85.17.136.172 63 63 541989 20100930223335
+62.38.195.7 1 11 540237 20100923172903
+93.48.111.96 0 1 115032 
+194.111.71.136 1 1 4950528 20100915193828
+187.75.191.198 1 1 2391 20100912062333
+206.83.86.2 16 16 146076 20100924004657
+118.168.119.127 1 1 2391 20100912063621
+58.105.208.115 1 1 997048 20100903235700
+58.173.148.150 7 14 149833 20100912193748
+194.225.224.69 1 1 4424908 20100907212828
+93.210.116.21 1 1 48670 20100930101844
+220.136.75.154 0 1 24606 
+125.230.90.196 1 1 2391 20100903134403
+203.36.44.12 58 113 5340081 20100928192441
+94.38.112.122 0 1 24606 
+149.135.70.244 3 3 9901056 20100920161042
+67.188.239.164 0 1 24606 
+137.84.8.97 1 6 74448 20100901014959
+74.125.16.65 1 1 4950528 20100923062737
+141.228.250.141 1 1 1137379 20100909012725
+87.248.125.49 1 1 2391 20100907042753
+113.91.209.156 1 1 6531 20100923154104
+58.175.28.179 7 26 903435 20100901165943
+74.208.16.10 4 4 25071 20100913044638
+87.0.239.113 0 1 115032 
+110.75.173.43 2 2 12074 20100905091949
+67.82.8.101 0 1 71316 
+97.123.19.159 1 6 68498 20100912120847
+203.33.181.134 3 7 76105 20100908142653
+121.215.7.206 4 13 294177 20100903103409
+58.175.210.27 3 3 14851584 20100912184130
+80.249.48.138 2 2 0 20100923192822
+80.191.3.110 1 1 4424908 20100925161249
+72.207.61.253 1 7 125968 20100903105717
+194.169.234.13 1 1 2391 20100904184051
+207.46.193.50 1 2 5835 20100921165615
+207.46.199.30 1 1 2825 20100929075125
+207.46.12.161 1 2 9806 20100918121253
+109.162.193.148 1 17 1249860 20100923184459
+201.103.90.191 4 8 5026512 20100915023255
+89.0.143.235 2 5 181904 20100912014341
+203.217.88.175 1 2 6531 20100912224216
+207.46.12.110 1 1 64154 20100917073027
+207.46.12.66 1 2 5835 20100903164420
+69.242.184.68 2 46 2316398 20100929081622
+58.179.32.98 4 11 159740 20100907211651
+70.96.249.6 1 1 2391 20100924055426
+203.143.211.85 8 18 127651 20100923150207
+69.234.176.78 1 1 4950528 20100916110113
+66.249.17.110 1 4 82582 20100926045231
+86.155.180.148 1 1 4950528 20100929061133
+199.64.0.252 0 1 24606 
+85.86.58.140 0 1 24606 
+207.46.12.64 2 2 348609 20100921091650
+204.109.64.2 3 3 22401 20100922014153
+200.198.194.146 0 1 24606 
+70.115.188.97 0 1 115032 
+218.215.51.183 1 1 4950528 20100908200049
+77.22.124.31 0 1 24606 
+109.122.19.35 1 1 25648 20100914120833
+118.90.125.127 0 1 24606 
+139.130.235.62 7 20 297448 20100927132149
+203.51.55.140 1 1 4950528 20100907222540
+66.65.132.210 4 14 885480 20100906120823
+67.11.3.25 1 1 4950528 20100927121435
+67.193.236.140 0 1 51520 
+90.209.144.79 1 1 4950528 20100924023733
+205.155.65.226 1 1 66955 20100924040919
+207.46.195.211 1 2 9407 20100920130703
+193.52.170.239 3 11 153203 20100928203659
+121.221.235.156 1 4 0 20100910203116
+121.215.163.161 4 10 93452 20100912170546
+110.75.168.15 1 1 2391 20100926151634
+94.172.140.30 6 15 5075428 20100923050250
+98.216.127.107 0 1 79964 
+221.212.116.1 0 1 16510 
+149.243.232.3 1 1 1409677 20100914181544
+82.153.158.243 0 1 24606 
+41.220.68.7 1 1 17568 20100902095932
+216.220.216.168 0 1 51520 
+65.122.8.1 0 3 73818 
+121.223.0.11 1 3 17433 20100912080131
+93.33.113.177 0 1 24606 
+60.230.216.235 1 5 211216 20100925213237
+203.51.76.137 1 1 4950528 20100920163241
+121.127.194.77 1 6 68498 20100918074558
+124.178.150.43 9 21 227730 20100930175626
+124.180.42.136 2 2 4950528 20100904183517
+68.235.68.65 0 1 24606 
+91.125.122.214 2 2 9901056 20100919214510
+76.238.246.217 0 1 24606 
+207.46.12.160 1 2 13293 20100921194321
+139.168.77.205 3 3 22475 20100916175950
+98.71.173.17 2 8 133484 20100907132122
+65.68.101.148 2 7 82729 20100919014007
+139.86.2.15 2 43 2455260 20100902135754
+207.46.12.209 1 1 5115 20100905092517
+203.122.254.24 5 5 4782 20100901090814
+78.90.89.186 1 6 68498 20100915222751
+192.43.227.18 1 1 892783 20100903155009
+64.38.235.130 2 2 9239 20100917094459
+121.215.2.230 4 8 78496 20100906171319
+137.111.13.200 6 16 639886 20100928200007
+138.162.0.43 0 1 24606 
+189.45.129.69 1 1 1137379 20100924214953
+150.204.130.209 1 1 892783 20100917000846
+109.122.8.146 1 1 25648 20100907074508
+150.101.158.203 1 1 4950528 20100916103540
+220.255.0.63 0 1 8941 
+90.182.138.155 1 1 2391 20100930124330
+99.245.192.248 0 1 24606 
+67.58.77.109 0 1 24606 
+94.181.193.11 3 3 25809 20100929213724
+64.5.40.122 4 4 0 20100924103833
+220.237.108.75 17 55 696993 20100910155341
+117.198.3.89 1 1 4950528 20100910211937
+194.225.166.110 1 1 4424908 20100908234012
+137.78.16.223 1 1 412189 20100917012338
+202.45.119.18 3 3 17370 20100908125817
+65.52.104.42 1 2 171647 20100911140237
+58.169.249.76 5 25 507998 20100911234608
+67.142.165.26 0 1 24606 
+58.169.36.1 1 45 3069684 20100926153129
+207.81.160.123 1 9 441349 20100912034625
+62.10.209.36 0 1 115032 
+125.27.45.165 0 1 79964 
+89.103.2.248 4 8 78375 20100913035649
+189.84.197.166 1 1 92984 20100930212856
+189.120.208.246 0 1 24606 
+69.144.48.226 0 1 24606 
+71.74.157.108 1 7 125968 20100926120549
+74.138.216.108 0 1 24606 
+220.233.16.230 5 11 100035 20100906213546
+124.168.51.67 1 20 1189548 20100906181937
+220.255.7.227 1 1 2391 20100901185527
+68.38.233.201 1 6 68498 20100905012738
+64.61.10.68 0 4 199178 
+80.123.36.242 0 2 144798 
+65.52.104.37 2 3 672611 20100907134820
+88.214.193.166 1 1 2391 20100907175515
+124.179.148.225 1 1 4950528 20100906071525
+59.103.207.211 1 1 4950528 20100924214621
+79.98.4.108 0 1 115032 
+199.185.67.13 2 2 9901056 20100924020251
+92.255.227.101 1 1 8603 20100909233913
+216.171.98.77 14 14 153201 20100929151058
+221.192.233.83 1 1 25648 20100923194231
+174.28.159.92 0 1 66162 
+132.24.126.26 2 6 660306 20100911042051
+203.45.254.225 0 1 8941 
+207.46.12.114 3 3 225515 20100914100552
+88.212.40.189 0 1 24606 
+88.97.7.2 1 1 4950528 20100930073114
+60.52.21.210 1 1 4950528 20100902054931
+208.80.194.37 1 1 2391 20100924051300
+124.189.144.172 3 7 75984 20100915141432
+218.45.245.249 1 1 2391 20100903072225
+74.204.189.6 2 2 24076 20100902223800
+72.224.37.123 1 1 1717687 20100927015050
+173.242.114.100 2 2 180148 20100927001412
+115.147.203.63 0 1 51520 
+116.50.227.121 1 1 1137379 20100916134100
+208.80.194.30 9 9 67539 20100921084857
+94.181.213.123 1 1 8603 20100907075119
+207.46.12.108 1 2 7940 20100927104014
+121.222.175.2 3 7 75910 20100929140639
+173.192.34.95 40 40 835650 20100925013551
+213.115.65.30 1 1 1137379 20100928012635
+208.64.3.100 1 1 2391 20100929010557
+194.138.12.144 1 1 1137379 20100902232348
+213.247.64.30 0 1 77565 
+216.12.165.125 1 1 2391 20100901091059
+208.124.36.71 0 1 24606 
+98.254.21.108 0 1 24606 
+74.86.240.226 2 2 0 20100901135358
+91.99.13.159 0 1 24606 
+113.29.215.134 19 37 419580 20100923125427
+138.253.231.151 1 1 412189 20100929203236
+60.217.232.55 1 1 2391 20100904104421
+209.150.75.4 0 1 24606 
+114.76.51.217 6 21 704103 20100904183342
+150.101.9.1 1 1 84673 20100901100243
+95.24.9.186 0 1 18719 
+110.75.168.8 1 1 2391 20100907173335
+58.7.239.57 2 6 106514 20100919154022
+76.21.222.69 0 1 24606 
+68.95.76.20 3 3 14851584 20100922232827
+117.198.159.25 0 1 24606 
+207.126.224.241 4 4 9564 20100927233351
+124.185.9.95 1 5 211216 20100915212338
+93.210.97.98 1 1 48670 20100930015700
+89.149.244.89 1 1 18265 20100909052056
+115.96.131.226 1 1 4950528 20100922021344
+117.199.129.69 1 4 94769 20100917220221
+210.236.173.98 0 1 57050 
+114.78.19.219 5 9 80692 20100921122020
+66.79.163.110 1 1 2391 20100902004557
+67.55.56.78 1 1 344329 20100925182329
+207.46.204.214 1 1 94394 20100927164404
+130.220.71.22 1 1 1137379 20100905152836
+206.251.41.137 1 6 68498 20100928080034
+174.98.111.215 2 2 186973 20100929090858
+69.247.58.3 1 1 13535 20100926075802
+213.244.183.194 9 9 46812 20100928192742
+89.178.139.5 1 1 5152 20100924200314
+207.46.12.158 1 1 18265 20100911091427
+174.0.249.253 2 9 211999 20100912004647
+196.202.46.188 0 1 79964 
+189.8.25.14 1 7 125968 20100921075053
+124.171.95.168 4 8 78496 20100904190936
+207.46.199.20 2 2 477701 20100929135325
+66.249.82.2 1 1 1137379 20100920163721
+174.30.168.34 1 1 892783 20100918081954
+64.198.235.130 3 7 76105 20100911075957
+76.104.234.184 0 1 24606 
+93.210.105.100 1 1 48670 20100910064323
+150.101.198.177 11 55 2323719 20100913103127
+90.134.57.26 1 6 68498 20100915035352
+77.193.62.232 2 3 182042 20100929061929
+192.77.86.2 1 1 1137379 20100921100328
+94.181.228.41 1 1 8603 20100908042118
+64.250.202.65 0 1 24606 
+110.75.175.37 2 2 15320 20100904081147
+203.214.99.238 2 2 4950528 20100907212121
+41.220.68.6 0 1 26245 
+220.238.166.62 1 1 412189 20100930141434
+67.190.34.129 0 1 24606 
+190.128.60.166 0 7 525666 
+94.181.212.116 1 1 8603 20100909033136
+88.72.222.62 1 1 412189 20100915193704
+202.161.43.233 1 1 4950528 20100901154618
+58.179.32.134 1 1 84673 20100922163027
+76.244.149.38 1 1 1970795 20100926225624
+98.121.101.22 4 10 648327 20100914153422
+203.51.0.177 1 4 128981 20100928215259
+78.97.179.65 0 1 24606 
+67.253.111.224 1 1 4950528 20100914204039
+78.116.125.24 2 3 43232 20100918104727
+121.213.218.147 0 2 49212 
+207.46.199.33 1 7 136422 20100919214314
+58.179.244.87 1 42 2903434 20100922154626
+203.122.246.96 1 1 84673 20100924093525
+92.255.227.145 1 1 8603 20100915160029
+78.137.48.46 1 1 2391 20100919153759
+41.27.79.154 1 1 2380119 20100929052321
+220.239.178.155 1 1 4950528 20100913222921
+186.137.13.114 2 10 330903 20100919101641
+210.212.236.227 1 1 4424908 20100907161228
+134.148.5.104 2 2 4950528 20100906140956
+188.165.198.17 2 2 4782 20100918230323
+58.96.115.82 3 7 75910 20100929231523
+203.45.226.205 5 9 96310 20100904231638
+62.6.170.34 1 1 1427798 20100919044004
+190.84.38.87 0 6 446340 
+117.18.81.10 1 1 6531 20100911074047
+121.45.25.82 1 5 234965 20100905223649
+195.195.86.200 10 47 582276 20100915012052
+168.132.121.146 1 1 1137379 20100922092502
+77.194.228.148 0 1 77565 
+122.108.27.19 1 2 22545 20100926114107
+59.101.34.69 6 10 101640 20100914153403
+59.100.10.43 1 3 19932 20100914141254
+69.234.185.78 3 7 76105 20100901151640
+110.75.171.72 1 1 8281 20100905130058
+203.45.235.96 1 7 191189 20100913083609
+201.218.50.5 2 2 1137379 20100909171012
+202.128.252.109 1 11 719201 20100930165419
+187.11.214.82 1 1 8603 20100904100936
+93.214.188.120 1 1 48670 20100922092402
+216.249.64.78 1 1 2380119 20100922122338
+94.226.49.177 1 1 1130573 20100927063150
+70.31.153.241 1 15 1183645 20100923000315
+202.3.66.50 2 3 77159 20100928233231
+81.157.213.207 1 6 74448 20100908070510
+184.96.11.20 1 6 68498 20100930111943
+58.8.120.165 0 1 115032 
+121.54.2.83 4 8 5026438 20100926003658
+203.206.43.54 3 7 75984 20100917015539
+205.209.142.14 2 2 36530 20100930014915
+92.41.35.122 6 13 162166 20100919014951
+98.81.58.116 2 13 200416 20100906163345
+180.94.69.123 1 7 527483 20100917171408
+203.111.30.178 1 1 14650 20100930164541
+61.228.56.140 0 1 24606 
+65.19.154.163 6 6 46693 20100925111752
+203.206.139.6 3 3 14851584 20100920152702
+173.180.76.243 1 3 16864 20100914121348
+124.185.189.56 3 7 75984 20100915210848
+124.182.128.141 17 83 424182 20100905030250
+72.66.0.41 4 4 2545018 20100915013613
+82.131.184.191 1 1 2391 20100924210057
+78.133.103.164 6 6 88671 20100923072630
+67.227.138.20 2 2 4782 20100925113126
+137.155.208.116 1 3 192387 20100923062744
+203.171.197.62 41 76 2838715 20100912125753
+74.125.154.81 1 1 1137379 20100919025350
+220.253.255.174 21 36 956763 20100913150445
+200.118.9.26 0 5 372438 
+91.142.61.245 1 1 1137379 20100917031521
+67.55.72.165 10 10 43768 20100926164738
+69.28.58.13 1 1 3911 20100929184259
+98.193.122.244 1 7 125968 20100923160112
+24.229.174.68 0 1 24606 
+110.174.173.200 13 42 1213294 20100911142139
+212.243.89.114 1 1 1137379 20100914002646
+79.191.184.7 1 4 85676 20100922020607
+211.155.245.80 0 1 115032 
+202.177.218.51 1 1 57915 20100921105206
+203.122.254.26 5 5 9903447 20100914123059
+67.234.187.249 1 1 537488 20100910225221
+153.107.33.157 3 7 76105 20100901100118
+87.16.122.27 0 1 115032 
+71.54.233.199 1 18 1294763 20100923103151
+207.46.12.112 1 1 4950528 20100903114203
+110.75.168.27 1 1 2391 20100923083638
+85.18.127.213 15 15 53793 20100917203231
+78.146.53.255 0 2 230064 
+93.144.33.121 0 1 115032 
+70.92.162.42 0 1 24606 
+122.154.17.158 2 2 36920 20100912135204
+93.210.116.95 2 2 97340 20100903205412
+58.107.231.46 6 14 152015 20100920204703
+194.7.62.30 2 8 134249 20100929002520
+121.223.125.95 4 4 4950528 20100909071355
+58.172.248.82 4 11 159619 20100916163145
+208.80.194.28 5 5 45387 20100914185102
+207.46.12.119 1 1 0 20100928211550
+211.104.188.163 0 1 1367303 
+86.147.243.230 0 1 24606 
+78.130.84.140 2 7 200435 20100916101448
+24.171.168.223 1 1 4950528 20100917032708
+60.240.231.113 1 1 412189 20100909164536
+24.128.177.102 0 1 24606 
+178.18.16.133 1 11 540237 20100926212931
+174.71.99.163 0 1 24606 
+129.94.135.161 1 4 95409 20100906154542
+208.80.194.51 5 5 49719 20100915210220
+91.117.86.158 0 1 115032 
+110.33.194.82 0 1 24606 
+123.2.126.2 1 1 2391 20100909214755
+98.19.17.53 1 1 1137379 20100927021320
+60.226.181.101 7 7 4950528 20100911122844
+140.198.74.139 1 6 68498 20100914121056
+220.238.170.43 3 7 76105 20100905213511
+143.132.32.36 2 16 1209207 20100923080242
+198.135.203.249 1 1 92984 20100903055842
+115.70.54.154 1 1 0 20100901164728
+184.73.96.191 3 3 22475 20100916042219
+77.111.90.197 8 8 19128 20100930082956
+207.46.193.36 2 2 29189 20100904172734
+124.157.238.10 0 1 47509 
+190.56.34.5 1 5 211216 20100910045713
+194.44.171.251 2 4 25617 20100914102749
+120.138.110.85 0 1 24606 
+90.6.237.93 5 22 307394 20100908064839
+60.229.7.18 1 1 4950528 20100910104607
+207.46.204.173 1 2 13867 20100927214048
+124.168.9.12 1 1 4950528 20100914164500
+130.238.21.195 1 1 1137379 20100903214221
+117.206.83.187 0 1 31026 
+94.181.192.89 1 1 8603 20100927165605
+121.215.34.45 4 4 4950528 20100902090958
+122.179.56.140 4 4 4950528 20100928180650
+50.10.127.238 1 6 68498 20100926083648
+58.178.198.31 4 8 5026633 20100907193057
+59.101.248.232 5 19 649945 20100920212333
+203.5.155.235 23 34 316181 20100916200605
+87.16.136.99 0 1 115032 
+71.63.238.209 1 7 125968 20100919122827
+121.216.42.172 2 2 4950528 20100912164517
+120.60.145.120 0 1 24606 
+76.166.148.208 0 1 24606 
+78.98.182.0 0 1 24606 
+124.176.5.148 5 9 9976966 20100929154807
+92.244.132.9 1 1 412189 20100922234943
+178.22.192.102 5 5 205206 20100909022619
+202.173.169.188 9 20 200706 20100903205528
+186.84.107.55 1 5 211216 20100908111719
+69.24.222.202 1 3 280162 20100910091541
+188.126.85.81 1 1 170572 20100910185842
+202.124.88.39 6 16 310127 20100904103718
+207.46.12.201 1 2 24334 20100905023523
+207.46.12.28 1 1 2038 20100920062914
+62.11.229.175 2 7 642170 20100924121303
+213.106.126.18 1 1 351793 20100925095050
+64.160.68.35 2 10 700395 20100923014333
+124.106.53.194 1 1 1137379 20100926232256
+120.60.3.75 0 1 24606 
+117.241.121.214 1 8 325438 20100911171601
+93.182.219.30 8 15 417271 20100920012205
+81.177.160.65 4 4 24866 20100917012121
+66.219.58.42 1 1 12038 20100924215450
+213.5.64.179 2 2 180148 20100926132716
+207.46.12.69 2 2 133019 20100919154216
+89.97.165.130 1 1 1970795 20100914051845
+117.242.149.16 0 1 24606 
+98.176.208.90 0 1 24606 
+204.136.184.10 1 6 326623 20100923141613
+125.230.73.119 1 1 2391 20100915075213
+150.197.25.52 1 1 4424908 20100907220357
+218.215.64.195 1 1 2391 20100919163219
+80.131.214.188 1 7 374357 20100903013313
+190.24.155.218 1 1 4950528 20100923015657
+117.198.97.169 0 1 24606 
+75.181.22.22 0 1 24606 
+99.229.29.41 1 6 74448 20100917054105
+111.93.41.118 1 1 4950528 20100929031206
+178.162.191.159 1 1 346824 20100927204319
+83.5.202.240 2 9 95726 20100904060848
+222.134.69.181 2 2 17206 20100905180507
+75.182.125.243 1 7 125968 20100928093735
+120.19.76.46 1 12 213821 20100907155115
+151.68.145.189 0 1 115032 
+194.149.88.200 1 1 711469 20100919225709
+58.7.188.18 1 6 68498 20100919212833
+72.135.49.96 1 9 441349 20100925113740
+109.195.81.38 0 1 24606 
+211.30.174.55 1 1 4950528 20100913074557
+195.241.23.138 0 1 24606 
+58.96.55.111 1 2 18265 20100909132120
+198.54.202.146 1 1 4950528 20100906015525
+60.241.129.184 1 1 335604 20100929205903
+118.209.132.139 1 1 4950528 20100916201204
+121.218.84.34 5 14 172919 20100913123805
+209.131.38.70 1 1 2391 20100910091554
+94.181.235.7 8 8 68824 20100927023513
+58.7.142.4 3 7 75910 20100919213414
+203.63.233.68 2 16 253736 20100917131733
+203.213.247.102 1 2 118287 20100921210009
+129.230.244.1 1 6 68498 20100928062747
+203.208.77.55 5 9 245451 20100908175011
+58.168.53.17 0 1 115032 
+211.154.136.237 1 1 2391 20100928115945
+89.21.92.0 1 7 527483 20100930050619
+68.47.77.176 1 1 8603 20100909153733
+89.171.195.74 0 1 24606 
+71.97.202.252 1 1 1137379 20100920030732
+211.114.101.253 2 2 2274758 20100906150955
+117.55.241.56 0 1 47454 
+93.210.120.71 1 1 48670 20100905182638
+124.171.98.124 1 1 1145104 20100923062616
+122.163.85.222 1 1 2391 20100924190246
+144.132.128.163 0 1 24606 
+83.83.138.219 1 1 1137379 20100929014543
+203.177.74.136 1 10 1078858 20100911155333
+147.26.87.16 0 2 49212 
+139.230.245.21 6 6 317690 20100913102240
+173.208.24.20 2 2 343090 20100929051807
+68.82.254.252 2 6 35618 20100907042840
+59.165.185.242 4 4 4549516 20100925165544
+180.94.93.5 1 1 412189 20100924170240
+203.162.36.145 1 1 1137379 20100907193649
+38.103.208.51 7 14 141904 20100929003751
+220.233.175.108 0 1 24606 
+207.46.199.31 3 10 320538 20100929175550
+109.113.145.149 0 1 115032 
+98.88.243.90 0 1 24606 
+173.208.67.16 2 2 30856 20100929051807
+72.219.154.15 0 1 24606 
+159.226.21.230 0 1 49557 
+202.136.100.186 7 20 1354142 20100928134350
+125.99.26.41 0 1 51520 
+203.87.9.46 1 1 84673 20100930200655
+67.188.194.88 0 1 65148 
+141.248.3.1 1 1 1137379 20100916032615
+109.52.243.215 0 1 24606 
+206.57.124.34 0 1 0 
+58.160.106.62 0 1 24606 
+220.253.79.144 1 3 128981 20100911141859
+123.231.46.18 1 13 1208511 20100922231841
+92.196.84.156 3 7 75984 20100916024303
+182.239.162.9 5 12 127271 20100902194807
+122.106.107.135 8 16 172052 20100915181317
+211.26.183.168 4 8 78301 20100930215347
+182.239.129.144 1 1 412189 20100929153712
+138.80.0.10 1 1 1137379 20100907120304
+220.101.170.99 6 14 151820 20100930143224
+98.154.88.13 2 2 9901056 20100917162244
+74.125.74.129 1 3 5056099 20100918120325
+219.89.222.98 1 6 74448 20100926112355
+59.99.65.40 0 1 24606 
+58.167.2.15 1 5 211216 20100916101553
+203.213.61.89 1 1 516661 20100911141030
+178.33.104.20 1 1 47000 20100928162445
+24.14.253.12 1 1 4950528 20100922230249
+84.92.30.242 2 21 426214 20100906213124
+121.216.24.238 3 7 75984 20100915104838
+198.7.247.187 0 1 31259 
+94.161.146.163 0 1 115032 
+98.203.173.124 3 8 91010 20100912085539
+207.46.193.48 1 1 6051 20100907173050
+192.54.144.229 2 4 28482 20100910023736
+120.16.113.215 3 7 76105 20100910110644
+69.138.45.167 1 1 4950528 20100915092647
+79.84.180.106 3 7 75910 20100925022628
+93.42.238.175 0 1 115032 
+121.98.148.11 0 1 24606 
+86.52.8.39 0 2 157529 
+207.14.37.92 0 1 24606 
+166.205.13.157 0 1 19156 
+76.105.140.179 1 1 4950528 20100911025548
+207.46.12.200 1 1 7617 20100903052140
+134.148.4.20 4 4 19802112 20100910135627
+98.198.0.143 2 8 134249 20100924103447
+208.96.122.158 0 1 24606 
+91.207.142.145 1 1 8603 20100923223039
+143.238.70.26 6 20 149726 20100915170534
+114.247.10.148 1 15 1183645 20100909163949
+203.13.41.202 0 1 24606 
+67.210.218.108 2 2 4782 20100910001107
+206.196.111.204 4 4 26507 20100912052057
+98.240.210.149 1 2 92365 20100915033133
+58.172.52.183 1 1 351793 20100903161121
+120.21.231.81 1 1 4950528 20100906143840
+218.24.179.199 1 1 2178908 20100915170748
+207.46.12.76 2 8 142042 20100906191854
+200.55.248.56 3 12 824040 20100908200731
+60.234.160.51 1 1 4950528 20100902121956
+212.110.147.189 4 4 368217 20100916192526
+217.221.238.186 1 2 307193 20100907232937
+80.85.96.4 0 1 24606 
+95.170.211.26 1 1 4950528 20100924205229
+77.23.254.220 2 2 179175 20100909142703
+115.165.110.248 0 1 24606 
+151.202.88.209 1 1 1970795 20100930071259
+164.113.102.160 1 7 336176 20100925055119
+90.62.167.5 0 3 223170 
+110.75.168.11 1 1 2391 20100908215332
+119.247.151.168 3 3 90812 20100919234712
+99.19.75.45 1 11 719201 20100908122800
+82.67.177.178 2 2 7543 20100929163248
+202.161.96.158 24 60 1011817 20100925121259
+117.204.49.168 1 1 4950528 20100916230318
+203.115.12.114 1 31 540565 20100912222912
+64.121.56.246 1 1 0 20100917141548
+122.161.56.45 0 1 24606 
+146.230.128.29 1 1 1137379 20100916041232
+189.113.46.135 21 21 193415 20100927224206
+66.79.172.88 3 3 19761 20100902093901
+58.167.89.125 5 9 96310 20100902175921
+203.44.251.3 1 1 58633 20100917143416
+130.203.133.123 2 2 15926 20100922172403
+207.46.12.157 1 1 9786 20100904014855
+193.39.75.50 7 11 100702 20100923210709
+74.125.152.82 1 1 1137379 20100928214024
+207.46.12.123 1 7 136420 20100930004200
+86.96.227.93 0 2 153309 
+115.70.57.238 6 15 5102197 20100907214457
+79.49.39.204 0 1 115032 
+61.246.236.70 2 2 4782 20100902083339
+203.10.77.190 6 10 83157 20100913104524
+203.10.121.82 1 1 0 20100906120806
+218.6.9.140 2 2 9397 20100916103642
+66.83.201.3 1 1 1137379 20100916221657
+120.17.192.61 1 44 3068766 20100930235910
+114.73.15.153 0 13 198393 
+173.28.69.108 1 1 1137379 20100920030248
+69.28.58.16 3 3 22401 20100928005840
+202.136.110.172 2 6 248500 20100910155524
+110.75.168.22 2 2 4782 20100930180022
+58.110.64.170 4 4 4950528 20100911093634
+124.171.107.230 1 1 1272509 20100919174408
+86.96.228.86 0 1 290427 
+59.156.129.77 16 16 38256 20100920074344
+216.104.15.142 3 3 5572689 20100922202010
+159.221.32.10 4 4 4950528 20100921053048
+98.114.200.118 1 11 719201 20100930074616
+144.137.9.214 1 1 892783 20100922164418
+207.46.204.219 1 1 8542 20100918025804
+194.44.169.2 1 2 31139 20100901025227
+75.41.114.133 2 7 1213602 20100908030543
+24.233.103.118 1 9 441349 20100925061021
+67.183.148.163 3 6 90553 20100930123726
+165.228.238.93 1 1 4950528 20100916100716
+207.46.204.210 1 7 136422 20100918040450
+216.186.171.3 0 1 24606 
+207.46.199.191 1 1 5612 20100921085826
+85.121.21.43 3 7 75910 20100923220927
+91.201.66.6 1 6 288468 20100901052516
+122.49.141.145 1 1 57915 20100928221302
+203.52.130.136 3 3 2678349 20100916114952
+203.43.144.28 1 7 191189 20100909105650
+180.151.55.9 0 1 24606 
+59.90.170.14 1 6 68498 20100906040803
+124.185.22.161 1 8 228088 20100911143359
+38.229.70.45 1 1 2391 20100913123029
+79.40.186.186 0 1 24606 
+118.210.207.118 1 12 213821 20100928021837
+201.215.193.46 1 6 74448 20100926020447
+95.27.21.45 0 1 8941 
+109.226.6.194 1 1 8603 20100916025402
+207.46.204.206 1 1 8542 20100916140100
+194.8.210.62 3 7 76105 20100910221324
+99.226.222.191 4 22 977838 20100912064238
+128.157.160.13 1 2 4975134 20100928020531
+220.255.0.34 1 1 4950528 20100915013222
+213.236.208.22 7 18 234792 20100911144136
+75.0.183.16 0 1 24606 
+93.128.81.185 0 1 24606 
+71.178.250.21 1 6 74448 20100928144228
+203.161.79.124 1 4 95409 20100921234010
+134.39.229.113 1 1 1272509 20100923070314
+124.168.247.153 1 8 228088 20100903105218
+119.152.59.176 1 5 234965 20100915191405
+94.23.230.51 3 3 194648 20100904195615
+66.32.212.42 1 1 92984 20100901061834
+207.46.12.164 1 1 5708 20100905064649
+66.90.101.11 3 3 22475 20100912223626
+85.1.254.184 0 3 223170 
+208.64.68.228 2 2 29716 20100930013227
+58.111.205.16 1 1 4950528 20100915161402
+209.240.38.33 1 42 2082415 20100930063512
+124.169.49.73 1 5 234965 20100926134941
+66.219.58.39 4 4 9564 20100929114326
+94.195.114.91 2 8 134249 20100917075549
+162.58.82.136 1 2 461972 20100915041907
+99.12.197.196 1 1 4950528 20100920120159
+121.149.160.245 0 1 24606 
+130.117.244.8 16 16 18321664 20100918201246
+124.182.190.139 4 16 630642 20100901202300
+67.207.112.58 3 7 75910 20100924074902
+92.243.84.187 2 2 4782 20100913103157
+86.162.6.134 1 1 1970795 20100914012851
+207.61.17.24 0 1 24606 
+93.80.68.244 1 1 5226 20100908123208
+150.12.32.50 1 1 892783 20100914153504
+58.185.173.134 1 1 4950528 20100905131729
+110.75.174.19 1 1 6827731 20100904172210
+68.35.94.140 4 16 630642 20100907014756
+207.46.12.155 2 3 719694 20100915164316
+97.65.133.250 1 6 68498 20100928051029
+124.168.205.50 2 2 1821866 20100912163010
+85.176.48.201 0 1 24606 
+68.173.252.182 0 1 24606 
+195.27.17.6 1 1 1137379 20100908201300
+125.139.150.187 3 7 75910 20100920164022
+82.198.3.58 3 3 14851584 20100927224008
+130.95.244.20 1 1 106631 20100913114302
+110.32.55.240 1 42 2081442 20100908094106
+80.249.48.135 7 7 4950528 20100923192641
+203.36.44.13 24 33 6335009 20100923192138
+64.27.0.108 1 1 7793 20100924103530
+207.46.12.166 2 2 436088 20100914084001
+213.32.127.170 1 2 92365 20100929165154
+190.157.44.34 0 1 24606 
+208.80.194.55 1 1 2391 20100930185124
+61.122.3.9 3 7 75910 20100927194003
+95.133.169.28 1 1 2037 20100912212626
+68.95.76.30 2 2 9901056 20100927224514
+65.52.49.140 1 1 70744 20100923024324
+98.119.199.51 1 6 74448 20100911133756
+83.249.81.222 2 3 149963 20100929225403
+134.148.4.14 3 3 14851584 20100908115202
+207.46.12.19 1 1 1272 20100913013251
+95.18.9.68 1 1 20271 20100924084725
+119.12.165.236 1 1 25258 20100924142422
+125.230.66.100 1 1 2391 20100929055823
+169.244.143.125 1 1 4950528 20100914225223
+116.193.184.242 6 26 514743 20100915203644
+122.104.0.120 3 7 76105 20100902200229
+194.103.217.6 1 6 74448 20100901054506
+58.170.128.163 6 68 2849301 20100921095101
+203.13.3.80 3 3 9901056 20100923164558
+75.156.133.58 0 1 24606 
+150.70.75.167 2 2 1215246 20100927064415
+84.221.143.64 0 1 115032 
+134.102.112.31 0 1 24606 
+67.49.135.220 2 2 9901056 20100926114952
+123.117.74.77 5 37 1256923 20100905170734
+210.255.69.26 0 1 290427 
+24.115.66.250 1 4 229674 20100922132630
+65.40.218.152 0 1 24606 
+79.98.5.10 1 1 1970795 20100913224255
+173.203.51.205 2 2 4782 20100911224452
+189.152.46.11 1 7 125968 20100907082519
+195.212.79.1 1 1 537488 20100902020512
+218.231.92.122 20 20 47820 20100919105212
+76.10.205.68 1 1 2391 20100905211523
+66.177.226.233 1 1 8603 20100914223303
+76.246.24.73 1 3 137264 20100927103307
+203.10.224.94 6 16 104642 20100902093725
+188.195.184.15 1 3 122274 20100912194455
+95.27.193.8 1 1 2391 20100926141803
+90.210.223.96 1 2 315309 20100927022313
+59.92.2.53 1 1 1137379 20100904230244
+110.32.112.33 1 1 4950528 20100927203719
+80.254.177.164 1 1 1137379 20100907215137
+124.171.214.181 4 8 78496 20100905230234
+70.76.99.63 1 4 82582 20100915101808
+41.3.19.172 1 1 106631 20100907013224
+206.53.157.138 1 1 711469 20100907160946
+125.164.24.3 1 1 63124 20100916235820
+80.249.48.134 3 3 0 20100923193323
+116.199.212.78 1 1 456493 20100918140153
+41.220.68.11 0 1 19179 
+68.17.169.130 1 1 4950528 20100910100152
+114.26.53.141 0 1 24606 
+209.131.39.62 1 1 2391 20100916174241
+207.46.12.159 1 1 53513 20100920051713
+203.214.109.225 4 8 78301 20100930214915
+91.204.8.51 3 3 3412137 20100923172902
+124.182.184.173 1 1 2326201 20100904000019
+109.169.29.135 6 6 14346 20100928164114
+89.135.19.14 1 8 325438 20100923012848
+78.146.245.147 1 1 4950528 20100914022518
+212.219.51.101 1 1 738373 20100908043139
+195.195.86.193 3 14 582276 20100903220618
+203.10.121.85 2 2 4950528 20100902141754
+207.46.12.68 2 2 216037 20100906000638
+203.171.196.123 3 7 75910 20100925225726
+68.61.78.239 0 1 24606 
+184.72.14.70 10 10 78691 20100920024850
+84.19.186.140 1 1 4677 20100918190024
+207.46.204.202 2 2 544605 20100906113614
+110.75.171.77 1 1 13850 20100902160238
+95.49.114.39 2 2 9901056 20100914185130
+124.169.38.13 3 7 76105 20100909214728
+124.177.6.113 1 1 78932 20100921193520
+91.19.43.11 1 6 74448 20100907020545
+80.131.208.108 3 45 2713013 20100903052315
+122.104.145.216 5 5 4955310 20100907100210
+65.52.104.36 3 5 49644 20100916100705
+110.75.172.81 1 1 12038 20100903000120
+93.210.119.187 1 1 48670 20100911021659
+78.144.145.251 0 1 24606 
+208.80.194.50 3 3 41928 20100930112100
+58.110.119.61 3 7 76105 20100903170548
+203.51.167.121 1 1 66437 20100916220723
+114.80.93.52 34 34 81294 20100930175631
+117.198.82.83 0 3 73818 
+58.172.148.210 2 2 10359672 20100903095049
+83.31.146.20 2 2 1515892 20100921062609
+89.72.111.11 3 7 75910 20100923062237
+93.173.183.85 2 2 90709 20100905043049
+94.75.209.148 3 3 511716 20100910023900
+193.153.172.251 1 1 4950528 20100911025036
+173.242.114.2 8 8 228533 20100913065752
+173.11.6.121 0 1 24606 
+203.26.122.12 10 21 278152 20100921162831
+124.124.115.140 2 2 2274758 20100906153927
+59.93.116.30 1 1 1137379 20100921023825
+109.123.99.56 8 8 228533 20100917025842
+124.186.89.7 3 7 75984 20100913182318
+70.246.154.249 1 43 2372842 20100929124301
+207.46.12.74 1 7 145928 20100902030803
+207.46.199.24 1 1 4387 20100912114401
+207.46.193.39 1 2 8225 20100904205158
+220.225.77.178 0 2 49212 
+202.152.243.155 1 1 4950528 20100924030828
+118.210.49.158 1 1 84673 20100913001107
+165.206.132.6 0 1 20636 
+95.27.232.108 0 1 1075 
+110.175.2.151 6 11 99386 20100920200448
+188.118.77.12 1 1 892783 20100907003417
+207.46.195.204 2 2 52603 20100920191106
+203.244.197.254 1 1 1137379 20100902190042
+128.255.194.114 1 6 74448 20100915225743
+117.241.193.203 1 1 1137379 20100916201206
+84.48.89.250 2 17 272989 20100901043055
+87.5.168.177 0 1 115032 
+222.92.16.5 1 3 19249 20100920113405
+97.93.105.241 3 7 75910 20100924164105
+98.124.1.102 0 1 24606 
+216.121.185.131 21 49 532345 20100927055052
+207.46.12.25 1 2 9473 20100907125331
+80.14.166.72 0 1 158115 
+207.46.204.204 2 2 2468213 20100929224639
+121.74.224.167 1 1 4950528 20100902161155
+87.4.89.151 0 1 115032 
+216.79.193.210 2 2 4950528 20100928010958
+93.210.116.196 1 1 48670 20100901064257
+207.46.195.203 1 2 6725 20100904063944
+78.173.60.243 1 8 722617 20100901070746
+94.101.160.1 4 8 15086549 20100909215130
+151.68.9.101 1 5 234965 20100915164801
+222.152.140.161 1 2 24036 20100905193952
+207.46.12.26 1 1 2702726 20100912233456
+112.200.79.146 1 1 1137379 20100916021527
+71.74.99.22 0 1 24606 
+212.121.212.73 1 1 4950528 20100915005919
+203.14.52.45 2 6 257962 20100922163049
+109.122.3.112 1 1 25648 20100924180105
+207.46.12.206 1 1 1435414 20100904151906
+122.107.97.214 1 1 4950528 20100902115020
+196.215.22.136 0 1 24606 
+186.110.171.13 1 1 4424908 20100923110023
+208.80.194.26 5 5 45387 20100914154641
+76.30.189.27 1 6 68498 20100902011156
+213.154.93.64 1 5 234965 20100906153153
+218.248.20.68 1 1 1137379 20100908194559
+64.251.144.253 0 1 24606 
+41.220.68.2 0 1 26996 
+87.6.46.182 0 1 115032 
+216.104.15.130 1 1 1137379 20100922094712
+207.46.12.121 2 3 468351 20100922140353
+121.216.13.74 7 14 141760 20100909123103
+122.106.127.35 3 7 76105 20100901202657
+99.229.133.68 0 1 79964 
+84.220.133.4 1 6 68498 20100930185118
+121.216.4.107 3 7 76105 20100911171844
+203.109.214.234 0 1 24606 
+110.75.174.17 1 1 7452 20100901184917
+122.149.239.72 1 1 1137379 20100916152608
+63.64.36.17 3 44 2229718 20100908101246
+58.9.136.151 1 1 4950528 20100901201105
+117.18.81.8 5 5 32655 20100913061001
+94.140.163.33 1 1 997048 20100924220114
+68.37.85.40 1 1 8603 20100911115653
+143.238.123.226 1 3 128981 20100907234727
+117.120.18.132 3 7 76105 20100908165547
+90.216.119.247 1 5 211216 20100914192523
+122.57.248.134 1 1 4950528 20100915161930
+208.80.194.35 8 8 78938 20100930205641
+76.10.100.151 3 7 76105 20100912023024
+212.227.136.205 2 2 16241 20100924162135
+124.124.111.33 1 1 4950528 20100905204551
+76.169.88.137 0 1 115032 
+81.107.52.77 0 1 24606 
+115.97.134.64 1 6 68498 20100918001042
+207.46.204.212 1 1 6051 20100904104514
+113.251.126.236 0 1 86443 
+88.119.128.227 0 1 79964 
+203.88.11.129 0 1 49557 
+80.239.243.27 2 2 2870828 20100928001154
+87.206.239.159 0 1 24606 
+150.140.143.136 3 3 7173 20100926075728
+85.247.40.79 1 1 4424908 20100929093021
+118.208.244.130 0 1 24606 
+76.6.84.31 0 1 24606 
+115.128.54.45 3 7 75984 20100916202958
+220.255.3.41 0 1 24606 
+113.108.91.94 1 1 2515 20100905165622
+110.75.168.30 1 1 2391 20100922084908
+202.173.170.31 4 8 78301 20100925160407
+82.26.201.14 2 44 2198232 20100920044122
+121.91.119.95 1 6 68498 20100914083611
+117.195.166.179 1 1 1137379 20100908032814
+123.243.30.233 1 7 374357 20100904000003
+216.145.17.190 0 1 1924 
+121.45.40.25 1 1 57915 20100926220031
+77.105.29.206 1 15 1183645 20100907060653
+173.64.170.182 1 6 74448 20100906042328
+71.188.189.245 1 1 8603 20100902002221
+69.7.197.42 2 4 220768 20100901073459
+168.216.89.92 10 10 100595 20100922145714
+91.212.226.56 16 17 367331 20100924063621
+187.112.64.141 1 6 74448 20100905121622
+142.177.81.10 1 5 371425 20100923033550
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 30
+20100901 1609 1882 92993324 80
+20100902 1173 1338 93310450 77
+20100903 1117 1331 75518654 72
+20100904 1134 1306 33745551 61
+20100905 1172 1360 43040501 66
+20100906 1218 1449 101131638 85
+20100907 1432 1636 144254977 87
+20100908 1287 1778 142903111 95
+20100909 1127 1240 70247699 63
+20100910 1060 1146 62157186 67
+20100911 1138 1300 57197132 56
+20100912 1184 1455 96054457 70
+20100913 1268 1606 73745543 75
+20100914 1115 1280 105243406 73
+20100915 1125 1325 122436692 69
+20100916 812 1073 123089381 88
+20100917 1127 1372 96163986 70
+20100918 1155 1283 30257735 56
+20100919 1407 1532 49824028 61
+20100920 1173 1407 99845602 73
+20100921 1225 1450 90685506 82
+20100922 1172 1336 81546714 70
+20100923 1214 1426 133876226 93
+20100924 1195 1343 70509347 80
+20100925 1188 1335 74493360 61
+20100926 1173 1369 44042138 63
+20100927 1419 1522 67066761 56
+20100928 1185 1391 75721469 76
+20100929 1267 1586 113933044 86
+20100930 1145 1535 54624219 74
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 7
+1h+ 110
+5mn-15mn 70
+2mn-5mn 56
+30s-2mn 112
+15mn-30mn 28
+0s-30s 1792
+30mn-1h 17
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 389
+/sba2009/header.php 7698 16204290 32 0
+/sba2009/right_bar.php 7697 5118505 0 32
+/sba2009/left_bar.php 7697 30510908 0 0
+/SBA2009_messageboard.php 7225 62156675 199 206
+/ 852 2027568 563 242
+/main.php 516 7677664 26 252
+/side.php 449 2329038 17 24
+/library/Living_on_Mars.ppt 407 1589119488 286 264
+/headline_archive.php 117 16403356 78 54
+/marsoz.php 102 1398850 66 58
+/qld.php 22 183304 1 3
+/jnt/laing_8nov2001.html 5 11830 0 0
+/expedition1/mar08.shtml 7 33873 2 2
+/jnt/jnt-db/ 5 74830 0 0
+/expedition1/feb25.shtml 11 24904 3 3
+/230309.php 5 32105 0 0
+/mars_oz/MarsOz_video_3GPP.3gp 7 3649352 2 2
+/library/tmq_v2i3.pdf 2 3435374 1 1
+/marsupial/about.php 22 173404 1 1
+/amec2003/proceedings/ 5 27125 0 0
+/amec2005/proceedings/West_surface.pdf 6 557904 6 6
+/library/AMEC2006_JC.pdf 3 6536724 2 3
+/SBA2009_galleries.php 19 325481 3 3
+/jnt/jnt-db/Australia-SA_Strangways.html 1 6248 1 1
+/230110.php 10 68660 0 1
+/amec2002/proceedings/13-Sean_McMullen.htm 5 16745 0 0
+/amec2004/proceedings/04-Rodney_Buckland.htm 5 42715 0 0
+/library/media_release_290703.pdf 1 130630 1 1
+/youth_corner_brittany_hunter.php 4 25792 1 2
+/human_factors.php 2 18318 1 0
+/amec2002/proceedings/15-Steve_Dawson_HF_Overview.htm 6 26322 1 1
+/amec2004/proceedings/ 5 2235 0 0
+/library/NSCW2010_application_form.pdf 24 1862806 21 18
+/jnt/jnt-db/JNT-DB-Brief_Cover.html 5 24270 0 0
+/amec2004/proceedings/18-Guy_Murphy.htm 5 43895 0 0
+/amec2002/proceedings/ 9 13464 0 0
+/expedition1/feb15.shtml 6 16950 1 1
+/library/media_release_311005.php 5 28890 0 0
+/amec2006/files/AMEC2006_Bowen_Gargano_presentation.pdf 3 6368271 1 1
+/amec2006/VSSEC_Brochure_international.pdf 1 213392 1 1
+/amec2002/proceedings/07-Jarntimarra_1.htm 6 42702 2 1
+/amec2005/proceedings/Eggins.pdf 1 60240 1 1
+/publications.php 40 372840 1 3
+/library/coober_pedy_ISRU_AMEC.pdf 25 10304725 25 23
+/propulsion.php 13 48165 0 2
+/nsw.php 25 245200 2 2
+/jnt/contributors.php 10 28730 0 2
+/amec2003/proceedings/05-Graham_Mann_full_paper.htm 6 330234 0 1
+/expedition1/feb19.shtml 5 14390 0 0
+/amec2007/proceedings/AMEC2007_Clarke_etal.PDF 12 10713396 10 10
+/SBA2009_gallery_090713.php 8 61264 1 1
+/jnt/laing_3nov2001.html 5 9545 0 0
+/amec2006/files/AMEC2006_David_Willson_presentation.pdf 1 3487001 1 1
+/library/MarsOZ_Addendum1.pdf 2 912986 1 2
+/amec2002/proceedings/22-Graham_Mann_full_paper.htm 6 209604 1 1
+/jnt/laing_2nov2001.html 5 6685 0 0
+/library/MarsOZ_Proposal-ver1b.pdf 10 14096770 6 8
+/amec2006/files/AMEC2006_Scott_Williams_presentation.pdf 1 761516 1 1
+/amec2002/proceedings/15-Steve_Dawson_full_paper.htm 8 443984 3 3
+/amec2002/proceedings/00-publication_notes.htm 5 13885 0 0
+/library/media_release_170805.php 7 69412 2 2
+/links.php 13 89024 5 6
+/amec2006/files/AMEC2006_Clarke_West_presentation.pdf 1 4614108 1 1
+/jnt/hoogland_27oct2001.html 6 42090 0 0
+/jnt/laing_27oct2001.html 5 10935 0 0
+/amec2004/proceedings/11-Vic_Gostin.htm 5 53180 0 0
+/amec2007/proceedings/TOC.php 8 63528 0 0
+/expedition1/feb14.shtml 5 13540 0 0
+/amec2008/AMEC2008_Program.pdf 3 1379502 3 3
+/youth_corner_georgia_bowen.php 4 32904 2 2
+/library/typeinst.doc 1 109056 1 1
+/expedition1/mar14.shtml 5 22335 0 0
+/120207.php 5 54065 0 0
+/amec2002/proceedings/19-Jin_Tan_Carlile_Leung_Van_shaik.htm 6 34248 1 1
+/jnt/laing_5nov2001.html 5 5295 0 0
+http://www.marssociety.org.au/AMEC.php 2 27070 2 1
+/amec2002/proceedings/18-James_Waldie_MarsSkin.htm 5 20355 0 0
+/expedition1/mar13.shtml 5 9630 0 0
+/amec2005/proceedings/West_Phobos.pdf 1 94394 1 1
+/expedition1/mar06.shtml 5 14175 0 0
+/amec2002/proceedings/Panel_1.htm 5 12955 0 0
+/schmittbio.php 9 70083 4 0
+/expedition1/feb20.shtml 5 23490 0 0
+/amec2003/proceedings/04-James_Waldie.htm 5 59510 0 1
+/library/ 80 0 11 16
+/marsskin/marsskinamec2002.php 8 61712 0 1
+/120907.php 5 44305 0 0
+/amec2004/proceedings/index2.html 5 86270 0 0
+/library/FieldofViewReport.pdf 1 107611 1 1
+/amec2004/proceedings/15-Sheryl_Bishop.htm 1 0 1 1
+/expedition1/mar04.shtml 5 20560 0 0
+/expedition1/feb16.shtml 5 15455 1 0
+/jnt/about.php 11 63272 1 1
+/wa.php 49 1256752 12 18
+/marsupial/documents/HOP_press_kit_2001.pdf 1 1038048 1 1
+/library/marsoz_final_site_selection.pdf 4 1387296 2 1
+/amec2008/AMEC2008_Map.pdf 3 1549983 2 2
+/amec2007/proceedings/AMEC2007_Dimasi_Abstract.PDF 2 28426 0 0
+/library/visions_in_the_desert.ppt 1 3085824 1 1
+/amec2005/proceedings/Squyres.pdf 1 66437 1 1
+/AMEC.php/ 16 216560 16 16
+/library/media_release_260707.php 5 27235 0 0
+/library/media_release_141101.pdf 2 141488 2 2
+/SBA_about.php 6 56340 1 2
+/expedition1/feb23.shtml 6 16308 1 1
+/jnt/jarntimarra_expedition.php 15 180480 5 6
+/library/tmq_v2i1.pdf 11 75105041 10 10
+/jnt/laing_28oct2001.html 5 14180 0 0
+/marsupial/documents/Wombat_competition_entry_2000.pdf 3 4283394 3 3
+http://www.marssociety.org.au/amec2008/AMEC2008.php 1 18265 0 1
+/mars_quarterly.php 13 56381 0 3
+/jnt/laing_30oct2001.html 5 8680 0 0
+/library/Analogue_Stations.pdf 6 2110758 6 6
+/amec2003/proceedings/12-Jennifer_Laing.htm 8 48408 3 4
+/amec2004/proceedings/00-Acknowledgements.htm 5 52115 0 0
+/expedition1/mar02.shtml 5 15960 0 0
+/library/AMEC2009_Abstracts.pdf 11 1472712 0 6
+/AMEC.php 43 568470 32 31
+/marsupial/index.php 48 187728 17 15
+/library/AMEC2009_Flyer.pdf 2 441502 2 2
+/amec2004/proceedings/06-Jonathan_Clarke.htm 5 76775 0 0
+/library/AMEC2009_Hunter_paper.pdf 8 2113864 0 5
+/amec2002/amec2002.shtml 21 368928 12 12
+/Call_for_Abstracts.php 5 21755 0 0
+/youth_corner.php 8 31600 0 1
+/marsupial/login.php 17 52122 0 10
+/amec2010/amec2010.php 82 987116 21 33
+/290708.php 5 43730 0 0
+// 10 23910 2 3
+/sa.php 24 665832 2 4
+/jnt/links.php 1 2082 0 1
+/200709.php 9 70137 3 3
+/library/AMEC2010_program_draft.pdf 1 103722 1 1
+/amec2005/proceedings/Clarke.pdf 1 63124 1 1
+/tas.php 19 104633 1 3
+/expedition1/mar12.shtml 5 21120 0 0
+/amec2003/proceedings/08-Jon_Clarke_1.htm 5 74745 0 0
+/schmitt.php 6 73308 1 1
+/amec2004/proceedings/00-publication_notes.htm 5 29780 0 0
+/library/CPSS_Leaflet.pdf 2 307274 2 1
+/030309.php 6 41190 1 1
+/marsupial/m-paw.php 8 107632 1 0
+/marsupial/marsupial.php 9 44667 0 3
+/marsoz2.php 9 115128 1 1
+/jnt/laing_6nov2001.html 5 7260 0 0
+/library 19 0 0 5
+/amec2007/proceedings/AMEC2007_Pain_etal.PDF 1 3849584 1 1
+/SBA2009_gallery_090712.php 8 61280 0 1
+/expedition1/mar15.shtml 5 10555 0 0
+/jnt/jnt-db/climate.html 6 144906 1 1
+/library/media_release_250905.php 6 35742 1 1
+/amec2002/program.shtml 5 148585 0 0
+/jnt/ 5 43320 0 0
+/amec2006/files/AMEC2006_West_Charles_Sutherland_Boswell_presentation.pdf 7 4980283 7 7
+/jnt/laing_31oct2001.html 5 14310 0 1
+/amec2007/proceedings/AMEC2007_Dyskin_etal.PDF 5 1065420 4 4
+/expedition1/feb26.shtml 5 16090 0 0
+/SBA2009_gallery_090716.php 12 91920 1 1
+/130408.php 5 37015 0 0
+/marsupial/contact.php 22 108416 0 0
+/amec2002/proceedings/06-MarsOz_background_full_paper.htm 33 807552 27 27
+/amec2002/proceedings/01-Harrison_Schmitt.htm 5 18520 0 0
+/amec2002/proceedings/24-Yon_Wui_Ng.htm 8 17605 2 1
+/library/17793_PROP01.pdf 7 923559 0 2
+/amec2003/proceedings/01-Vadim_Gushin.htm 6 94452 1 1
+/amec2006/files/AMEC2006_Clarke_Willson_presentation.pdf 3 4306242 2 2
+/amec2003/proceedings/05-Graham_Mann.htm 7 75173 2 1
+/jnt/start_group_2_lo_res.html 5 1700 0 0
+/library/MSA_TECH_pamphlet.pdf 1 339261 0 0
+/amec2002/proceedings/00-preface.htm 5 23245 0 0
+/library/media_release_150104.pdf 1 170218 1 1
+/vic.php 31 496868 1 7
+/amec2004/proceedings/19-Jim_Dator.htm 5 55630 0 0
+/amec2007/proceedings/AMEC2007_Gargano.PDF 3 3891042 0 0
+/marsupial/drawings/GA-1%20rover%20DRAFT.pdf 1 207367 1 1
+/main.php/contact.php 6 89148 4 4
+/expedition1/mar01.shtml 6 20400 1 1
+/jnt/laing_29oct2001.html 5 40100 0 0
+/amec2002/proceedings/04-Everett_Gibson.htm 6 30690 1 1
+/amec2006/AMEC2006_proceedings.php 6 46440 1 3
+/library/VSSEC_Press_Release.pdf 1 373818 0 1
+/amec2003/proceedings/06-Mark_Smith.htm 5 33145 0 0
+/amec2002/proceedings/Panel_2.htm 5 13490 0 0
+//main.php 4 59916 0 1
+/marsupial/design.php 25 101500 4 1
+/library/media_release_080401.pdf 1 217225 1 1
+/amec2002/proceedings/14-Rob_Hart_full_paper.htm 7 152740 2 2
+/amec2002/proceedings/07-Jarntimarra_1_full_paper.htm 5 175105 0 0
+/amec2003/proceedings/00-publication_notes.htm 7 59794 2 2
+/blog/ 2 9397 1 1
+/amec2003/proceedings/02-Steven_Dawson.htm 5 47940 0 0
+/amec2005/proceedings/Christie&Welcch.pdf 4 234532 3 3
+/jnt/west_3nov2001.html 5 15915 0 0
+/amec2003/proceedings/index2.html 6 107202 1 1
+/amec2003/proceedings/00-Guy_Murphy.htm 5 73515 0 0
+//side.php 2 10452 0 0
+/international_sites.php 6 30258 1 1
+/jnt/jnt-db/Australia-SA_Mount_Gee.html 1 6361 1 1
+/amec2005/proceedings/Charles.pdf 2 103794 2 2
+/mars_missions.php 13 302367 4 4
+/jnt/jnt-db/Australia-SA_Milners_Pile.html 1 6239 1 0
+/amec2002/proceedings/24-Yon_Wei_Ng_full_paper.htm 26 639050 15 16
+/220108.php 7 51919 2 2
+/expedition1/mar10.shtml 5 15645 0 0
+/library/MSA_Trifold_Leaflet.pdf 2 466118 0 1
+/jnt/laing_9nov2001.html 5 12390 0 0
+/amec2004/proceedings/09-Graham_Mann.htm 5 42505 0 0
+/120910.php 26 156507 0 5
+/AMEC2009_proceedings.php 30 128010 0 2
+/amec2004/proceedings/03-Wendell_Mendell.htm 6 56898 1 1
+/library/17793_PROP11.pdf 5 673505 0 0
+/amec2006/amec2006.htm 7 59346 2 2
+/amec2003/proceedings/03-Rob_Hart.htm 5 44490 0 0
+/library/APRSAF-Poster-Design-Competition-2010.pdf 4 3410840 0 1
+/amec2001/ 1 23899 1 0
+/media.php 16 151712 1 5
+/library/media_release_050603.pdf 2 176188 1 2
+/marsupial/ 1 3911 0 1
+/amec2006/files/AMEC2006_Sarah_Joyce_presentation.pdf 6 317690 1 1
+/SBA2009_gallery_090711.php 7 53620 1 1
+/amec2005/proceedings/Pain.pdf 1 865623 1 1
+/amec2004/proceedings/12-Jennifer_Heldmann.htm 6 58716 1 1
+/amec2002/proceedings/index2.html 5 36435 0 0
+/act.php 20 241320 0 0
+/aboutus.php 25 186300 1 7
+/contacts.php 30 357060 1 8
+/amec2002/proceedings/02-Ross_Taylor.htm 5 23610 0 0
+/amec2003/proceedings/11-Jon_Clarke_2.htm 5 59045 0 0
+/amec2003/proceedings/02-Steven_Dawson_extended_abstract.htm 5 72735 0 0
+/SBA2009_gallery_090714.php 7 53606 0 1
+/amec2005/proceedings/Mann.pdf 1 815727 1 1
+/amec2004/proceedings/14-Graziella_Capralli.htm 5 50235 0 1
+/library/14_July_Boston.pdf 2 69706 2 2
+/amec2002/proceedings/11-Pavel_Trivailo.htm 5 24730 0 0
+/marsskin/marsskinexpeditionone.php 8 67520 0 0
+/jnt/climate.php 32 947437 16 16
+/amec2002/proceedings/23-Steven_Scheding.htm 5 12485 0 0
+/amec2003/proceedings/12-Jennifer_Laing_full_paper.htm 33 1606110 28 28
+/expedition1/feb27.shtml 6 27984 1 1
+/amec2001/RegistrationForm.html 6 12222 1 1
+/expedition1/feb24.shtml 5 18835 0 0
+/marsupial/resources.php 22 138622 3 3
+/jnt/jnt-db/Australia-SA_NE-Sturt.html 1 9049 1 1
+/geology.php 12 56028 1 0
+/jnt/index.php 21 181944 1 6
+/library/SBA2009_Bonaccorsi_Full_Report.pdf 2 5062364 2 1
+/library/media_release_280508.pdf 2 50516 1 2
+/amec2007/proceedings/AMEC2007_OBrien.PDF 11 12436303 11 11
+/opportunities.php 23 162518 0 5
+/library/SBA-2009_Expedition_Report.pdf 21 24047184 20 20
+/library/AESC_media_release_2_--_June_2008.pdf 2 510870 2 2
+/library/17793_PROP02.pdf 5 1134680 0 0
+/bibliography.php 5 88985 0 0
+/jnt/jnt-db/Australia-SA_Dalhousie_Rockpile.html 1 6594 0 1
+/amec2002/proceedings/14-Rob_Hart.htm 5 20890 0 0
+/library/EMC2009_Flyer.pdf 1 2702726 1 1
+/library/media_release_050906.php 5 30030 0 0
+/marsupial/competition_specs.php 10 223980 0 0
+/amec2002/proceedings/13-Sean_McMullen_full_paper.htm 7 161966 2 2
+/library/X2_report.pdf 6 2013624 5 5
+/SBA2009_reports.php 5 46175 0 0
+/library/AMEC2008_conference_%20proceedings.pdf 17 40462023 10 10
+/sponsors.php 17 97308 1 4
+/amec2007/proceedings/AMEC2007_Willson.PDF 16 70798528 16 16
+/media_archive.php 5 108590 0 0
+/library/media_release_080410.pdf 2 213262 2 2
+/expedition1/feb18.shtml 5 15000 0 0
+/SBA_Namibia_2010.php 2 22478 0 0
+/amec2007/proceedings/AMEC2007_Brumfitt_and_Thompson.PDF 2 1476746 2 2
+/nt.php 16 118752 0 1
+/msa_in_the_news.php 11 330704 4 3
+/library/tmq_v1i4.pdf 6 11824770 6 6
+/library/MARSOZ_Proposal-ver1A.pdf 1 64512 0 0
+/amec2002/proceedings/05-Guy_Murphy.htm 5 18310 0 0
+/amec2002/proceedings/03-David_Green.htm 5 24455 0 0
+/mars_oz/mars_oz_bis_final_draft.pdf 4 2149952 4 4
+/library/MSA-TEC-JNT-PM-02-02-JNT1_proposal-U-ver0B.pdf 4 20719344 2 2
+/library/wombat.pdf 2 2855596 2 1
+/library/Spaceward_Bound_Mojave_2010_Application.doc 1 45056 1 1
+/amec2004/proceedings/08-James_Waldie.htm 5 65580 0 0
+/amec2003/proceedings/10-panel_discussion_1.htm 5 34640 0 0
+/expedition1/feb22.shtml 5 30025 0 0
+/expedition1/mar05.shtml 5 16350 0 0
+/amec2002/proceedings/19-Jin_Tan_Carlile_Leung_Van_shaik_full_paper.htm 36 1135053 17 17
+/040709.php 5 33740 0 0
+/expedition1/feb21.shtml 6 16302 1 1
+/comms.php 8 76936 2 3
+/amec2004/proceedings/01-Neil_Newman.htm 5 38395 0 0
+/amec2002/proceedings/17-James_Waldie_MCP_full_paper.htm 39 1239685 28 28
+/jnt/hoogland_2nov2001.html 5 11625 0 0
+/amec2003/proceedings/00-Peter_Nattrass.htm 15 210924 10 10
+/marsupial/news.php 31 1042220 12 10
+/expedition1/mar03.shtml 5 11835 0 0
+/amec2007/proceedings/AMEC2007_Wilson_and_Clarke_Abstract.PDF 2 39026 2 2
+/amec2003/proceedings/07-Aaron_Tan.htm 5 52850 0 0
+/SBA2009.php 49 725116 11 14
+/amec2005/AMEC2005.htm 5 44960 0 0
+/past_events.php 12 62346 0 1
+/amec2004/proceedings/02-Christine_Charles.htm 6 55746 1 1
+/amec2004/proceedings/06-Jonathan_Clarke_full_paper.htm 5 229565 0 0
+/marsupial/trax.php 34 195987 2 4
+/library/media_release_271005.php 7 39382 2 2
+/130207.php 5 34855 0 0
+/amec2003/proceedings/09-Arkady_Dyskin.htm 7 121884 2 2
+/amec2001/accomodation.shtml 5 6045 0 0
+/library/willson-et-al.pdf 10 10180072 7 7
+/library/MSA-TEC-SAF-OCD-1A.pdf 98 108051005 87 87
+/amec2004/proceedings/00-preface.htm 6 67980 1 1
+/amec2002/proceedings/06-Jonathan_Clark_MarsOz_background.htm 5 27065 0 0
+/library/media_release_150501.pdf 4 1324164 4 4
+/jnt/laing_1nov2001.html 5 5035 0 0
+/clarkediary.php 7 39284 2 2
+/library/17793_PROP12.pdf 4 679280 0 3
+/expedition1/feb17.shtml 6 12228 1 1
+/library/Crew_92_MSA_Report.pdf 2 94000 2 2
+/jnt/hoogland_31oct2001.html 5 8820 0 0
+/library/media_release_030909.pdf 3 2991144 2 2
+/library/media_release_221001.pdf 1 14650 1 1
+/library/media_release_310706.php 5 28415 0 0
+/jnt/advertiser_13nov01.html 5 945 0 0
+/marsskin.php 86 712166 46 47
+/amec2002/proceedings/18-James_Waldie_MarsSkin_full_paper.htm 19 385149 12 12
+/amec2001/index.shtml 10 238990 2 2
+/expedition1/feb28.shtml 6 19230 1 1
+/jnt/laing_4nov2001.html 5 11875 0 0
+/marsskin/marsskinlisaleonardo.php 9 82854 1 2
+/amec2004/proceedings/17-David_Willson.htm 5 66295 0 0
+/amec2002/proceedings/17-James_Waldie_Flexible_Space_Suits.htm 5 20705 0 0
+/amec2005/proceedings/Taylor.pdf 1 53513 1 1
+/jnt/hoogland_11nov2001.html 5 12270 0 0
+/061108.php 5 34365 0 0
+/SBA2009_gallery_090715.php 10 76580 1 1
+/jnt/laing_7nov2001.html 5 6210 0 0
+/amec2001/qantas.shtml 6 7632 1 1
+/library/AGM2010_notice.pdf 3 236796 1 1
+/library/media_release_061106.php 8 73864 2 2
+/jnt/jnt-db/brief.html 5 37485 0 0
+/amec2005/proceedings/Nagle_tracking.pdf 2 99770 2 2
+/expedition1/mar11.shtml 5 16595 0 0
+/amec2004/amec2004.html 5 64000 0 0
+/library/SBA2009_Update_June09.pdf 3 6978603 3 2
+/library/MDRS_paper_model.pdf 1 884313 0 1
+/blog/wp-login.php 3 5909 1 1
+/amec2003/proceedings/13-panel_discussion_2.htm 5 34480 0 0
+/library/media_release_081205.php 29 189399 23 23
+/amec2002/proceedings/21-Craig_Jin.htm 5 18655 0 0
+/amec2008/AMEC2008.php 25 438360 17 18
+/amec2005/proceedings/AMEC2005_proceedings.php 5 41445 0 0
+/library/media_release_190901.pdf 1 74386 1 1
+/library/13th_July_Rupert.pdf 5 289575 5 5
+/jnt/user_notes.php 9 131994 1 0
+/library/AMEC2009_Program.doc 2 1130496 0 1
+/amec2004/proceedings/16-Rob_Pocaro.htm 5 42915 0 0
+/amec2003/proceedings/14-photo_gallery.htm 5 10870 0 0
+/amec2005/proceedings/Krins.pdf 1 50858 1 1
+/library/From_Earth_to_Mars.pdf 1 359898 1 1
+/amec2007/proceedings/AMEC2007_Bowen_Abstract.PDF 2 15562 0 0
+/jnt/jnt-db/Australia-SA_Dalhousie_Springs.html 1 7387 1 0
+/library/NASA-Spacebound-Mojave-2010-Report.pdf 3 200865 2 2
+/library/AMEC2010_map.pdf 1 656557 1 1
+/amec2007/proceedings/AMEC2007_Mann.PDF 1 344329 1 1
+/library/14th_July_Air_Force.pdf 1 54288 1 1
+/library/AMEC2009_Garagono_paper.pdf 11 1071060 0 4
+/mars500.php 9 52317 0 2
+/marsupial/support.php 20 131860 6 2
+/library/media_release_181001.pdf 1 64154 1 1
+/jnt/jnt-db/Australia-SA_Moon_Plain.html 1 5675 1 1
+/amec2003/proceedings/00-preface.htm 6 45702 1 1
+/jnt/jnt-db/JNT-DB-Cover.html 5 24225 0 0
+/search.php 8 36768 2 3
+/amec2004/proceedings/07-Rocky_Persaud.htm 5 61875 0 0
+/amec2004/proceedings/10-Adrian_Brown.htm 5 58015 0 0
+/library/media_release_260805.php 6 33900 1 1
+/expedition1/mar09.shtml 5 20465 0 0
+/jnt/Jnt1_itinerary.php 6 598476 0 0
+/amec2004/proceedings/05-Fathi_Karouia.htm 5 44505 0 0
+/amec2002/proceedings/22-Graham_Mann.htm 6 17718 1 1
+/library/media_release_191203.php 6 50388 1 1
+/amec2004/proceedings/13-Mark_Bishop.htm 5 51520 0 0
+/amec2002/proceedings/16-Steve_Dawson_MSA_HF.htm 6 26646 1 1
+/jnt/site_selection.php 11 148082 1 2
+/index.php 24 57384 4 4
+/SBA2009_gallery_090710.php 6 45948 0 0
+/marsskin/marsskinexpeditiontwo.php 7 65849 0 0
+/library/media_release_260610.pdf 4 544624 0 1
+/amec2008/Call_for_Papers.php 7 32739 2 2
+/library/tmq_v2i2.pdf 2 7288254 1 1
+/library/water-rocket-competition-Flyer-2010.pdf 4 1455639 0 0
+/techoverview.php 19 195263 1 6
+END_SIDER

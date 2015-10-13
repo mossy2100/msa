@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function msa_amec_menu() {
+  $items = array();
+  $items['event/amec-2012/registration'] = array(
+    'title' => "AMEC 2012 Registration",
+    'page callback' => 'msa_amec_registration_page',
+    'access callback' => TRUE,
+    'type' => MENU_NORMAL_ITEM,
+  );
+  return $items;
+}
+
+/**
+ * Generate HTML for AMEC registration page.
+ * 
+ * @return string
+ */
+function msa_amec_registration_page() {
+  $html = '';
+  $html .= views_embed_view('amec_registration_fees', 'page');
+  $html .= "<h2>Conference Dinner</h2>
+    <p>Join us for dinner at the beautiful
+    <a href='http://www.cscc.com.au/location/woden/' target='_blank'>Southern Cross Club</a> at 7:00 pm for a 7:30
+    start on Saturday, 15 September.</p>";
+  $html .= msa_shop_add_to_cart_form('AMEC-2012-DINNER', TRUE);
+  return $html;
+}

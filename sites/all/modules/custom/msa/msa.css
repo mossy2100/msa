@@ -1,0 +1,28 @@
+/**
+ * CSS to fix issues with the Seven theme in the overlay.
+ * I opted not to create a subtheme of Seven because it's referenced elsewhere in the core codebase.
+ */
+
+/* I don't want table headings to be all caps. */
+.overlay ul.primary,
+.overlay table th,
+.overlay fieldset .fieldset-legend,
+.overlay .form-item label.option,
+.overlay #system-themes-page h2,
+.overlay div.admin-options label {
+  text-transform: none;
+}
+
+.overlay #edit-title {
+  width: 400px;
+}
+
+/* Styles for readonly textfields. */
+.overlay input.form-autocomplete.readonly,
+.overlay input.form-text.readonly,
+.overlay input.form-file.readonly,
+.overlay textarea.form-textarea.readonly,
+.overlay select.form-select.readonly {
+  background-color: #eee;
+  color: #777;
+}

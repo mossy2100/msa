@@ -1,0 +1,4 @@
+name = MSA Fix Old Site
+description = Fixes up paths in the old website pages, so that it can still be viewed at /sites/old
+core = 7.x
+package = MSA

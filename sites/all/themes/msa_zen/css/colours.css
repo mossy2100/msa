@@ -1,0 +1,28 @@
+/*
+MSA colours to be used in design, theme and fonts
+=================================================
+
+Black             #000      Header region background, normal text
+Dark grey         #777      Labels, dates
+Shadow grey       #999      Shadows, image borders
+Grey              #ccc      Used for borders in various places.
+Unpublished grey  #d8d8d8   For "Unpublished" label
+Soft grey         #eee      Even table rows
+Pale grey         #f7f7f7   Readonly form fields, advanced search fieldset
+White             #fff      Content area background
+
+MSA Red           #ad0000   Headings
+Light red         #ffb2b2   Currently not used but keep just in case
+Pale red          #fee      Error messages background colour
+
+MSA dark blue     #0000b3   Links
+Soft blue         #b6c5ff   Button bg
+Pale blue         #eef      Odd table rows
+
+MSA Orange        #ff9941   Menu bar
+Full orange       #ff7600   Link hover
+Light orange      #ffdea6   Main page background colour, button hover bg
+Pale orange       #fff1d9   Table headers
+
+Pale yellow       #ffc      Warning messages background colour
+*/

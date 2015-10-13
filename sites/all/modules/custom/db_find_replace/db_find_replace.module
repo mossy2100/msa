@@ -1,0 +1,630 @@
+<?php
+
+//define('DB_FIND_REPLACE_EVERYTHING', 1);
+//define('DB_FIND_REPLACE_NODES', 2);
+//define('DB_FIND_REPLACE_USERS', 3);
+//define('DB_FIND_REPLACE_TAXONOMY', 4);
+//define('DB_FIND_REPLACE_COMMENTS', 5);
+//define('DB_FIND_REPLACE_FILES', 6);
+//define('DB_FIND_REPLACE_REVISIONS', 7);
+//define('DB_FIND_REPLACE_OTHER', 8);
+
+/**
+ * Implements hook_menu(). 
+ */
+function db_find_replace_menu() {
+  $items = array();
+  $items['admin/config/development/db-find-replace'] = array(
+    'title' => 'Database Find and Replace',
+    'description' => 'Find and replace for database text fields.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('db_find_replace_search_form'),
+    'access arguments' => array('access administration pages'),
+  );
+  $items['admin/config/development/db-find-replace/results'] = array(
+    'title' => 'Database Find and Replace - Search Results',
+    'description' => 'Search results for database find and replace.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('db_find_replace_results_form'),
+    'access arguments' => array('access administration pages'),
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function db_find_replace_theme() {
+  $themes = array(
+    'db_find_replace_results_form' => array(
+      'arguments' => array('form' => NULL),
+      'render element' => 'form',
+    ),
+    'db_find_replace_button' => array(
+      'variables' => array(
+        'label' => '',
+        'classes' => array(),
+        'id' => ''
+      ),
+    ),
+  );
+  return $themes;
+}
+
+/**
+ * Convert a search string to a PCRE (Perl-Compatible Regular Expression).
+ * 
+ * @param string $pattern
+ * @param bool $case_sensitive
+ * @return string
+ */
+function db_find_replace_string_to_regex($str, $case_sensitive = TRUE) {
+  // Convert the pattern to a regular expression:
+  $pattern = '/' . str_replace('/', '\/', quotemeta($str)) . '/';
+  if (!$case_sensitive) {
+    $pattern .= 'i';
+  }  
+  return $pattern;
+}
+
+///**
+// * Convert a MySQL simple string matching pattern to a PCRE (Perl-Compatible Regular Expression).
+// * 
+// * @param string $pattern
+// * @param bool $case_sensitive
+// * @return string
+// */
+//function db_find_replace_mysql_to_regex($pattern, $case_sensitive = TRUE) {
+//  // Convert the pattern to a regular expression:
+//  $pattern = db_find_replace_string_to_regex($pattern, $case_sensitive);
+//
+//  // Replace the '%' wildcard with '.*'
+//  $pattern = str_replace('\%', 'DB_FIND_REPLACE_PERCENT', $pattern);
+//  $pattern = str_replace('%', '.*', $pattern);
+//  $pattern = str_replace('DB_FIND_REPLACE_PERCENT', '%', $pattern);
+//  
+//  // Replace the '_' wildcard with '.'
+//  $pattern = str_replace('\_', 'DB_FIND_REPLACE_UNDERSCORE', $pattern);
+//  $pattern = str_replace('_', '.', $pattern);
+//  $pattern = str_replace('DB_FIND_REPLACE_UNDERSCORE', '_', $pattern);
+//
+//  return $pattern;
+//}
+
+/**
+ * Construct the DB Find and Replace form.
+ * 
+ * @return array
+ */
+function db_find_replace_search_form() {
+  $module_path = drupal_get_path('module', 'db_find_replace'); 
+  drupal_add_js("$module_path/db_find_replace_search.js");
+  drupal_add_css("$module_path/db_find_replace_search.css");
+  $form = array();
+  $form['instructions'] = array(
+    '#type' => 'markup',
+    '#markup' => '<p>' . t("This is a development tool for performing find and replace operations on text fields in the database.") .
+      ' ' . t("It works like the find and replace function in your IDE.") . ' ' .
+      t("This module should not be made available to anyone but developers, and should probably never be uploaded to a production site.") .
+      " <span class='db-find-replace-warning'>" . t("WARNING: THIS IS NOT A TOY! You can seriously screw up your database if you aren't careful. BACKUP YOUR DATABASE BEFORE DOING ANY REPLACEMENTS.") . "</span>" .
+      '</p>',
+  );
+  $form['find_text'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Find text'),
+    '#description' => t('The text or html you want to find.'),
+    '#required' => TRUE,
+    '#default_value' => $_SESSION['db_find_replace']['form']['find_text'],
+  );
+//  $form['regex'] = array(
+//    '#type' => 'checkbox',
+//    '#title' => t('Regular expression'),
+//    '#description' => t('Check this box if the above value is a regular expression.'),
+//    '#default_value' => $_SESSION['db_find_replace']['form']['regex'],
+//  );
+  $form['match_case'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Match case'),
+    '#description' => t('Check this box if you want case-sensitive matching.'),
+    '#default_value' => $_SESSION['db_find_replace']['form']['match_case'],
+  );
+//  $form['find_options'] = array(
+//    '#type' => 'checkboxes',
+//    '#title' => t('What do you want to search?'),
+//    '#description' => t('Tables that are never searched include access log, cache tables, search tables, sessions and watchdog.'),
+//    '#options' => array(
+//      DB_FIND_REPLACE_EVERYTHING  => t('Everything'),
+//      DB_FIND_REPLACE_NODES       => t('Nodes'),
+//      DB_FIND_REPLACE_USERS       => t('Users'),
+//      DB_FIND_REPLACE_TAXONOMY    => t('Taxonomy'),
+//      DB_FIND_REPLACE_COMMENTS    => t('Comments'),
+//      DB_FIND_REPLACE_FILES       => t('Files'),
+//      DB_FIND_REPLACE_REVISIONS   => t('Revisions'),
+//      DB_FIND_REPLACE_OTHER       => t('Other stuff'),
+//    ),
+//    '#default_value' => $_SESSION['db_find_replace']['form']['find_options'],
+//  );
+  $form['do_replace'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Do replacement'),
+    '#description' => t('Check this if you want to do find-and-replace.'),
+    '#default_value' => $_SESSION['db_find_replace']['form']['do_replace'],
+  );
+  $form['replace_text'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Replace text'),
+    '#description' => t('The text or html you want to replace matches with.'),
+    '#default_value' => $_SESSION['db_find_replace']['form']['replace_text'],
+  );
+//  $form['replace_options'] = array(
+//    '#type' => 'radios',
+//    '#title' => t('Replace options'),
+//    '#options' => array(
+//      0 => t('No replace'),
+//      1 => t('Replace all'),
+//      2 => t('Replace with confirmation'),
+//    ),
+//    '#default_value' => $_SESSION['db_find_replace']['form']['replace_options'],
+//  );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Go'),
+  );
+  return $form;
+}
+
+/**
+ * Submit handler for db_find_replace_search_form.
+ * Do the actual search.
+ * 
+ * @param array $form
+ * @param array $form_state
+ */
+function db_find_replace_search_form_submit($form, &$form_state) {
+  //dpm($form_state['values']);
+    
+  // Remember the form fields:
+  $_SESSION['db_find_replace']['form'] = $form_state['values'];
+  
+  // Get the database structure:
+  $db_structure = db_find_replace_get_db_structure();
+
+  $matches = array();
+  
+  // Set the operator and find string based on whether we're searching by regular expression or not.
+  // (Note - regex feature is not fully implemented yet - add in next version.)
+  if ($form_state['values']['regex']) {
+    $op = 'REGEXP';
+    $find = $form_state['values']['find_text'];
+  }
+  else {
+    $op = 'LIKE';
+    $find = '%' . $form_state['values']['find_text'] . '%';
+  }
+  $binary = $form_state['values']['match_case'] ? 'BINARY' : '';
+  
+//  dpm("$op $binary $find");
+  
+  // Search every text column:
+  foreach ($db_structure as $table => $columns) {
+    
+    // Skip tables without text columns:
+    if (!is_array($columns['text_columns'])) {
+      continue;
+    }
+    
+    // Primary key columns:
+    $primary_keys = is_array($columns['primary_keys']) ? implode(', ', $columns['primary_keys']) . ',' : '';
+
+    // Search text columns:
+    foreach ($columns['text_columns'] as $column) {
+      $rs = db_query("SELECT $primary_keys $column AS data FROM $table WHERE $column $op $binary :find", array(':find' => $find));
+      foreach ($rs as $rec) {
+        $match = array(
+          'table' => $table,
+          'column' => $column,
+          'data' => $rec->data,
+        );
+        if (is_array($columns['primary_keys'])) {
+          foreach ($columns['primary_keys'] as $primary_key) {
+            $match['primary_keys'][$primary_key] = $rec->{$primary_key};
+          }
+        }
+        $matches[] = $match;
+      }
+    }
+  }
+  
+  usort($matches, 'db_find_replace_sort_matches');
+//  dpm($matches);
+
+  // Remember the matches:
+  $_SESSION['db_find_replace']['results'] = $matches;
+  
+  // Go to the results page:
+  drupal_goto('admin/config/development/db-find-replace/results');
+}
+
+/**
+ * Form for displaying search results.
+ * 
+ * @return array
+ */
+function db_find_replace_results_form() {
+  $form = array();
+  
+  // Search results:
+  $results = $_SESSION['db_find_replace']['results'];
+  if (is_array($results) && !empty($results)) {
+    $n = 0;
+    foreach ($results as $result) {
+      $form["original-$n"] = array(
+        '#type' => 'hidden',
+        '#default_value' => $result['data'],
+      );
+      $form["modified-$n"] = array(
+        '#type' => 'textarea',
+        '#resizable' => FALSE,
+        '#default_value' => $result['data'],
+      );
+      $n++;
+    }
+  }
+
+  // Buttons:
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Update database'),
+  );
+  $form['cancel'] = array(
+    '#type' => 'submit',
+    '#value' => t('Back to search form'),
+  );
+
+  return $form;
+}
+
+/**
+ * Theme the search results form.
+ * 
+ * @return string
+ */
+function theme_db_find_replace_results_form($vars) {
+  $form = $vars['form'];
+  
+  $html = '';
+  $results_found = isset($_SESSION['db_find_replace']['results']) && !empty($_SESSION['db_find_replace']['results']);
+  if (!$results_found) {
+    $html .= "<p>No results found.</p>";
+  }
+  else {
+    // Add the JS and CSS:
+    $module_path = drupal_get_path('module', 'db_find_replace');
+    drupal_add_js("$module_path/db_find_replace_results.js");
+    drupal_add_css("$module_path/db_find_replace_results.css");
+    drupal_add_js("sites/all/libraries/star/strings.js");
+    drupal_add_js("sites/all/libraries/star/arrays.js");
+    drupal_add_js("sites/all/libraries/star/debug.js");
+    $settings = array(
+      'find_text'       => $_SESSION['db_find_replace']['form']['find_text'],
+      'case_sensitive'  => $_SESSION['db_find_replace']['form']['case_sensitive'],
+      'do_replace'      => $_SESSION['db_find_replace']['form']['do_replace'],
+      'replace_text'    => $_SESSION['db_find_replace']['form']['replace_text'],
+    );
+    drupal_add_js(array('db_find_replace' => $settings), 'setting');
+    
+    // Display number of results:
+    $n = count($_SESSION['db_find_replace']['results']);
+    $html .= "<p>" . ($n == 1 ? '1 match' : "$n matches") . " found.</p>\n";
+
+    // Create table:
+    $table = array();
+    $rows = array();
+    $table['header'] = array(t('Table'), t('Primary key(s)'), t('Column'), t('Data'));
+
+    foreach ($_SESSION['db_find_replace']['results'] as $i => &$result) {
+      
+      // Get primary keys:
+      $primary_keys = array();
+      if (is_array($result['primary_keys'])) {
+        foreach ($result['primary_keys'] as $key => $value) {
+          $primary_keys[] = "$key=$value";
+        }
+      }
+
+      // Convert data to display format:
+      $data_html = htmlspecialchars($result['data']);
+      
+      // Create a mini-form within each result table cell:
+      $miniform = "<div id='db-find-replace-result-$i' class='db-find-replace-result'>";
+      $miniform .= "<div id='db-find-replace-html-$i' class='db-find-replace-html'>$data_html</div>";
+      $miniform .= drupal_render($form["original-$i"]);
+      $miniform .= drupal_render($form["modified-$i"]);
+      if (empty($primary_keys)) {
+        $miniform .= "<p>Sorry, but this module doesn't support updating records without a primary key.</p>";
+      }
+      else {
+        $miniform .= "<div id='db-find-replace-controls-$i' class='db-find-replace-controls'>";
+        $miniform .= theme('db_find_replace_button', array(
+          'label' => t('Edit'),
+          'classes' => 'db-find-replace-edit',
+          'id' => "db-find-replace-edit-$i",
+        ));
+        $miniform .= theme('db_find_replace_button', array(
+          'label' => t('Done'),
+          'classes' => 'db-find-replace-done',
+          'id' => "db-find-replace-done-$i",
+        ));
+        $miniform .= theme('db_find_replace_button', array(
+          'label' => t('Next'),
+          'classes' => 'db-find-replace-next',
+          'id' => "db-find-replace-next-$i",
+        ));
+        if ($_SESSION['db_find_replace']['form']['do_replace']) {
+          $miniform .= theme('db_find_replace_button', array(
+            'label' => t('Replace one'),
+            'classes' => 'db-find-replace-one',
+            'id' => "db-find-replace-one-$i",
+          ));
+          $miniform .= theme('db_find_replace_button', array(
+            'label' => t('Replace all'),
+            'classes' => 'db-find-replace-all',
+            'id' => "db-find-replace-all-$i",
+          ));
+        }
+        $miniform .= theme('db_find_replace_button', array(
+          'label' => t('Undo all changes'),
+          'classes' => 'db-find-replace-undo',
+          'id' => "db-find-replace-undo-$i",
+        ));
+        $miniform .= "</div>";
+      }
+      $miniform .= "</div>";
+
+      // Construct row:
+      $row = array(
+        $result['table'],
+        implode(', ', $primary_keys),
+        $result['column'],
+        $miniform,
+      );
+      // If the row has just been updated, highlight it:
+      if ($result['updated']) {
+        $row = array(
+          'data' => $row,
+          'class' => array('db-find-replace-updated'),
+        );
+        // We don't want to show it highlighted again:
+        unset($result['updated']);
+      }
+      // Add row to the table:
+      $rows[] = $row;
+    }
+    $table['rows'] = $rows;
+    $table['attributes'] = array('id' => 'db-find-replace-results');
+    $html .= theme('table', $table);
+  }
+  
+  // Buttons:
+  if ($results_found) {
+    $html .= drupal_render($form['submit']);
+  }
+  $html .= drupal_render($form['cancel']);
+  
+  // Render the rest of the form and return.
+  $html .= drupal_render_children($form);
+  return $html;
+}
+
+function db_find_replace_results_form_submit($form, &$form_state) {
+  // If Cancel was clicked, go back to the search form:
+  if ($form_state['values']['op'] == $form_state['values']['cancel']) {
+    drupal_goto('admin/config/development/db-find-replace');
+  }
+  else {
+    // Loop through results looking for records to update:
+    $results = &$_SESSION['db_find_replace']['results'];
+    if (is_array($results) && !empty($results)) {
+      $n = 0;
+      $messages = array();
+      foreach ($results as &$result) {
+        $modified_text = $form_state['values']["modified-$n"];
+        
+        // If it's changed and we have primary keys, update the database:
+        if ($modified_text != $result['data'] && isset($result['primary_keys']) && !empty($result['primary_keys'])) {
+          
+          // Update the record:
+          $query = db_update($result['table'])->fields(array($result['column'] => $modified_text));
+          foreach ($result['primary_keys'] as $key => $value) {
+            $query = $query->condition($key, $value);
+          }
+//          dpm_query($query);
+          $query->execute();
+          
+          // Update the results array:
+          $result['data'] = $modified_text;
+          $result['updated'] = TRUE;
+
+          $messages[] = t("Table %table updated.", array('%table' => $result['table']));
+        }
+        $n++;
+      }
+
+      // Display messages:
+      if (!empty($messages)) {
+        drupal_set_message(t("Updated rows are highlighted in blue below."));
+        foreach ($messages as $message) {
+          drupal_set_message($message);
+        }
+      }
+
+    }
+  }
+}
+
+/**
+ * Scan the database and find the text columns.
+ * Stores this info in cache to save time.
+ * 
+ * @return array
+ */
+function db_find_replace_get_db_structure() {
+//  // Check if we have this info in the cache:
+//  $text_columns = cache_get('db_find_replace_db_text_columns');
+//  if ($text_columns) {
+//    return $text_columns;
+//  }
+
+  $columns = array();
+  
+  // Get the tables to skip:
+  require_once drupal_get_path('module', 'backup_migrate') . "/includes/destinations.db.inc";
+  $bm = new backup_migrate_destination_db();
+  $backup_settings = $bm->backup_settings_default();
+  $skip_tables = $backup_settings['nodata_tables'];
+
+  // Get all the tables in the database:
+  $rs = db_query("SHOW FULL TABLES WHERE Table_type = 'BASE TABLE'");
+  foreach ($rs as $rec) {
+    $rec = array_values((array) $rec);
+    $table = $rec[0];
+    if (in_array($table, $skip_tables)) {
+      continue;
+    }
+    $columns[$table] = array();
+
+    // Get the text columns and primary keys from this table:
+    $rs2 = db_query("DESCRIBE $table");
+    foreach ($rs2 as $column) {
+      // Collect text columns:
+      if (preg_match('/char|text|blob/', $column->type)) {
+        $columns[$table]['text_columns'][] = $column->field;
+      }
+      // Collect primary keys:
+      if ($column->key == 'PRI') {
+        $columns[$table]['primary_keys'][] = $column->field;
+      }
+    }
+  }
+  
+//  dpm($columns);
+  
+//  // Store this info in the cache:
+//  cache_set('db_find_replace_db_text_columns', $columns, 'cache', CACHE_TEMPORARY);
+
+  return $columns;
+}
+
+/**
+ * Callback for usort, for ordering matches.
+ * 
+ * @param array $a
+ * @param array $b
+ * @return int
+ */
+function db_find_replace_sort_matches($a, $b) {
+  // Compare table names:
+  if ($a['table'] < $b['table']) {
+    return -1;
+  }
+  elseif ($a['table'] > $b['table']) {
+    return 1;
+  }
+
+  // Compare primary keys:
+  $primary_keys = array_keys($a['primary_keys']);
+  foreach ($primary_keys as $primary_key) {
+    if ($a['primary_keys'][$primary_key] < $b['primary_keys'][$primary_key]) {
+      return -1;
+    }
+    elseif ($a['primary_keys'][$primary_key] > $b['primary_keys'][$primary_key]) {
+      return 1;
+    }
+  }
+
+  // Compare column names:
+  if ($a['column'] < $b['column']) {
+    return -1;
+  }
+  elseif ($a['column'] > $b['column']) {
+    return 1;
+  }
+
+  return 0;
+}
+
+/*
+ * 
+  // Node tables:
+  if ($form_state['values']['find_options'][DB_FIND_REPLACE_NODES]) {
+    // Search node table:
+    $tables[] = 'node';
+    // Include the corresponding revision table if requested:
+    if ($form_state['values']['find_options'][DB_FIND_REPLACE_NODES]) {
+      $tables[] = 'node_revisions';
+    }
+    // Get all the fields associated with nodes:
+    $sql = "SELECT DISTINCT field_name FROM {field_config_instance} WHERE entity_type = 'node' ORDER BY field_name";
+    $rs = db_query($sql);
+    foreach ($rs as $field) {
+      $tables[] = 'field_data_' . $field->field_name;
+      // Include the corresponding revision table if requested:
+      if ($form_state['values']['find_options'][DB_FIND_REPLACE_NODES]) {
+        $tables[] = 'field_revision_' . $field->field_name;
+      }
+    }
+  }
+  
+  // User tables:
+  if ($form_state['values']['find_options'][DB_FIND_REPLACE_USERS]) {
+    // Search user table:
+    $tables[] = 'users';
+    // Get all the fields associated with users:
+    $sql = "SELECT DISTINCT field_name FROM {field_config_instance} WHERE entity_type = 'user' ORDER BY field_name";
+    $rs = db_query($sql);
+    foreach ($rs as $field) {
+      $tables[] = 'field_data_' . $field->field_name;
+      // Include the corresponding revision table if requested:
+      if ($form_state['values']['find_options'][DB_FIND_REPLACE_NODES]) {
+        $tables[] = 'field_revision_' . $field->field_name;
+      }
+    }
+  }
+  
+    
+ */
+
+
+/**
+ * Returns HTML for a button form element.
+ *
+ * @param string $label
+ * @param mixed $classes
+ *   Can be array or string.
+ * @param string $id
+ * @return string
+ */
+function theme_db_find_replace_button($variables) {
+  $label = $variables['label'];
+  $classes = $variables['classes'];
+  $id = $variables['id'];
+  
+  // Get the classes as a string:
+  if (is_array($classes)) {
+    $classes = implode(' ', $classes);
+  }
+  $classes .= ($classes ? ' ' : '') . 'form-submit';
+
+  // Create attributes array:
+  $attributes = array(
+    'type' => 'button',
+    'value' => $label,
+    'class' => $classes,
+  );
+  if ($id) {
+    $attributes['id'] = $id;
+  }
+
+  return '<input' . drupal_attributes($attributes) . ' />';
+}

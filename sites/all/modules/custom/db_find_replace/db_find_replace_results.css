@@ -1,0 +1,55 @@
+
+.db-find-replace-html, .db-find-replace-result textarea.form-textarea {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  padding: 3px;
+  margin: 0;
+  border: solid 1px #BEBFB9;
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  display: block;
+  white-space: pre-wrap;
+  max-height: 250px;
+  overflow: auto;
+  position: relative;
+}
+
+.db-find-replace-html {
+  background-color: #F3F4EE;
+}
+  
+.db-find-replace-result textarea.form-textarea {
+  display: none;
+  background-color: White;
+}
+
+.db-find-replace-controls {
+  margin-top: 1em;
+}
+
+.db-find-replace-done {
+  display: none;
+}
+
+.db-find-replace-find {
+  color: red;
+}
+
+.db-find-replace-replace {
+  color: #00aa00;
+}
+
+.db-find-replace-highlight {
+  background-color: yellow;
+  color: black;
+}
+
+#db-find-replace-results tr.db-find-replace-updated.even {
+  background-color: #d3eaff;
+}
+
+#db-find-replace-results tr.db-find-replace-updated.odd {
+  background-color: #ecf6ff;
+}

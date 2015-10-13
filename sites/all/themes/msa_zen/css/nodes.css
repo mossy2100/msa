@@ -1,0 +1,164 @@
+/**
+ * @file
+ * Node Styling
+ *
+ * Style anything that isn't in the $content variable.
+ */
+
+
+.node /* Node wrapper */ {
+}
+
+.node-sticky /* A sticky node (displayed before others in a list) */ {
+}
+
+.node-unpublished /* Unpublished nodes */ {
+  /* background-color: #fff4f4; */ /* Drupal core uses a #fff4f4 background */
+}
+
+.node-unpublished div.unpublished,
+.comment-unpublished div.unpublished /* The word "Unpublished" displayed underneath the content. */ {
+  height: 0;
+  overflow: visible;
+  color: #d8d8d8;
+  font-size: 75px;
+/*  line-height: 1;*/
+  font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  word-wrap: break-word; /* A very nice CSS3 property */
+}
+
+.node-by-viewer /* A node created by the current user */ {
+}
+
+.node-teaser /* A node displayed as teaser */ {
+  background-color: #eee;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* All nodes are given a node-type-FOO class that describes the type of
+ * content that it is. If you create a new content type called
+ * "my-custom-type", it will receive a "node-type-my-custom-type" class.
+ */
+.node-type-page /* Page content node */ {
+}
+
+.node-type-story /* Story content node */ {
+}
+
+.marker /* "New" or "Updated" marker for content that is new or updated for the current user */ {
+  color: #ad0000;
+}
+
+.node .picture /* The picture of the node author */ {
+}
+
+.node.node-unpublished .picture,
+.comment.comment-unpublished .picture {
+  position: relative; /* Otherwise floated pictures will appear below the "Unpublished" text. */
+}
+
+.node .meta /* Wrapper for submitted and terms data */ {
+}
+
+/* The "posted by" information */
+.node .submitted,
+.comment .submitted {
+  color: #777;
+  font-size: 10px;
+  font-style: italic;
+}
+
+.node .terms /* Node terms (taxonomy) */ {
+}
+
+.node .content /* Node's content wrapper */ {
+}
+
+.node ul.links /* Node links. See also the ul.links declaration in the pages.css. */ {
+}
+
+.preview .node /* Preview of the content before submitting new or updated content */ {
+  /* background-color: #ffffea; */ /* Drupal core uses a #ffffea background */
+}
+
+.node .content .field .field-items {
+  margin-bottom: 20px;
+}
+
+.node .content .field .field-label {
+  margin-bottom: 3px;
+  color: #ad0000;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.node .content .field .field-item p:first-child {
+  margin-top: 0px;
+}
+
+.node .content .field:first-child {
+  margin-top: 20px;
+}
+
+.node .content .field .field-items li {
+  margin: 10px 0;
+}
+
+.node .content .field-type-image div.field-item {
+  display: inline;
+  margin: 10px 10px 10px 0;
+}
+
+.node img, .profile img {
+  border: solid 1px #999;
+}
+
+
+/* field collections */
+
+.field-collection-view-final th {
+  text-align: center;
+}
+
+.node .content .field .field-items .field-collection-view-final td div.field,
+.node .content .field .field-items .field-collection-view-final td div.field-items {
+  margin: 0;
+}
+
+.field-collection-view, .field-collection-container {
+  border: none;
+}
+
+/* missions */
+.node .content div.field.field-name-field-mission-image {
+  float: right;
+  margin-top: 0;
+}
+
+.node .content div.field.field-name-field-mission-image div.field-item {
+  margin-right: 0;
+}
+
+
+img.left-image {
+  float: left;
+  margin-right: 10px;  
+}
+
+img.right-image {
+  float: right;
+  margin-left: 10px;
+}
+
+/* Slightly bigger fonts for AMEC fields */
+.node-amec .content .field .field-label {
+  font-size: 20px;
+}
+
+.node-amec .content .field .field-item {
+  font-size: 14px;
+}

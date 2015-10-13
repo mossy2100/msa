@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Mars Society Redirects feature.
+ */
+
+include_once('marssoc_redirects.features.inc');

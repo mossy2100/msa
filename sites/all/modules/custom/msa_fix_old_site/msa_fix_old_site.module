@@ -1,0 +1,315 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function msa_fix_old_site_menu() {
+  $items = array();
+  $items['admin/msa/fix-old-site'] = array(
+    'page callback' => 'msa_fix_old_site_scan',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  $items['admin/msa/fix-old-site-db'] = array(
+    'page callback' => 'msa_fix_old_site_db',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+/**
+ * Update all links in a block of code.
+ * 
+ * @param type $code 
+ */
+function msa_fix_old_site_update_links($code) {
+  $base_dir = '/Users/shaun/Dropbox/Projects/MSA/backups/old-site';
+  $regexs = array(
+    "/(href|src)=\"([^\"]+)\"/i",
+    "/(href|src)=\'([^\']+)\'/i",
+  );
+  foreach ($regexs as $regex) {
+    $n_matches = preg_match_all($regex, $code, $matches);
+
+    if ($n_matches) {
+      dbg($matches);
+
+      foreach ($matches[2] as $i => $href) {
+
+        // Trim spaces:
+        $trim_href = trim($href);
+        if (!$trim_href) {
+          continue;
+        }
+
+        // Look for absolute, relative and external links:
+        if (strpos($trim_href, 'http://www.marssociety.org.au') === 0) {
+          // Absolute link:
+          $updated_href = '/' . ltrim(substr($trim_href, strlen('http://www.marssociety.org.au')), '/');
+        }
+        elseif (strpos($trim_href, 'http://marssociety.org.au') === 0) {
+          // Absolute link:
+          $updated_href = '/' . ltrim(substr($trim_href, strlen('http://marssociety.org.au')), '/');
+        }
+        elseif (strpos($trim_href, 'http://') === 0 || strpos($trim_href, 'https://') === 0 || strpos($trim_href, 'mailto:') === 0 ||
+            strpos(strtolower($trim_href), '<?php') === 0 || $trim_href[0] == '#') {
+          // External link or PHP or fragment => ignore.
+          $updated_href = FALSE;
+        }
+        else {
+          // Relative link:
+          // The URL could be relative to the root directory, current directory, or somewhere in between.
+
+          // Trim any slash from the start:
+          $trim_href = ltrim($trim_href, '/');
+
+          // Break off any fragment or query:
+          list($href_query, $fragment) = explode('#', $trim_href);
+          list($href2, $query) = explode('?', $href_query);
+
+          $found = FALSE;
+          $done = FALSE;
+          $dir2check = $dir ? $dir : $base_dir;
+          while (!$done) {
+            $current_path = "$dir2check/$href2";
+            // Check current directory:
+            echo "Looking for file $current_path... ";
+            if (file_exists($current_path)) {
+              // It's relative to current dir:
+              echo "exists<br>";
+              $updated_href = substr($dir2check, strlen($base_dir)) . "/$href2";
+              $found = TRUE;
+              $done = TRUE;
+            }
+            else {
+              echo "does not exist<br>";
+              if ($dir2check == $base_dir) {
+                $done = TRUE;
+              }
+              else {
+                // Go up a level:
+                $dir2check = substr($dir2check, 0, strrpos($dir2check, '/'));
+              }
+            }
+          }
+          
+          if (!$found) {
+            // Let's try some of the obvious subdirectories:
+            $subdirs = array('library', 'documents', 'images', 'marsupial', 'jnt');
+            foreach ($subdirs as $subdir) {
+              $dir2check = "$base_dir/$subdir";
+              $current_path = "$dir2check/$href2";
+              // Check current directory:
+              echo "Looking for file $current_path... ";
+              if (file_exists($current_path)) {
+                // It's relative to current dir:
+                echo "exists<br>";
+                $updated_href = substr($dir2check, strlen($base_dir)) . "/$href2";
+                $found = TRUE;
+              }
+              else {
+                echo "does not exist<br>";
+              }
+            }
+          }
+
+          if ($found) {
+            // Glue the query and fragment back on:
+            if ($query) {
+              $updated_href .= '?' . $query;
+            }
+            if ($fragment) {
+              $updated_href .= '#' . $fragment;
+            }
+          }
+          else {
+            echo "File not found, don't fix.<br><br>\n";
+            $updated_href = FALSE;
+          }
+        }
+
+        if ($updated_href) {
+          if ($updated_href != $href) {
+            echo "Update $href to $updated_href<br>\n";
+            $attr = $matches[0][$i];
+            $updated_attr = str_replace($href, $updated_href, $attr);
+            echo "Update $attr to $updated_attr<br>\n";
+            $code = str_replace($attr, $updated_attr, $code);
+          }
+          else {
+            echo "No change to $href<br>";
+          }
+          echo "<br>\n";
+        }
+      }
+    }
+  }
+  
+  // Now update raw links:
+  $regex = "/http://(www.)?marssociety.org.au([^\ ]+)/i";
+  echo "Matching raw links...<br>\n";
+  $n_matches = preg_match_all($regex, $code, $matches);
+  if ($n_matches) {
+    foreach ($matches[0] as $i => $href) {
+      $updated_href = $matches[2][$i];
+      echo "Update raw link $href to $updated_href<br>\n";
+      $code = str_replace($href, $updated_href, $code);
+    }
+  }
+
+  return $code;
+}
+
+/**
+ * Scans all files in the specified directory, defaulting to /sites/old, and fixes up paths.
+ * 
+ * @param string $path
+ */
+function msa_fix_old_site_scan($dir = NULL) {
+  global $count, $limit;
+  if (!$limit) {
+//    $limit = 50;
+  }
+  if ($limit && $count >= $limit) {
+    return;
+  }
+
+  $base_dir = '/Users/shaun/Dropbox/Projects/MSA/backups/old-site';
+  if ($dir === NULL) {
+    $dir = $base_dir;
+  }
+
+  echo "<h1>Scanning directory " . substr($dir, strlen($base_dir)) . "/</h1>";
+
+  $files = scandir($dir);
+  
+  foreach ($files as $file) {
+    $path = "$dir/$file";
+
+    if (is_file($path)) {
+      $ext = strtolower(pathinfo($file, PATHINFO_EXTENSION));
+      if (in_array($ext, array('php', 'inc', 'htm', 'html', 'shtml', 'xhtml'))) {
+        echo "<h3>Scanning file $path</h3>";
+        $code = file_get_contents($path);
+        
+        // Update links in the code:
+        $updated_code = msa_fix_old_site_update_links($code);
+        
+        // Output the updated file:
+        if ($code != $updated_code) {
+          $out_path = DRUPAL_ROOT . '/sites/old' . substr($path, strlen($base_dir));
+          echo "Writing to $out_path<br>";
+//          file_put_contents($out_path, $code);
+        }
+        
+        $count++;
+        if ($limit && $count >= $limit) {
+          return;
+        }
+      }
+    }
+    elseif (is_dir($path)) {
+      if ($file == '.' || $file == '..') {
+        continue;
+      }
+      msa_fix_old_site_scan($path);
+    }
+  }
+}
+
+/**
+ * Look through text fields in the database and do the same thing as with the files.
+ */
+function msa_fix_old_site_db() {
+  $databases = array(
+//    'msa_old_marssociety' => array(
+//      'conference' => array(
+//        'pk' => array(
+//          'year',
+//        ),
+//        'fields' => array(
+//          'venue',
+//          'introduction',
+//          'registration_link',
+//          'opening_event_speaker_bio',
+//          'banquet',
+//          'accommodation',
+//          'travel',
+//        ),
+//      ),
+//      'headlines' => array(
+//        'pk' => array(
+//          'headline',
+//        ),
+//        'fields' => array(
+//          'article',
+//          'thumb_gallery',
+//        ),
+//      ),
+//      'in_the_news' => array(
+//        'pk' => array(
+//          'title',
+//          'date',
+//        ),
+//        'fields' => array(
+//          'link',
+//        ),
+//      ),
+//    ),
+    'msa_old_marsupial' => array(
+      'news' => array(
+        'pk' => array(
+          'date',
+        ),
+        'fields' => array(
+          'para1',
+          'para2',
+        ),
+      ),
+    ),
+  );
+  foreach ($databases as $database => $tables) {
+    echo "<h1>Database $database</h1>";
+    
+    db_set_active($database);
+    
+    foreach ($tables as $table => $info) {
+      
+      echo "<h2>Table $table</h1>";
+      
+      $rs = db_select($table, 't')->fields('t')->execute();
+      foreach ($rs as $rec) {
+        
+        dbg($rec);
+        
+        $changes = array();
+        // Look for changes:
+        foreach ($info['fields'] as $field) {
+          $code = $rec->$field;
+          $updated_code = msa_fix_old_site_update_links($code);
+          if ($code != $updated_code) {
+            $changes[$field] = $updated_code;
+          }
+        }
+        if ($changes) {
+          // Update the db:
+          $q = db_update($table);
+          foreach ($info['pk'] as $pk) {
+            $q = $q->condition($pk, $rec->$pk);
+          }
+          $q->fields($changes);
+          dbg_query($q, $database);
+//          $q->execute();
+        }
+        else {
+          echo "No changes<br>\n";
+        }
+        
+        echo "<hr>";
+      }
+      
+    }
+  }
+  db_set_active();
+}

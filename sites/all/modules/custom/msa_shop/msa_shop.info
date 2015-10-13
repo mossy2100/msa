@@ -1,0 +1,6 @@
+name = MSA Shop
+description = Support functions for the MSA shop.
+core = 7.x
+package = MSA
+dependencies[] = msa
+dependencies[] = commerce

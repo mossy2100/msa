@@ -1,0 +1,48 @@
+/**
+ * @file
+ * Block Styling
+ */
+
+
+.block /* Block wrapper */ {
+  margin-bottom: 10px;
+}
+
+.sidebar .block {
+  border-width: 0;
+  padding: 10px;
+}
+
+.sidebar .block ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar .block ul li {
+  list-style-image: none;
+  list-style-type: none;
+}
+
+.sidebar .block .menu a {
+  color: Black;
+  text-decoration: none;
+  display: block;
+  width: 160px;
+  padding: 2px 5px;
+  text-align: center;
+  margin: 0 0 5px 0;
+  border-width: 3px;
+  border-top-color: aliceblue;
+  border-left-color: aliceblue;
+  border-right-color: navy;
+  border-bottom-color: navy;
+}
+
+.sidebar .block .menu .last a {
+  margin-bottom: 0;
+}
+
+#block-block-3 p {
+  margin: 0;
+}

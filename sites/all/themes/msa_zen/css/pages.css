@@ -1,0 +1,196 @@
+/**
+ * @file
+ * Page Styling
+ *
+ * Style the markup found in page.tpl.php. Also includes some styling of
+ * miscellaneous Drupal elements that appear in the $content variable, such as
+ * ul.links, .pager, .more-link, etc.
+ */
+
+/*
+ * Body
+ */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * The skip-link link will be completely hidden until a user tabs to the link.
+ * See http://www.webaim.org/techniques/skipnav/
+ */
+#skip-link a,
+#skip-link a:visited {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: -500px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #777;
+  color: #fff;
+}
+
+#skip-link a:hover,
+#skip-link a:active,
+#skip-link a:focus {
+  position: static;
+  width: 100%;
+  height: auto;
+  padding: 2px 0 3px 0;
+}
+
+/*
+ * Header
+ */
+#header {
+  background: url('../images/MSA-transparent.png') center 50px no-repeat;
+  height: 200px;
+}
+
+#logo /* Wrapping link for logo */ {
+  float: left; /* LTR */
+  margin: 0;
+  padding: 0;
+}
+
+#logo img {
+  vertical-align: bottom;
+}
+
+#name-and-slogan /* Wrapper for website name and slogan */ {
+}
+
+h1#site-name,
+div#site-name  The name of the website  {
+  margin: 0;
+  font-size: 24px;
+}
+
+#site-name a:link,
+#site-name a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+#site-name a:hover,
+#site-name a:focus {
+  text-decoration: underline;
+}
+
+#site-slogan /* The slogan (or tagline) of a website */ {
+}
+
+.region-header /* Wrapper for any blocks placed in the header region */ {
+  clear: both; /* Clear the logo */
+}
+
+.sidebar .section, #content .section {
+  margin: 10px;
+}
+
+.sidebar .section {
+  padding: 0;
+}
+
+#content .section {
+  border-width: 0;
+  padding: 10px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -khtml-border-radius: 15px;
+  border-radius: 15px;
+}
+
+#mission /* The mission statement of the site (displayed on homepage) */ {
+}
+
+.breadcrumb /* The path to the current page in the form of a list of links */ {
+  padding-bottom: 0; /* Undo system.css */
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.help /* Help text on a page */ {
+  margin: 10px 0;
+}
+
+.more-help-link /* Link to more help */ {
+  font-size: 10px;
+  text-align: right;
+}
+
+.region-content /* Wrapper for the actual page content */ {
+}
+
+ul.links /* List of links */ {
+  margin: 10px 0;
+  padding: 0;
+}
+
+ul.links.inline {
+  margin: 0;
+  display: inline;
+}
+
+ul.links li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 5px;
+}
+
+.item-list ul.pager {
+  clear: both;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.item-list .pager li {
+  padding: 3px;
+}
+
+.pager a,
+.pager strong.pager-current /* Each page number in the pager list */ {
+  padding: 5px 10px;
+}
+
+.feed-icons /* The links to the RSS or Atom feeds for the current list of content */ {
+  margin: 10px 0;
+}
+
+.more-link /* Aggregator, blog, and forum more link */ {
+  text-align: right; /* LTR */
+  font-size: 10px;
+}
+
+.field-name-field-tags {
+  font-size: 10px;
+  font-style: italic;
+  height: 20px;
+  display: both;
+  padding-bottom: 20px;
+  clear: both;
+}
+
+.field-name-field-tags .field-label {
+  font-weight: normal;
+}
+
+.field-name-field-tags div {
+  float: left;
+}
+
+.field-name-field-tags .field-item {
+  margin-right: 5px;
+}
+
+.debug {
+  color: Red;
+  font-size: 10px;
+}
+
+.page-image {
+  margin: 10px;
+}

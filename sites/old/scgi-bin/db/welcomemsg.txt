@@ -1,0 +1,2 @@
+Welcome to YaWPS!
+YaWPS (Yet another Web Portal System) is a lightweight web portal system written in Perl. All client output is valid HTML 4. Main features include: newssystem, forum, user management, link database, site stats, theme selection, search engine.<br><br>Thank you!

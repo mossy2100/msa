@@ -1,0 +1,294 @@
+THE AUSTRALIAN MARS EXPLORATION 
+CONFERENCE
+
+ 
+
+THE AUSTRALIAN MARS EXPLORATION 
+CONFERENCE
+
+ 
+ 
+
+Conference
+Program
+
+
+
+Time
+Speaker
+Topic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Mobile Robot Navigation on Mars
+
+Professor Ray Jarvis 
+
+This paper looks at some of the issues concerning the physical 
+architectures, sensors and artificial intelligence associated with mobile 
+robot navigation, both of an entirely autonomous kind and of a so called 
+tele-autonomous variety, particularly in the context of the exploration of 
+Mars. 
+
+Professor Ray Jarvis completed his BE (Elec.) and Ph.D. (Elec.) at the 
+University of Western Australia in 1962 and 1968, respectively. 
+
+After two year at Purdue University he was appointed to the Australian 
+National University (ANU) to teach Computer Science. There he was 
+instrumental in establishing the Department of Computer Science at ANU, 
+and was its first Head of Department. 
+
+He joined Monash University in 1985 and established the Intelligent Robotic 
+Research Centre in 1987. He has been the Centre's Director since then. 
+His research interests are in Computer Vision and Robotics. Both robotic 
+manipulators and mobile robots of various sizes have been part of his 
+interests. Most recently he has been working on autonomous and 
+teleoperated vehicles and vessels including a tacked vehicle, several boats, 
+an amphibious craft, an excavator and a half scale Russian built Martian 
+Rover. He has also recently developed a research interest in Humanoid 
+Robotics. From an AI perceptive his main interests are in Computer Vision 
+and Path Planning. 
+
+
+The Mars Society Australia's Technical Program
+
+Mr Jason Hoogland
+
+The Mars Society Australia's Technical Programme consists of five 
+projects, collectively known as Operation Red Centre. 
+
+Project Jarntimarra will involve experts in various scientific disciplines 
+including geology and microbiology developing a valuable electronic 
+database containing comprehensive information on Australian Mars 
+Analogue sites.  
+
+In 2000 Mars Society Australia was one of three international groups 
+awarded seed funding to develop a "flight-like" Mars rover vehicle to 
+undertake unique analogue research.  Project Marsupial is constructing a 
+family of vehicles intended to assist with the design of future Mars rovers.  
+The Human Operations Prototype (HOP) is the first vehicle in the series.  
+
+Analogue simulation depends on subjecting crew members to the same 
+kinds of constraints expected for human crews on the surface of Mars.  A 
+key element of Operation Red Centre is therefore a Mars analogue surface 
+suit.  Project Mars Skin will apply the latest research in such systems to 
+develop realistic Mars suits for use in analogue research activities.  
+
+The international Mars Society has established a research station on arctic 
+Devon Island.  The facility is designed to be "flight-like", similar to the kind 
+of planetary entry, descent and landing habitats used in leading humans-to-
+Mars mission proposals andallow realistic simulations to help test mission 
+planning hypotheses.  It is proposed that three additional stations around 
+the world will be built, including a Mars Australian Research Station (Mars-
+Oz).   
+
+Mars Society Australia will operate a communications payload aboard an 
+Australian satellite Jaesat in 2002, a key component of the Store and 
+Forward Mars Analogue Research System (SAFMARS) project.  
+
+Jason Hoogland is a 28 year old Phd candidate in Mechanical Engineering 
+at the University of Queensland.  His Doctoral thesis is investigating the 
+aerothermodynamic influence of ablative injection on superorbital entry heat 
+shield flowfields.  This involves novel simulation of the vapourisation of 
+these kinds of thermal protection systems in the hypersonic expansion 
+tubes at the Centre for Hypersonics, focussing on the heat shield of the 
+Japanese Muses-C asteroid sample return mission scheduled to launch in 
+2002.  Prior to this he worked as a Graduate Engineer with the Robe River 
+Mining Company, based in Perth.  His work involved R&D on vibrational 
+removal of fines from lump iron ore, and project management of a $9 million 
+Lump Rescreening Plant.  Jason has a BE (mech, Hons) from teh 
+University of Western Australia and a BSc (physics) from the University of 
+Melbourne.
+
+
+Antarctica as an Analogue for Mars
+Dr John Webb
+Antarctica has been used as an analogue for Mars in terms of its physical 
+environment and also in terms of the social interactions between the people 
+in the small groups who work there. The ice-free areas of Antarctica (so-
+called 'oases') are similar to the surface of Mars in that they are arid 
+deserts, characterised by very low temperatures and humidities and very 
+windy conditions, although of course the atmospheric pressure is much 
+higher and the atmospheric composition different. Weathering of the rocks 
+exposed in Antarctica is dominated by physical processes, e.g. wind 
+erosion and salt wedging, and the same is likely to be true on Mars, 
+although salt wedging is probably absent. Downslope movement of regolith 
+in Antarctica is dominated by debris flows and slumping in the water-
+saturated material overlying the permafrost in summer, and has been 
+regarded by some workers as analogous to the processes forming 
+apparently active gullies near the Martian poles, although this is arguable.
+Any human exploration of Mars will be based around small parties, isolated 
+for long periods, undertaking field work from a base, and therefore 
+resembles the current practices in Antarctica. Studies of the social 
+interactions between personnel in Antarctica give insights into likely 
+problems that could arise on Mars, particularly conflicts due to differences 
+in background (scientific/military), age and gender. Particularly at bases, 
+social problems can be more important than the physical demands of the 
+surrounding hostile environment.
+Environmental concerns that have recently become important in Antarctica 
+may also be applicable to Mars, particularly the removal or disposal of all 
+waste.
+I attended Queensland University, where I obtained my Honours (with a 
+University Medal) and PhD degrees (the latter in 1982). My thesis was on 
+Triassic palaeobotany of southeastern Queensland, but since completing it 
+my interests have broadened, to include geomorphology and Antarctic 
+geology. After finishing my thesis I taught for 5 years at Melbourne 
+University Geology Department, then moved to La Trobe University Earth 
+Sciences in 1985, where I teach sedimentology and environmental geology. 
+At the moment I'm Head of Department. Over the summer of 1989-1990 I 
+went to Antarctica for a field season in the northern Prince Charles 
+Mountains, studying Permo-Triassic sedimentology and the recent 
+geomorphology.
+Earth Analogues for Martian Environments
+Prof Malcolm Walter
+Places such as Devon Island are analogues for the present environment of 
+Mars. But another category of analogues is also important: those places 
+that resemble ancient environments that might have hosted life, such as 
+former lakes and thermal springs.  In Australia we have numerous such 
+places, including gold deposits in central Queensland,  a giant lead-zinc-
+silver deposit in the NT, Mount Painter in SA, and many sites in WA. Some 
+of these are also analogues for aspects of the current environment on 
+Mars. Mt Painter is one such; it is one of the World's largest ancient thermal 
+spring systems, has an active thermal spring nearby, and is flanked by arid 
+plains, dunes and salt lakes. It is an excellent site for conducting simulation 
+experiments.
+Malcolm Walter is Adjunct Professor of geology at Macquarie University in 
+Sydney, Director of the Australian Centre for Astrobiology based at that 
+university,  and Director of M. R. Walter Pty Ltd. He has worked for 35 
+years on the geological evidence of early life on Earth, including the earliest 
+convincing evidence of life. Since 1989 he has been funded by NASA in 
+their "exobiology" and "astrobiology" programs, focussing on microbial life 
+in high temperature ecosystems, and the search for life on Mars. During 
+1999 his book "The Search for Life on Mars" was published by Allen & 
+Unwin. He has published more than 100 articles and several other books. 
+He also works as an oil exploration consultant and a consultant to 
+museums, and is currently curator of a special Centenary of Federation 
+exhibition on space exploration (for the new Museum of Australia in 
+Canberra, Museum Victoria, and elsewhere).
+
+
+Novel nano-organisms (Nanobes): living 
+analogues for Martian "nanobacteria"?
+Dr Philippa Uwins
+On August 7th 1996 NASA made the historic announcement that Martian 
+Meteorite ALH84001 could contain evidence for past life on Mars. Central 
+to the thesis, and perhaps the most controversial aspect of the findings, 
+were the fossil remnants of sub-bacteria sized "cells" called nannobacteria. 
+While the results were of great scientific interest they fuelled a fierce and 
+highly contentious debate, not only concerning the existence of Martian 
+microbes, but a controversy surrounding the minimum possible size of life 
+on earth. 
+The identification and existence of nanobacteria was not new and had been 
+proposed previously by a number of workers. However, the likelihood of 
+such small cells existing was strongly questioned, since it was argued that 
+these cells would have been far too small to carry out the metabolic and 
+reproductive processes essential for life. It has remained unresolved to this 
+day whether these mineralised nannobacteria were fossilised remnants of 
+independent life forms, artefacts of sample preparation or unusual mineral 
+deposits.
+
+However, more recently, we reported on the existence of novel nano-
+organisms (nanobes) growing on Triassic and Jurassic sandstones 
+collected from petroleum exploration boreholes offshore Western Australia. 
+These filamentous, pleomorphic and yeast-like cells provide further 
+evidence for nano-scopic life. Because these cells were so much smaller 
+than any known microbe, they were given the name 'nanobe'. 
+
+Nanobes will be described, illustrated and discussed within the context of 
+the nanobacterial debate. If nanobes are novel life forms as claimed, how 
+will their existence impact on our understanding of three fundamental 
+questions, What is life? How did it evolve? and Is there life beyond earth?
+
+BIO: Dr Philippa Uwins is a Senior Research Fellow at The University of 
+Queensland, Centre for Microscopy and Microanalysis. She has a degree in 
+Geology from the University of Edinburgh (1982), and a Ph.D in Palynology 
+(the study of organic microfossils) from the University of Aberdeen (1987). 
+She then worked for one year at Robertson Research International's head 
+office in North Wales as a palynologist. She has been at the University of 
+Queensland, Centre for Microscopy and Microanalysis since 1989. Her 
+research has focussed on phytoplankton ecology and water quality 
+monitoring, clay mineralogy, catalyst chemistry, microscopy research and 
+techniques (specialising in Environmental Scanning Electron Microscopy 
+(ESEM) and ultra-high resolution Field Emission SEM (FESEM)). More 
+recently her work has focussed on the molecular, morphological and 
+ultrastructural characterisation of novel nano-organisms called nanobes.
+
+
+White Mars
+Dr Nick Hoffman
+On Earth, life requires water, therefore our search for life beyond the Earth 
+is a search for water. For this reason we target Europa, a moon of Jupiter that may 
+have a liquid ocean beneath a thick icy crust, and also Mars where huge erosional 
+channels suggest the flow of fluids across the surface in the geological past. Many 
+scientists believe that rivers and lakes existed in the past on Mars, and perhaps 
+even oceans. However, this search on Mars may be ill-founded. Despite intense 
+research, the evidence for water on Mars is scarce. Now a new theory suggests 
+that the single strongest line of evidence for water on Mars - the "outburst flood 
+channels" may have been formed not by liquid water but by cold dry eruptions of 
+gas, dust and rock, fuelled by exploding liquid CO2.
+Nick obtained his B.Sc. in Geophysics from Edinburgh University, Scotland in 
+1980, graduating with 1st class Honours. He then moved to Cambridge University 
+where he completed a Ph.D. in 1983 on the topic of numerical studies of Mantle 
+Convection and Geochemical Mixing. After Cambridge, Nick entered the Oil 
+Industry, working for Britoil in Glasgow. Commencing in the Production & 
+Development division and moving progressively to Exploration and New Ventures 
+he worked on a variety of assignments in and around the North Sea. In 1991, Nick 
+moved to Melbourne Australia to join BHP Petroleum's Asia Division.  He left BHP 
+in 1999 and joined the active structural geology group at La Trobe University in 
+Melbourne to carry out Geological Research on extensional basins and 
+compressional margins of Australia, Indonesia, & New Guinea . 
+
+
+Dr Robert Zubrin
+Robert Zubrin, formerly a Staff Engineer at Lockheed Martin Astronautics in 
+Denver is now president of his own company, Pioneer Astronautics.  He holds 
+Masters degrees in Aeronautics and Astronautics and a doctorate in Nuclear 
+Engineering.  He is the inventor of several unique concepts for space propulsion 
+and exploration, the author of over 100 published technical and non-technical 
+papers in the field, as well the book "The Case for Mars: The Plan to Settle the 
+Red Planet and Why We Must" published by the Free Press.  He is a Fellow of the 
+British Interplanetary Society and Senior Vice President of the National Space 
+Society. Most recently, he founded the Mars Society; an international organization 
+dedicated to furthering the exploration and settlement of Mars by both public and 
+private means.  Prior to his work in astronautics, Dr. Zubrin was employed in areas 
+of thermonuclear fusion research, nuclear engineering, radiation protection, and as 
+a high school science teacher.
+

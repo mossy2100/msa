@@ -1,0 +1,103 @@
+body
+{
+}
+.Left
+{
+	width:100;
+	background-image: url(bg.jpg);
+	background-repeat:repeat-y;
+}
+.Right
+{
+	width:100;
+}
+.Banner
+{
+	background-image: url(banner.jpg);
+	background-repeat:no-repeat;
+	width:760;
+	height:85;
+}
+.MenuBar
+{
+	width:760;
+	text-align:center;
+	text-justify:distribute-all-lines;
+}
+
+A.menu:hover
+{
+	font-weight: bolder;
+	color: yellow;
+	background-color: #009999;
+	text-decoration: underline;
+}
+
+.menu
+{
+	font-weight: bolder;
+	text-decoration:none;
+}
+.TOC
+{
+	width:760;
+}
+
+.Title
+{
+	font-weight: bold;
+	font-size: x-large;
+	text-transform: none;
+	color: #000099;
+	font-style: normal;
+	font-family: Serif;
+	text-align: center;
+	font-variant: normal;
+}
+.Location
+{
+	font-weight: normal;
+	list-style-position: outside;
+	font-size: small;
+	font-style: normal;
+	font-family: Serif;
+	list-style-type: disc;
+	text-align: center;
+	font-variant: normal;
+}
+.Session
+{
+	border-top: silver thin ridge;
+	font-weight: bold;
+	font-size:large;
+	color:000099;
+	text-align:center;
+	padding-top:10
+}
+.Symposium
+{
+	font-size:large;
+	font-weight: bold;
+	color:#000099;
+	text-align:center;
+}
+.PaperBox
+{
+	padding:0;
+}
+.PaperNumber
+{
+	font-family: Serif;
+	padding:0;
+}
+.PaperTitle
+{
+	font-family: Serif;
+	padding:0;
+}
+.Author
+{
+	font-family: Serif;
+	font-style: italic;
+	padding:0;
+}

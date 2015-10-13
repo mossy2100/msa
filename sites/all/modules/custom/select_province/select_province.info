@@ -1,0 +1,4 @@
+name = Select Province
+description = Converts the autocomplete state/province textfield provided by the location module into a select box that has its options populated using AJAX when the country is selected.
+core = 7.x
+package = Location
