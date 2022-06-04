@@ -598,7 +598,7 @@ function msa_member_mail($key, &$message, $params) {
       ));
     // Copy us in on these emails:
     $message['headers'] = array(
-      'Cc' => 'shaun@astromultimedia.com, gmmurphy@ozemail.com.au, Jon.Clarke@bigpond.com',
+      'Cc' => 'gmmurphy@ozemail.com.au, Jon.Clarke@bigpond.com',
     );
   }
 }
